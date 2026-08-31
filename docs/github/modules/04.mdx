@@ -1,0 +1,39 @@
+---
+title: 4 — GitHub Actions and Delivery
+description: Build safe, observable continuous integration.
+---
+
+# GitHub Actions and Delivery
+
+**Outcome:** Create a least-privilege workflow, diagnose a failed run, and explain the trust boundary around events and secrets.
+
+A workflow is YAML in `.github/workflows`. Events trigger workflow runs; jobs run in parallel unless dependencies are declared; steps execute actions or commands on a runner. Pin action versions, grant only required token permissions, set timeouts, cache safely, and keep build output reproducible.
+
+```yaml
+name: verify
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+```
+
+Diagnose from first cause, not last symptom: confirm trigger and ref; inspect annotations and earliest failing step; reproduce with the same tool/runtime; check dependency lockfiles and environment assumptions; make one causal change; rerun. Do not print secrets. Fork-originated pull requests and `pull_request_target` have different trust characteristics; never execute untrusted checkout code with elevated secrets.
+
+Artifacts preserve outputs from a run. Environments can add approvals and scoped secrets. Prefer short-lived identity federation such as OIDC over long-lived cloud keys when supported.
+
+<div className="checkpoint"><strong>Check:</strong> Why use <code>npm ci</code> in CI? <details><summary>Feedback</summary>It installs exactly from the lockfile and fails when package metadata is inconsistent, improving reproducibility.</details></div>
+

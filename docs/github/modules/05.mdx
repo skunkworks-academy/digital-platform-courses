@@ -1,0 +1,23 @@
+---
+title: 5 — Security and Governance
+description: Protect identities, code, dependencies, workflows, and releases.
+---
+
+# Security and Governance
+
+**Outcome:** Threat-model a repository and apply controls that prevent, detect, and respond to common software-supply-chain risks.
+
+Start with identity: require MFA, prefer enterprise-managed access where appropriate, use teams and least privilege, review outside collaborators, and remove stale access. Protect critical branches with review and status requirements while controlling bypass rights.
+
+Repository security is layered:
+
+- **Secrets:** never commit them; use secret scanning and push protection where available; rotate immediately if exposed.
+- **Dependencies:** maintain a dependency graph, review new transitive risk, enable alerts and controlled updates.
+- **Code:** use code scanning where supported and triage findings by reachability, severity, and business context.
+- **Workflows:** minimize token permissions, pin trusted actions, constrain untrusted input, and protect deployment environments.
+- **Response:** publish `SECURITY.md`; handle vulnerabilities privately; preserve evidence and document remediation.
+
+Plan and license availability differ. If a feature is unavailable, record the gap and implement a proportional alternative such as local scanning, manual dependency review, or an external approved control.
+
+<div className="checkpoint"><strong>Scenario:</strong> A token was pushed and then deleted in the next commit. What now? <details><summary>Feedback</summary>Assume compromise: revoke/rotate it, inspect access logs and usage, remove it from accessible history where appropriate, enable prevention, and document the incident. Deleting the file does not invalidate the credential or erase earlier commits.</details></div>
+

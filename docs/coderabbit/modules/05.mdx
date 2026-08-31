@@ -1,0 +1,24 @@
+---
+title: 5 — Workflow Integration and Quality Gates
+description: Combine CodeRabbit with CI, ownership and merge controls.
+---
+
+# Workflow Integration and Quality Gates
+
+**Outcome:** Design a merge workflow in which automation accelerates review without bypassing accountable approval.
+
+Decide when reviews run: every eligible PR, by target branch, label, description keyword, or manual `@coderabbitai review`. Exclude drafts until useful, and consider bot-authored dependency PRs separately. Current auto-review controls support scope and incremental-review behaviour; confirm syntax against the configuration reference.
+
+Separate advisory from blocking controls. Deterministic tests, lint, security scans, ownership approval, and deployment authorization should remain explicit GitHub checks and rules. If CodeRabbit participates in a request-changes workflow, define how comments are resolved, who may override, and what happens when the service is unavailable.
+
+Recommended decision record:
+
+| Gate | Owner | Failure action | Override |
+|---|---|---|---|
+| Unit/integration tests | Engineering | Fix or correct test | Maintainer with reason |
+| Security scan | Security owner | Triage before merge | Security exception |
+| CodeRabbit findings | Author + reviewer | Resolve/dismiss with proof | Human reviewer |
+| Domain acceptance | Product/domain owner | Correct behaviour | No silent override |
+
+<div className="checkpoint"><strong>Check:</strong> Should service outage stop emergency remediation? <details><summary>Feedback</summary>Define a controlled break-glass path with required human review, evidence, scope, expiry, and retrospective.</details></div>
+

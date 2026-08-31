@@ -1,0 +1,27 @@
+---
+title: 2 — Repository Design and Access
+description: Establish a discoverable, maintainable and least-privilege repository.
+---
+
+# Repository Design and Access
+
+**Outcome:** Configure a repository whose purpose, ownership, contribution path, and security expectations are clear to a new contributor.
+
+A repository is a product boundary. Its name, description, visibility, default branch, topics, license, README, contribution guide, security policy, issue forms, and ownership rules together shape contributor behaviour. Choose visibility based on information classification—not convenience. Grant the least role that permits the person’s work and prefer teams over individual grants at scale.
+
+Minimum durable documentation:
+
+- `README.md`: purpose, audience, setup, usage, validation, support.
+- `CONTRIBUTING.md`: branch, commit, test, PR, and review expectations.
+- `SECURITY.md`: supported versions and a private vulnerability-reporting route.
+- `CODEOWNERS`: review routing; pair it with branch/ruleset enforcement.
+- `.gitignore`: generated files and local secrets, while remembering it cannot remove secrets already committed.
+
+Rulesets or branch protection can require pull requests, approving reviews, passing status checks, signed commits, linear history, or restricted pushes. Controls should be proportional: too little permits unsafe change; too much creates bypasses and delay. Record exceptions, owners, and review dates.
+
+<div className="checkpoint"><strong>Check:</strong> Does a CODEOWNERS match alone prevent merge without the owner? <details><summary>Feedback</summary>No. CODEOWNERS requests appropriate review; protection or ruleset settings must require that review.</details></div>
+
+## Apply
+
+Create the five governance files, assign an owner to each control, and explain why your selected repository visibility and collaborator roles are appropriate.
+

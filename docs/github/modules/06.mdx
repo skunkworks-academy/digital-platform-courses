@@ -1,0 +1,26 @@
+---
+title: 6 — Releases, Operations and Improvement
+description: Publish traceable versions and improve delivery performance.
+---
+
+# Releases, Operations and Improvement
+
+**Outcome:** Produce a traceable release, communicate change, and select balanced improvement measures.
+
+A tag names a point in history; a GitHub release adds human-facing notes and assets. Choose a versioning policy that matches your product. Before release, confirm acceptance, security findings, dependency status, artifact provenance, approvals, migration needs, rollback, and support ownership.
+
+Release notes serve users. Group breaking changes, features, fixes, security changes, deprecations, and upgrade steps. Link issues and pull requests without exposing sensitive vulnerability detail. Automating assembly is useful; a responsible owner still validates meaning and impact.
+
+Operate with balanced measures:
+
+| Question | Example evidence |
+|---|---|
+| Are changes moving? | Lead time, review wait, deployment frequency |
+| Are changes safe? | Change failure, rollback, escaped defect and security incident rates |
+| Is the system recoverable? | Time to restore, runbook success |
+| Is collaboration healthy? | PR size, review depth, reopened findings, contributor feedback |
+
+Metrics guide inquiry, not individual performance scoring. Gaming one measure often damages another. Use a retrospective to identify one constraint, one experiment, an owner, a target, and a review date.
+
+<div className="checkpoint"><strong>Check:</strong> Why is deployment frequency alone a poor success measure? <details><summary>Feedback</summary>It says nothing about safety, value, reliability, or recovery. Pair flow measures with outcome and stability measures.</details></div>
+

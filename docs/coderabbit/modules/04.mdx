@@ -1,0 +1,22 @@
+---
+title: 4 — Triage, Conversation and Resolution
+description: Convert review comments into verified engineering decisions.
+---
+
+# Triage, Conversation and Resolution
+
+**Outcome:** Classify a finding, reproduce its claim, choose a response, and retain proof of resolution.
+
+Read the whole diff and acceptance criteria before individual comments. For each finding classify:
+
+1. **Validity:** confirmed, plausible/unconfirmed, false positive, duplicate, or out of scope.
+2. **Impact:** security, correctness, reliability, performance, accessibility, maintainability, or style.
+3. **Priority:** likelihood × impact × exposure, adjusted for reversibility.
+4. **Action:** fix now, create follow-up, accept documented risk, or dismiss with evidence.
+
+Reproduce the claim with a test, trace, minimal example, documentation, or careful code reasoning. Ask CodeRabbit to clarify assumptions or suggest a test, but do not treat its confidence as validation. When using a proposed fix, inspect every line, consider failure modes, add regression evidence, and run the relevant suite.
+
+A strong response says what changed and how it was verified. A strong dismissal explains which premise is false and cites the observable evidence. Resolve the thread only when the technical concern is addressed—not merely acknowledged.
+
+<div className="checkpoint"><strong>Check:</strong> A suggestion improves readability but expands capstone scope. What response fits? <details><summary>Feedback</summary>Record it as a follow-up if valuable, explain the scope decision, and avoid mixing unrelated change into the current PR.</details></div>
+

@@ -1,0 +1,23 @@
+---
+title: 2 — Installation, Privacy and Scope
+description: Connect repositories with deliberate access and data decisions.
+---
+
+# Installation, Privacy and Scope
+
+**Outcome:** Produce an approved installation decision that limits repositories, permissions, and sensitive content.
+
+Before installing, identify data classifications in source, diffs, issues, PR comments, logs, and connected knowledge systems. Review vendor terms, retention, model/data-use commitments, subprocessors, region, access controls, incident processes, and deletion options under your organization’s policy. Obtain the required security, privacy, legal, and repository-owner approvals.
+
+Limit the GitHub App installation to selected repositories where possible. Review permissions and explain each material grant. Remove stale installations and access. Protect secrets before they reach a review: ignore files, use secret scanning, and keep generated logs free of credentials and personal data.
+
+Establish boundaries in a short control record:
+
+- approved repositories and excluded data classes;
+- installation owner and periodic access review;
+- allowed commands and code-generation behaviour;
+- escalation route for unsafe or confidential output;
+- removal, incident, and evidence-retention procedure.
+
+<div className="checkpoint"><strong>Scenario:</strong> A repository includes customer production exports used as fixtures. May you connect it because it is private? <details><summary>Feedback</summary>Privacy is not approval. Remove or synthesize the data and complete the organization’s vendor/data-processing review first.</details></div>
+

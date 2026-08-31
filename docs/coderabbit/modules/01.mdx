@@ -1,0 +1,25 @@
+---
+title: 1 — AI Review Operating Model
+description: Place AI review correctly within software assurance.
+---
+
+# AI Review Operating Model
+
+**Outcome:** Explain what AI review can and cannot establish, and assign clear human accountability.
+
+AI review can summarize change, surface suspicious patterns, propose improvements, answer questions, and apply repeatable instructions across many pull requests. It can miss defects, misunderstand domain intent, overstate risk, propose insecure code, or comment on irrelevant style. Its output is probabilistic evidence—not proof.
+
+Use layered review:
+
+```mermaid
+flowchart LR
+ A[Author self-review] --> S[Static tests and CI]
+ S --> R[CodeRabbit review]
+ R --> H[Human domain/security review]
+ H --> D[Authorized merge decision]
+```
+
+Define review goals before configuration: reduce escaped defects, shorten feedback time, teach conventions, strengthen security, or summarize change. One profile cannot optimize everything. High-volume low-risk repositories may value concise feedback; regulated or security-sensitive paths need explicit instructions and mandatory human reviewers.
+
+<div className="checkpoint"><strong>Check:</strong> CodeRabbit reports “no issues.” Is the change safe to merge? <details><summary>Feedback</summary>Not on that fact alone. Confirm acceptance criteria, automated checks, human review, and the risk-specific controls required by policy.</details></div>
+

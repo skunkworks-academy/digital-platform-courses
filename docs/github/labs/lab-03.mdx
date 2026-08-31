@@ -1,0 +1,21 @@
+---
+title: Lab 3 — Secure CI and Release
+description: Automate validation and produce a controlled release.
+---
+
+# Lab 3 — Secure CI and Release
+
+**Time:** 60 minutes
+
+Add a GitHub Actions workflow that runs on pull requests and pushes to `main`, uses read-only content permission, installs from a lockfile, validates the project, and has a timeout. Open a PR that intentionally fails one check. Diagnose the earliest causal error, fix it, and retain both run links or redacted summaries.
+
+Review action provenance and permissions. Explain how the workflow treats forked or otherwise untrusted contributions. Enable available dependency and secret protections, or record a substitute control and owner.
+
+Create a `v1.0.0` tag and GitHub release with user-facing change notes, known limitations, validation status, and rollback instruction.
+
+<div className="evidence"><strong>Evidence:</strong> workflow file, failed/passing diagnosis, permission rationale, security-control checklist, tag, release notes, and rollback statement.</div>
+
+## Safety gate
+
+The lab is unsuccessful if a live secret appears in source, logs, artifacts, evidence, or release assets. Revoke any exposed credential immediately.
+

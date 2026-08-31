@@ -1,0 +1,28 @@
+---
+title: 3 — Issues, Branches and Pull Requests
+description: Turn an idea into a reviewed, traceable change.
+---
+
+# Issues, Branches and Pull Requests
+
+**Outcome:** Deliver a focused change from acceptance criteria to merged pull request while preserving review evidence.
+
+Start with an issue that describes the user or operational need, scope, constraints, acceptance criteria, and verification method. A branch isolates the implementation. Make small coherent commits: each should build toward one purpose and explain why. Open a draft pull request early when feedback will reduce rework.
+
+A useful pull request contains context, linked issue, change summary, validation evidence, risk, rollback approach, and screenshots only when visual behaviour changed. The author self-reviews before requesting review. The reviewer examines correctness, tests, security, maintainability, accessibility, operations, and alignment with acceptance criteria—not just style.
+
+Treat review comments as a technical conversation:
+
+1. Clarify the risk or expected behaviour.
+2. Change the code or explain the trade-off with evidence.
+3. Add or update a test that would detect regression.
+4. Ask the reviewer to confirm; resolve only after the concern is addressed.
+
+When branches conflict, understand both intended changes. Update your branch, resolve locally, run the full relevant validation, and re-review the resolution. Never choose “ours” or “theirs” blindly.
+
+<div className="checkpoint"><strong>Check:</strong> A PR is green but does not satisfy one acceptance criterion. Is it ready? <details><summary>Feedback</summary>No. Automated checks are evidence, not the whole acceptance decision. Update the implementation or explicitly renegotiate the criterion.</details></div>
+
+## Apply
+
+Use an issue template, create a branch linked to an issue, commit a change, open a PR, request review, respond to feedback, and merge using the repository’s chosen history strategy.
+

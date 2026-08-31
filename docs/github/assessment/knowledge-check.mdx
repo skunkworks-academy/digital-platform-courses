@@ -1,0 +1,27 @@
+---
+title: GitHub Knowledge Check
+description: Twelve-question conceptual assessment with feedback.
+---
+
+# GitHub Knowledge Check
+
+Record answers before expanding feedback. Score one point each; **10/12** meets the 80% threshold.
+
+1. Which area contains content proposed for the next commit: working tree, index, remote, or release?
+2. What does `git fetch` change?
+3. Why pair CODEOWNERS with a ruleset?
+4. Name two qualities of a testable acceptance criterion.
+5. A status check passes but the user need is unmet. May the PR be accepted solely because it is green?
+6. What is the first response to a committed live token?
+7. Why is `pull_request_target` dangerous with an untrusted checkout?
+8. What does `permissions: contents: read` accomplish in an Actions workflow?
+9. Which is safer for reproducible Node CI: `npm install` without a lockfile or `npm ci` with one?
+10. What is the difference between a tag and a GitHub release?
+11. Name one flow and one stability measure.
+12. Who owns the final decision when an AI tool recommends a change?
+
+## Answer key and feedback
+
+1. Index/staging area. 2. Remote-tracking knowledge, without automatically changing the working branch. 3. Ownership routes review; enforcement requires protection. 4. Observable and unambiguous (also bounded/relevant). 5. No. 6. Revoke/rotate, then investigate and remediate history/prevention. 7. It can expose privileged context to attacker-controlled code. 8. Limits the workflow token to read repository contents. 9. `npm ci` with a committed lockfile. 10. A tag names a Git object; a release adds notes/assets and publishing state. 11. Example: lead time and change-failure rate. 12. The authorized human/team accountable for the change.
+`r`n
+

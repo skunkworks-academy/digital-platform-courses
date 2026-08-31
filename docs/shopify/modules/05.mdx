@@ -1,0 +1,19 @@
+---
+title: 5 — Checkout, Payments, Tax and Delivery
+description: Prepare transaction and fulfilment controls without using live customer data.
+---
+
+# Checkout, Payments, Tax and Delivery
+
+**Outcome:** Design and safely test a transparent checkout-to-delivery flow, identifying where specialist advice is required.
+
+Payment provider availability, fees, settlement timing, reserves, supported currencies, disputes, fraud tools, and eligibility vary. Use Shopify’s test mode or a supported test gateway for exercises. Never use a real card. Restrict refund and payment permissions, reconcile payouts, and define dispute evidence ownership.
+
+Tax obligations depend on nexus/place of supply, registration, product classification, customer type, prices, shipping, discounts, and jurisdiction. Platform calculation does not replace registration, filing, invoicing, or advice. Document who approves registrations, rates, exemptions, and filings.
+
+Shipping design connects locations, inventory, packaging, weights/dimensions, zones, rates, free-shipping thresholds, carrier services, handling time, fulfilment, tracking, and exceptions. Promise dates conservatively and state exclusions. Test representative addresses, carts, weights, markets, discounts, pickup/local delivery, and unavailable destinations.
+
+Publish accurate contact, shipping, return/refund, privacy, terms, subscription and cancellation information as applicable. Run end-to-end test orders: success, decline, discount, tax, shipping, cancellation, partial/full refund, fulfilment, tracking, notification, and inventory adjustment.
+
+<div className="checkpoint"><strong>Check:</strong> Tax appears at checkout in your test. Does that prove legal compliance? <details><summary>Feedback</summary>No. Confirm registration, classification, collection, invoices, reporting and filing with qualified local advice.</details></div>
+

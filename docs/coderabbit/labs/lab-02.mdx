@@ -1,0 +1,15 @@
+---
+title: Lab 2 — Configure a Risk-Aware Review
+description: Write and validate path-specific review policy.
+---
+
+# Lab 2 — Configure a Risk-Aware Review
+
+**Time:** 40 minutes
+
+Add a schema-referenced `.coderabbit.yaml`. Select a review profile, disable draft review, and add three path instructions: authentication, database migrations, and documentation. For each, state a concrete risk and expected evidence. Exclude one genuinely generated path and document where its upstream source is assured.
+
+Open a test PR containing a harmless known trigger, such as a state-changing handler without an authorization check in sample code. Confirm the review runs and inspect whether the instruction produces relevant feedback. Tune one setting based on the result.
+
+<div className="evidence"><strong>Evidence:</strong> valid configuration, review result, before/after tuning diff, and rationale.</div>
+

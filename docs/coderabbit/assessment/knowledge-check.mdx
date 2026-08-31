@@ -1,0 +1,25 @@
+---
+title: CodeRabbit Knowledge Check
+description: Conceptual check for safe AI-assisted review.
+---
+
+# CodeRabbit Knowledge Check
+
+Score one point each; **8/10** passes.
+
+1. Does “no issues found” prove a pull request is correct?
+2. Name two decisions required before connecting a private repository.
+3. Where is repository-level version-controlled configuration stored?
+4. What makes a path instruction actionable?
+5. Which should usually enforce formatting: AI review or a deterministic formatter/linter?
+6. Name the five triage validity categories used in this course.
+7. What evidence best proves a bug fix?
+8. Who may accept or override review risk?
+9. Why is comment count a poor primary success metric?
+10. What is required after a material vendor or data-scope change?
+
+## Answer key
+
+1. No. 2. Examples: data approval, permissions, retention, owner, repository scope. 3. `.coderabbit.yaml` in the repository root. 4. It names a concrete risk/expected behaviour and evidence for a defined path. 5. Deterministic tooling. 6. Confirmed, plausible/unconfirmed, false positive, duplicate, out of scope. 7. A reproducing/regression test plus passing relevant validation. 8. The authorized accountable human under policy. 9. It measures activity rather than correctness, value, or noise. 10. Reassess access/privacy/risk, revalidate configuration, and record approval.
+`r`n
+

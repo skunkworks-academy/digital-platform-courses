@@ -1,0 +1,25 @@
+---
+title: 6 — Measurement, Tuning and Governance
+description: Measure helpfulness, risk and review outcomes.
+---
+
+# Measurement, Tuning and Governance
+
+**Outcome:** Evaluate review-system performance and propose a controlled configuration improvement.
+
+Measure outcomes, not comment volume. A high count can mean excellent detection or distracting noise. Sample metrics:
+
+- confirmed finding rate and false-positive rate by severity/path;
+- median time from comment to verified resolution;
+- escaped defects linked to reviewed changes;
+- repeated finding rate after instructions or tests are added;
+- reviewer/author usefulness rating;
+- sensitive-output, access, or policy incidents;
+- review coverage and service availability.
+
+Sample findings monthly or per release. Calibrate reviewers on the same examples. Identify paths with noisy or missed feedback, then change one configuration element and compare a defined period. Preserve configuration diffs and decision rationale.
+
+Review access, vendor changes, retention, model behaviour, and human override records periodically. Revalidate after new languages, architectures, sensitive data, or compliance obligations enter scope.
+
+<div className="checkpoint"><strong>Check:</strong> What should you do when false positives cluster in generated files? <details><summary>Feedback</summary>Exclude or narrow those paths if the generated output is assured elsewhere, and retain review on the generator/source and security-relevant output.</details></div>
+

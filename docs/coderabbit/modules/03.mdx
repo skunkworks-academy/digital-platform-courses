@@ -1,0 +1,33 @@
+---
+title: 3 — Configuration as Review Policy
+description: Turn engineering standards into clear, testable CodeRabbit configuration.
+---
+
+# Configuration as Review Policy
+
+**Outcome:** Create a valid `.coderabbit.yaml` that targets relevant changes and produces actionable feedback.
+
+Repository configuration is version-controlled review policy. CodeRabbit’s current reference describes language, tone, review profile, summaries, automatic-review controls, tools, path instructions, and other features. Defaults and schema evolve: validate every property against the current official schema.
+
+```yaml
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: en-ZA
+reviews:
+  profile: assertive
+  high_level_summary: true
+  auto_review:
+    enabled: true
+    drafts: false
+  path_instructions:
+    - path: "src/auth/**"
+      instructions: >-
+        Check authorization on every state-changing operation. Flag secrets,
+        insecure defaults, missing negative tests, and unlogged privilege changes.
+```
+
+Instructions should state risk, expected behaviour, and evidence—not vague requests like “review carefully.” Keep style enforcement in deterministic linters. Exclude generated/vendor files when their comments are noise, but ensure the generator or upstream dependency is reviewed elsewhere.
+
+Configuration precedence matters. Current documentation describes global overrides, repository files, central configuration, repository settings, organization settings, and defaults. Record where authoritative policy lives and test one known-trigger change after edits.
+
+<div className="checkpoint"><strong>Check:</strong> Why should SQL path instructions mention destructive operations explicitly? <details><summary>Feedback</summary>Specific risk conditions are more testable and consistent than a general request for a thorough review.</details></div>
+

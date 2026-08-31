@@ -1,0 +1,32 @@
+---
+title: 1 — Git and GitHub Mental Model
+description: Understand local history, remote collaboration, and repository state.
+---
+
+# Git and GitHub Mental Model
+
+**Outcome:** Given a small repository, distinguish local files, staged changes, commits, branches, and remote-tracking references, then choose a safe next action.
+
+Git is a distributed version-control system. A Git repository contains a graph of commits; each commit records a snapshot, parent relationship, author information, and message. GitHub hosts repositories and adds identity, permissions, issues, pull requests, automation, releases, and security services.
+
+Your **working tree** is the checked-out set of files. The **index** (staging area) is the proposed content for the next commit. `HEAD` identifies the checked-out commit or branch. A branch is a movable name pointing to a commit. `origin` is a conventional remote name, not a special server. `fetch` updates knowledge of a remote; `pull` fetches and then integrates; `push` asks the remote to update a reference.
+
+```bash
+git status
+git diff
+git diff --staged
+git log --oneline --decorate --graph --all
+```
+
+Before any destructive recovery, answer: Which state contains the work? Is it committed? Has it been shared? Can the operation be reversed? Prefer a new commit that restores correct state when others may already have based work on the history.
+
+## Worked decision
+
+A file is modified but not staged. `git diff` shows the change and `git diff --staged` is empty. The safest next action is to review the working-tree diff, stage only intended hunks, and commit with a meaningful message—not to push, because no commit yet contains the change.
+
+<div className="checkpoint"><strong>Check:</strong> Why can another collaborator not see your staged change? <details><summary>Feedback</summary>Staging and commits are local. The change must be committed and the branch pushed to a shared remote before another collaborator can fetch it.</details></div>
+
+## Apply
+
+Create a repository, edit `README.md`, inspect all three states, commit, create a branch, and draw the resulting commit graph. Retain the graph as lab evidence.
+
