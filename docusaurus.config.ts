@@ -4,7 +4,7 @@ import type {Options as PresetOptions, ThemeConfig} from '@docusaurus/preset-cla
 const config: Config = {
   title: 'Skunkworks Academy | Digital Platforms',
   tagline: 'Job-ready GitHub, CodeRabbit, and Shopify skills',
-  favicon: 'img/favicon.svg',
+  favicon: 'images/favicon-search.png',
   url: 'https://skunkworks-academy.github.io',
   baseUrl: '/digital-platform-courses/',
   organizationName: 'skunkworks-academy',
