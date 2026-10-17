@@ -1,0 +1,46 @@
+---
+title: "6 — Deployment, monitoring and recovery"
+description: "Foundational cloud computing applied lesson."
+---
+
+# Module 6: Deployment, monitoring and recovery
+
+**Duration:** 45–70 minutes. **Outcome:** make and justify a safe cloud design or operational decision.
+
+## Understand the concepts
+
+A deployment lifecycle covers source, build or configuration, controlled release, validation, rollback and ongoing ownership. Monitor availability, response errors, latency, usage and spend; metrics and alerts need a named responder and useful thresholds. Define recovery time objective (RTO) and recovery point objective (RPO) separately. RTO targets maximum time to recover, while RPO targets acceptable data loss. Run a harmless simulated outage test and confirm recovery dependencies before declaring readiness.
+
+## Worked scenario
+
+A fictional service wants recovery within four hours and at most one hour of data loss. Record RTO=4h and RPO=1h; then evaluate whether daily backup alone can satisfy the RPO.
+
+## Guided practical
+
+1. Create a deployment runbook: prerequisites, approvals, health checks, rollback, backup test, incident contact and post-release follow-up.
+2. Draw or tabulate the intended resource, people and trust boundaries.
+3. Identify at least one measurable success test, one failure/denial test and their expected outcomes.
+4. Record your test result or fully specified simulation, then explain a corrective action if it fails.
+5. Present a 100-word recommendation including costs, risk and responsibility.
+
+## Implementation caution
+
+Cloud replication without a tested restore strategy does not satisfy a data recovery objective.
+
+## Check understanding
+
+- Which concern belongs to the cloud provider, and which remains the customer's responsibility here?
+- How could you verify the result without incurring a bill or exposing private information?
+
+<details>
+  <summary>Review the expected response</summary>
+
+Credit a response that matches responsibilities to service models, states explicit cost/security assumptions and gives an independently reproducible test. A vendor promise or dashboard image alone does not prove operational readiness.
+
+</details>
+
+## Evidence record
+
+- [ ] Decision/architecture artefact and assumptions.
+- [ ] Normal and failure test with observed or simulated outcome.
+- [ ] Risks, verification method and next owner.

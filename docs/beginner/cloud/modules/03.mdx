@@ -1,0 +1,46 @@
+---
+title: "3 — Cloud storage and basic data protection"
+description: "Foundational cloud computing applied lesson."
+---
+
+# Module 3: Cloud storage and basic data protection
+
+**Duration:** 45–70 minutes. **Outcome:** make and justify a safe cloud design or operational decision.
+
+## Understand the concepts
+
+Object storage holds blobs and metadata; block storage serves raw volumes and file storage exposes shared filesystem semantics. Storage classes differ by access frequency, recovery time and durability design. Backups, snapshots, versioning, object locks and retention policies solve different problems. Encryption in transit and at rest protect specific threats but do not replace correct identity permissions. Public object access can leak information even when the provider itself is secure.
+
+## Worked scenario
+
+A team needs to store public product images and private invoice PDFs. Propose two isolated storage locations with named owners, minimal read access and explicit retention.
+
+## Guided practical
+
+1. Design a storage table listing data classification, access control, region, retention, restoration test and estimated lifecycle cost.
+2. Draw or tabulate the intended resource, people and trust boundaries.
+3. Identify at least one measurable success test, one failure/denial test and their expected outcomes.
+4. Record your test result or fully specified simulation, then explain a corrective action if it fails.
+5. Present a 100-word recommendation including costs, risk and responsibility.
+
+## Implementation caution
+
+Do not upload real customer data to trial resources or publish confidential objects to a public bucket as a convenience.
+
+## Check understanding
+
+- Which concern belongs to the cloud provider, and which remains the customer's responsibility here?
+- How could you verify the result without incurring a bill or exposing private information?
+
+<details>
+  <summary>Review the expected response</summary>
+
+Credit a response that matches responsibilities to service models, states explicit cost/security assumptions and gives an independently reproducible test. A vendor promise or dashboard image alone does not prove operational readiness.
+
+</details>
+
+## Evidence record
+
+- [ ] Decision/architecture artefact and assumptions.
+- [ ] Normal and failure test with observed or simulated outcome.
+- [ ] Risks, verification method and next owner.

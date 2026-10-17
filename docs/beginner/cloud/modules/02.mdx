@@ -1,0 +1,46 @@
+---
+title: "2 — Compute, regions and availability"
+description: "Foundational cloud computing applied lesson."
+---
+
+# Module 2: Compute, regions and availability
+
+**Duration:** 45–70 minutes. **Outcome:** make and justify a safe cloud design or operational decision.
+
+## Understand the concepts
+
+Virtual machines run operating systems on shared physical hosts; containers package applications but often share the host operating-system kernel. Serverless functions run code triggered by events and scale differently. Regions represent geographic deployment locations, and availability zones provide separate infrastructure within a region where available. Redundancy and backups address different failures; replicated corruption remains corruption. A service-level agreement describes provider commitments, not a guarantee your application architecture will never fail.
+
+## Worked scenario
+
+A booking site must remain usable during one server failure. Sketch a managed app, health checks, two instances and a data store; explain which components still represent single points of failure.
+
+## Guided practical
+
+1. Draw a simple architecture for a small public website and annotate failure domains, region, service dependencies, assumptions and how to observe health.
+2. Draw or tabulate the intended resource, people and trust boundaries.
+3. Identify at least one measurable success test, one failure/denial test and their expected outcomes.
+4. Record your test result or fully specified simulation, then explain a corrective action if it fails.
+5. Present a 100-word recommendation including costs, risk and responsibility.
+
+## Implementation caution
+
+Never treat two copies on one host or one region as the same protection as a properly designed recovery plan.
+
+## Check understanding
+
+- Which concern belongs to the cloud provider, and which remains the customer's responsibility here?
+- How could you verify the result without incurring a bill or exposing private information?
+
+<details>
+  <summary>Review the expected response</summary>
+
+Credit a response that matches responsibilities to service models, states explicit cost/security assumptions and gives an independently reproducible test. A vendor promise or dashboard image alone does not prove operational readiness.
+
+</details>
+
+## Evidence record
+
+- [ ] Decision/architecture artefact and assumptions.
+- [ ] Normal and failure test with observed or simulated outcome.
+- [ ] Risks, verification method and next owner.

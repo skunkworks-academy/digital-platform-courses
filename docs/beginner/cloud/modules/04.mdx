@@ -1,0 +1,46 @@
+---
+title: "4 — Identity, networks and shared responsibility"
+description: "Foundational cloud computing applied lesson."
+---
+
+# Module 4: Identity, networks and shared responsibility
+
+**Duration:** 45–70 minutes. **Outcome:** make and justify a safe cloud design or operational decision.
+
+## Understand the concepts
+
+Cloud resources need named identities, multifactor authentication, role-based permissions and restricted administrative access. The provider normally secures underlying facilities and some managed components; the customer remains responsible for data classification, access rights and configurations as defined by the service model. Virtual networks, subnets, security groups and firewalls define communication boundaries. A public IP is not itself an authorization decision; exposing an admin port broadly increases risk.
+
+## Worked scenario
+
+A junior engineer needs to read storage usage and monitor uptime. Assign only read permissions required for those tasks rather than an owner/admin role.
+
+## Guided practical
+
+1. Build a trust boundary diagram showing an internet client, public frontend, private data store and privileged administrator. Explain which actions are denied.
+2. Draw or tabulate the intended resource, people and trust boundaries.
+3. Identify at least one measurable success test, one failure/denial test and their expected outcomes.
+4. Record your test result or fully specified simulation, then explain a corrective action if it fails.
+5. Present a 100-word recommendation including costs, risk and responsibility.
+
+## Implementation caution
+
+Never paste permanent cloud access keys in source code, browser pages or public screenshots. Use provider-managed identity or short-lived credentials where possible.
+
+## Check understanding
+
+- Which concern belongs to the cloud provider, and which remains the customer's responsibility here?
+- How could you verify the result without incurring a bill or exposing private information?
+
+<details>
+  <summary>Review the expected response</summary>
+
+Credit a response that matches responsibilities to service models, states explicit cost/security assumptions and gives an independently reproducible test. A vendor promise or dashboard image alone does not prove operational readiness.
+
+</details>
+
+## Evidence record
+
+- [ ] Decision/architecture artefact and assumptions.
+- [ ] Normal and failure test with observed or simulated outcome.
+- [ ] Risks, verification method and next owner.

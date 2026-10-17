@@ -1,0 +1,46 @@
+---
+title: "5 — Cloud pricing, budgets and operational governance"
+description: "Foundational cloud computing applied lesson."
+---
+
+# Module 5: Cloud pricing, budgets and operational governance
+
+**Duration:** 45–70 minutes. **Outcome:** make and justify a safe cloud design or operational decision.
+
+## Understand the concepts
+
+Cloud cost often combines compute time, provisioned resources, storage capacity, network egress, managed databases, support and licensing. A free tier can have location, quantity and time limits. Estimate costs by usage assumptions and set budgets, labels/tags and alerts before deployment. A cost estimate is not a quote unless confirmed by the provider's region and service terms. Rightsizing, scheduled shutdown and lifecycle rules can reduce waste, but must not undermine recovery obligations.
+
+## Worked scenario
+
+A fictional test environment runs a VM for 100 hours rather than 730 hours. Compare scenarios using an assumed hourly price of $0.05 plus fixed $8 storage: $13 vs $44.50, before taxes and transfer charges.
+
+## Guided practical
+
+1. Prepare a monthly cost worksheet with unit, amount, quantity, region assumption and sensitivity for a 2x traffic spike; include a stop-spend trigger.
+2. Draw or tabulate the intended resource, people and trust boundaries.
+3. Identify at least one measurable success test, one failure/denial test and their expected outcomes.
+4. Record your test result or fully specified simulation, then explain a corrective action if it fails.
+5. Present a 100-word recommendation including costs, risk and responsibility.
+
+## Implementation caution
+
+Never enable a paid service during a course unless you understand the billing owner, limits, cancellation and alerts.
+
+## Check understanding
+
+- Which concern belongs to the cloud provider, and which remains the customer's responsibility here?
+- How could you verify the result without incurring a bill or exposing private information?
+
+<details>
+  <summary>Review the expected response</summary>
+
+Credit a response that matches responsibilities to service models, states explicit cost/security assumptions and gives an independently reproducible test. A vendor promise or dashboard image alone does not prove operational readiness.
+
+</details>
+
+## Evidence record
+
+- [ ] Decision/architecture artefact and assumptions.
+- [ ] Normal and failure test with observed or simulated outcome.
+- [ ] Risks, verification method and next owner.
