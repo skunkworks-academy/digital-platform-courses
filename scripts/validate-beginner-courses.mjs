@@ -44,7 +44,7 @@ const cap=read(base+'/assessment/capstone.mdx');assert.ok(cap.includes('70')&&ca
 }
 const gallery=read('docs/beginner/index.mdx');
 assert.ok(studio.includes('aria-pressed')&&studio.includes('role="status"'),'Accessible practice interactions missing');
-assert.ok(wrapper.includes('<VisualLearningStudio docId={id}/>'),'Missing global document studio integration');
+assert.ok(wrapper.includes('VisualLearningStudio key=')&&wrapper.includes('PageWorkbook key='),'Missing per-page interactive studio and workbook');
 assert.ok(config.includes('assets/skunkworks-ui.js')&&config.includes('assets/skunkworks-footer.js'),'Missing shared Academy header/footer');
 assert.ok(data.includes('studioCourses')&&data.includes('scenes'),'Missing topic-specific learning content');
 for(const [slug] of tracks){
