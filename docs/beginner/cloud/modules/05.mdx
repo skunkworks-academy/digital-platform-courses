@@ -40,3 +40,28 @@ What are the most relevant ownership, privacy and cost controls in the scenario?
 A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
 
 </details>
+
+## Extended learning: select compute, storage and database services
+
+Cloud **compute** runs applications and jobs; **object storage** often stores files and media; **block storage** can support mounted volumes; a **database service** organises structured records and queries. These have different access, durability, performance and billing characteristics. Replication may preserve availability but is not always a substitute for recoverable backup versions.
+
+### Worked example: a course content service
+
+A fictional platform holds public PDF handouts and private learner progress.
+
+1. Put public learning files in a suitably restricted or published content location, separate from private records.
+2. Store learner identities and completion records in an authenticated application database.
+3. Use a managed runtime or computing service to enforce access controls.
+4. Define backup, restore and retention requirements for each data category.
+5. Estimate storage growth and the network traffic used to deliver downloads.
+6. Test a fictional restore process without contacting a live provider.
+
+| Requirement | Likely service category |
+|---|---|
+| Host dynamic application logic | Compute or managed application runtime |
+| Deliver public course PDFs | Object storage or appropriate content service |
+| Track enrolments and grades | Database behind authenticated access |
+| Restore deleted content | Versioning plus tested independent recovery |
+| Separate private information | Identity-aware access controls and encryption |
+
+**Practice:** Draw a simple data flow showing the browser, application, object storage and database. Mark where authentication is required and how a backup would be restored.

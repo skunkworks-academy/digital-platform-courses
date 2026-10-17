@@ -40,3 +40,27 @@ What are the most relevant ownership, privacy and cost controls in the scenario?
 A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
 
 </details>
+
+## Extended learning: availability, zones and network design
+
+A **region** is a geographic cloud service location; an availability zone is often a separate fault domain within a region. Not all products have the same regional or zone coverage. Latency, data residency, service support and recovery objectives influence placement. A second zone may reduce failure exposure but does not replace backups or complete disaster-recovery planning.
+
+### Worked example: service interruption
+
+A fictional course portal needs to tolerate failure of a single hosting component.
+
+1. Identify the learner-facing web endpoint, application runtime, database and storage.
+2. Label dependencies such as DNS, identity service and outbound connectivity.
+3. Decide which components could use redundant instances or suitable zones.
+4. State a recovery time objective (RTO): how long the service may be unavailable.
+5. State a recovery point objective (RPO): how much recent data loss is acceptable.
+6. Create a tabletop plan to test a simulated application or zone failure.
+
+| Problem | Protection to assess |
+|---|---|
+| Single server fails | Redundant instances or managed availability |
+| Accidentally deleted data | Versioned backup and tested restore |
+| Region outage | Approved cross-region recovery strategy |
+| Unexpected high latency | Placement, routing and workload measurements |
+
+**Practice:** Draw a network diagram with learner browser, DNS, firewall or access controls, web application and protected data store. Mark which interactions should be publicly reachable and which must remain restricted. Do not attempt real intrusion testing.
