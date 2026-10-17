@@ -5,9 +5,19 @@ const root=process.cwd(),has=p=>existsSync(join(root,p)),read=p=>readFileSync(jo
 const tracks=[['ai','SKW-BEG-AI-101'],['cyber','SKW-BEG-CYB-101'],['it-support','SKW-BEG-IT-101'],['microsoft-productivity','SKW-BEG-M365-101'],['cloud','SKW-BEG-CLD-101']];
 const home=read('docs/index.mdx'),sidebar=read('sidebars.ts'),diagnostics=read('src/components/SkillsDiagnostic/index.tsx'),mastery=read('src/data/beginnerQuestionBank.ts');
 assert.ok(has('src/components/BeginnerMasteryQuiz/index.tsx'),'Missing interactive knowledge check component');
+const studio=read('src/components/VisualLearningStudio/index.tsx'),wrapper=read('src/theme/DocItem/Content/index.tsx'),data=read('src/data/learningStudio.ts'),config=read('docusaurus.config.ts');
+assert.ok(studio.includes('aria-pressed') && studio.includes('role="status"'),'Studio interactions must be accessible');
+assert.ok(studio.includes('useBaseUrl'),'Course illustrations must use deployed base path');
+assert.ok(wrapper.includes('VisualLearningStudio docId={id}'),'All beginner docs must receive visual studio');
+for(const file of ['skunkworks-ui.js','skunkworks-footer.js'])assert.ok(config.includes('https://www.skunkworksacademy.com/assets/'+file),'Missing Academy shared chrome '+file);
+
 for(const [slug,code] of tracks){
 const base='docs/beginner/'+slug,doc=read(base+'/index.mdx'),quiz=read(base+'/assessment/knowledge-check.mdx');
 assert.ok(doc.includes(code),'Incorrect code '+slug);
+assert.ok(data.includes('"'+slug+'"'),'Missing course interactive data '+slug);
+const illustration='static/img/learning-studio/'+slug+'.svg';
+assert.ok(has(illustration),'Missing illustration '+illustration);
+assert.ok(read(illustration).includes('<desc'),'Illustration needs accessible description '+slug);
 assert.ok(home.includes('./beginner/'+slug+'/'),'Missing main catalogue '+slug);
 assert.ok(sidebar.includes("courseItems('beginner/"+slug+"')")||sidebar.includes("items('beginner/"+slug+"')"),'Missing sidebar '+slug);
 assert.ok(diagnostics.includes('"beginner-'+slug+'"'),'Missing diagnostic '+slug);
