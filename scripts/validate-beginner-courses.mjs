@@ -29,7 +29,13 @@ assert.ok(mastery.includes('"beginner-'+slug+'"'),'Missing scored quiz bank '+sl
 assert.ok(doc.includes('<SkillsDiagnostic course="beginner-'+slug+'" />'),'Missing before/after '+slug);
 assert.ok(doc.includes('<CourseProgress course="beginner-'+slug+'" />'),'Missing progress tracking '+slug);
 const required=['course-guide.mdx','references.mdx','assessment/knowledge-check.mdx','assessment/capstone.mdx','assessment/rubric.mdx'];
-for(let n=1;n<=6;n++)required.push('modules/'+String(n).padStart(2,'0')+'.mdx');
+for(let n=1;n<=6;n++){
+ const modulePath=base+'/modules/'+String(n).padStart(2,'0')+'.mdx';
+ const content=read(modulePath);
+ assert.ok(content.includes('## Extended learning:'),'Missing expanded deep dive '+modulePath);
+ assert.ok(content.split(/\s+/).length>=570,'Module lacks sufficient explanatory depth '+modulePath);
+ required.push('modules/'+String(n).padStart(2,'0')+'.mdx');
+}
 for(let n=1;n<=3;n++)required.push('labs/lab-'+String(n).padStart(2,'0')+'.mdx');
 for(const file of required){const path=base+'/'+file;assert.ok(has(path),'Missing '+path);assert.ok(read(path).length>250,'Incomplete '+path)}
 assert.ok(quiz.includes('<BeginnerMasteryQuiz course="beginner-'+slug+'" />'),'Missing mounted interactive knowledge check '+slug);
