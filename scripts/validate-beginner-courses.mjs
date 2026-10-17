@@ -8,7 +8,10 @@ assert.ok(has('src/components/BeginnerMasteryQuiz/index.tsx'),'Missing interacti
 const studio=read('src/components/VisualLearningStudio/index.tsx'),wrapper=read('src/theme/DocItem/Content/index.tsx'),data=read('src/data/learningStudio.ts'),config=read('docusaurus.config.ts');
 assert.ok(studio.includes('aria-pressed') && studio.includes('role="status"'),'Studio interactions must be accessible');
 assert.ok(studio.includes('useBaseUrl'),'Course illustrations must use deployed base path');
-assert.ok(wrapper.includes('VisualLearningStudio docId={id}'),'All beginner docs must receive visual studio');
+assert.ok(wrapper.includes('VisualLearningStudio key=') && wrapper.includes('PageWorkbook key='),'Every learner page must remount an interactive visual studio and workbook');
+assert.ok(has('src/components/PageWorkbook/index.tsx'),'Missing page workbook');
+const workbook=read('src/components/PageWorkbook/index.tsx');
+assert.ok(workbook.includes('navigator.clipboard')&&workbook.includes('localStorage')&&workbook.includes('Confirm clear saved work'),'Missing functional copy, persistence and safe reset controls');
 for(const file of ['skunkworks-ui.js','skunkworks-footer.js'])assert.ok(config.includes('https://www.skunkworksacademy.com/assets/'+file),'Missing Academy shared chrome '+file);
 
 for(const [slug,code] of tracks){
