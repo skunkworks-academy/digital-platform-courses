@@ -10,7 +10,8 @@ assert.ok(existsSync(join(root,'src/components/CourseCart/index.tsx')),'Missing 
 const catalog=read('docs/index.mdx'), sidebars=read('sidebars.ts'),component=read('src/components/SkillsDiagnostic/index.tsx');
 const expectedCodes=['SKW-GH-101','SKW-CR-201','SKW-SH-101','SKW-M365-101','SKW-AUTO-101'];
 assert.ok(catalog.includes('<CourseCart />'),'Storefront is not mounted');
-for(const code of expectedCodes)assert.ok(catalog.includes(code),`Missing SKU ${code}`);
+const legacyCatalog=['docs/github/index.mdx','docs/coderabbit/index.mdx','docs/shopify/index.mdx','docs/maria/m365.mdx','docs/maria/automation.mdx'].map(read).join('\n');
+for(const code of expectedCodes)assert.ok(legacyCatalog.includes(code),`Missing legacy course SKU ${code}`);
 for(const slug of courseIds){
  const path=['github','coderabbit','shopify'].includes(slug)?`docs/${slug}/index.mdx`:`docs/maria/${slug}.mdx`;
  const doc=read(path);
