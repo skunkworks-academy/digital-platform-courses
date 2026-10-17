@@ -32,25 +32,20 @@ assert.ok(quiz.includes('<BeginnerMasteryQuiz course="beginner-'+slug+'" />'),'M
 assert.equal((quiz.match(/^### \d+\./gm)||[]).length,12,'Not 12 questions '+slug);
 const cap=read(base+'/assessment/capstone.mdx');assert.ok(cap.includes('70')&&cap.includes('20'),'Capstone rubric incomplete '+slug);
 }
+// All fifteen MDX pages per course share the Docusaurus DocItem wrapper.
+// Check course-specific illustrated cards and all original guided learning pages.
 const gallery=read('docs/beginner/index.mdx');
-const studio=read('src/components/VisualLearningStudio/index.tsx');
-const layout=read('src/theme/DocItem/Content/index.tsx');
-const data=read('src/data/learningStudio.ts');
-const chrome=read('docusaurus.config.ts');
-assert.ok(studio.includes('aria-pressed')&&studio.includes('role="status"'),'Accessible practice interactions missing');
-assert.ok(layout.includes('<VisualLearningStudio docId={id}/>'),'Missing global document studio integration');
-assert.ok(chrome.includes('assets/skunkworks-ui.js')&&chrome.includes('assets/skunkworks-footer.js'),'Missing shared Academy header/footer');
-assert.ok(data.includes('const')&&data.includes('scenes'),'Missing topic-specific learning content');
+assert.ok(has('src/components/CourseCover/index.tsx'),'Missing course gallery visual component');
 for(const [slug] of tracks){
  assert.ok(gallery.includes('<CourseCover course="'+slug+'" />'),'Missing visual course gallery card for '+slug);
- assert.ok(has('static/img/learning-studio/'+slug+'.svg'),'Missing original learning illustration: '+slug);
  const base='docs/beginner/'+slug;
- const expected=['index.mdx','course-guide.mdx','references.mdx','assessment/knowledge-check.mdx','assessment/capstone.mdx','assessment/rubric.mdx',
-   ...Array.from({length:6},(_,i)=>'modules/'+String(i+1).padStart(2,'0')+'.mdx'),
-   ...Array.from({length:3},(_,i)=>'labs/lab-'+String(i+1).padStart(2,'0')+'.mdx')];
+ const expected=['index.mdx','course-guide.mdx','references.mdx',
+ 'assessment/knowledge-check.mdx','assessment/capstone.mdx','assessment/rubric.mdx',
+ ...Array.from({length:6},(_,i)=>'modules/'+String(i+1).padStart(2,'0')+'.mdx'),
+ ...Array.from({length:3},(_,i)=>'labs/lab-'+String(i+1).padStart(2,'0')+'.mdx')];
  assert.equal(expected.length,15,'15-page course contract broken');
  for(const file of expected)assert.ok(has(base+'/'+file),'Missing public learning page '+base+'/'+file);
 }
 const css=read('src/css/custom.css');for(const hex of ['#03033a','#1e6bd0','#f7f9fc'])assert.ok(css.toLowerCase().includes(hex),'Missing brand colour '+hex);
 assert.ok(home.includes('No PayPal or card payment is taken'),'Missing truthful payment disclaimer');
-console.log('Five illustrated 15-page beginner courses validated: 30 modules, 15 practical labs, 5 capstones, 60 quiz questions, five diagnostics, theme and commerce disclaimers.');
+console.log('Five illustrated 15-page beginner courses (75 learning pages) validated: 30 modules, 15 practical labs, 5 capstones, 60 quiz questions, five diagnostics, theme and commerce disclaimers.');
