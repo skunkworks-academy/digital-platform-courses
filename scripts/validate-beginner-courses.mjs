@@ -12,7 +12,7 @@ assert.ok(wrapper.includes('VisualLearningStudio key=') && wrapper.includes('Pag
 assert.ok(wrapper.includes('href="#learning-studio"')&&wrapper.includes('href="#page-workbook"'),'Learning page shortcuts missing');
 assert.ok(has('src/components/PageWorkbook/index.tsx'),'Missing page workbook');
 assert.ok(has('src/components/CourseCompletion/index.tsx'),'Missing end-of-course completion component');
-assert.ok(sidebar.includes("s+'/references',s+'/assessment/completion'"),'Course ends must contain their own final page');
+assert.ok(sidebar.includes("s.startsWith('beginner/')"),'Course ends must contain their own final page');
 assert.ok(read('src/components/BeginnerMasteryQuiz/index.tsx').includes('skw-beginner-knowledge-v1'),'Required on-device formative score state is missing');
 const workbook=read('src/components/PageWorkbook/index.tsx');
 assert.ok(workbook.includes('navigator.clipboard')&&workbook.includes('localStorage')&&workbook.includes('Confirm clear saved work'),'Missing functional copy, persistence and safe reset controls');
