@@ -44,3 +44,27 @@ Full-credit responses state the intended security outcome, the least-privileged 
 - [ ] I completed the fictional or approved practical activity.
 - [ ] I tested a success case and a denied/failed case safely.
 - [ ] I saved an evidence note without personal data or credentials.
+
+## Extended learning: build reliable authentication and account recovery
+
+A **password** is something you know, a **security key or authenticator** is something you have, and a biometric can be used to unlock an approved device or authenticator. MFA combines independent factors. Passkeys based on modern FIDO standards bind authentication to the legitimate site, making them resistant to many credential phishing attacks. SMS one-time codes still provide some protection over a password alone, but are not phishing-resistant.
+
+### Worked example: protect three fictional staff roles
+
+| Role | Access requirement | Authentication and recovery |
+|---|---|---|
+| Cashier | Sales application only | Individual account, MFA and supervised recovery |
+| Manager | Reports and approvals | Individual stronger authentication, reviewed permissions |
+| Contractor | Time-limited support access | Expiring access, scoped permissions and recorded removal |
+
+1. Give each role its own identity; do not distribute a shared password.
+2. Record the minimum application actions required for the role.
+3. Select MFA suitable for the service and user; prefer passkeys/security keys where available.
+4. Design an offboarding step that disables access and revokes active sessions.
+5. Write a recovery procedure that prevents a help-desk impersonator from taking over an account.
+
+### Recognise the failure mode
+
+Repeated sign-in prompts that the user did not request may indicate an attacker has a password. The correct response is **deny the prompt, report it and follow the organisation's recovery process**. Never approve a push notification just to make it stop. Recovery codes are secrets: document their storage location, not their values, in a course portfolio.
+
+**Practice:** Simulate an account recovery phone call. Identify two identity-verification steps that do not ask a user to reveal a password or live one-time code.

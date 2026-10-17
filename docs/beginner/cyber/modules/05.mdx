@@ -44,3 +44,28 @@ Full-credit responses state the intended security outcome, the least-privileged 
 - [ ] I completed the fictional or approved practical activity.
 - [ ] I tested a success case and a denied/failed case safely.
 - [ ] I saved an evidence note without personal data or credentials.
+
+## Extended learning: distinguish safe connections from trusted services
+
+Home or office Wi-Fi security requires **an approved router configuration, strong administrative access, appropriate encryption and ongoing firmware updates**. WPA2-AES or WPA3 are common secure options where supported; open networks and obsolete encryption provide weaker protection. Guest networks reduce unnecessary device-to-device reachability, but a guest network alone is not proof of isolation.
+
+### Worked example: a small training centre
+
+The centre has staff laptops, learner Wi-Fi and a network printer.
+
+1. Draw a simple diagram: internet connection → router/firewall → separate staff and learner networks.
+2. Define which devices may use the printer and which must not access staff files.
+3. Protect router administration with a unique password and up-to-date configuration.
+4. Specify the expected outcome for a legitimate staff print job.
+5. Specify a **denied** learner-to-staff resource connection and a safe verification method.
+6. Document any settings requiring an authorised network administrator.
+
+### Compare three kinds of safety
+
+| Feature | Helps with | Does not prove |
+|---|---|---|
+| HTTPS | Encrypts transport to the connected website | The website or seller is honest |
+| Wi-Fi password | Restricts association to a wireless network | Every connected device is safe |
+| Firewall policy | Allows or blocks defined network traffic | An allowed application is harmless |
+
+**Practice:** Given a fictional public Wi-Fi login page requesting payment-card details, identify how you would independently confirm it is genuine before entering information. Never probe a real network you do not own or administer.

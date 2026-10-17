@@ -44,3 +44,26 @@ Full-credit responses state the intended security outcome, the least-privileged 
 - [ ] I completed the fictional or approved practical activity.
 - [ ] I tested a success case and a denied/failed case safely.
 - [ ] I saved an evidence note without personal data or credentials.
+
+## Extended learning: assess risks rather than memorise threats
+
+**Confidentiality** asks who may read data, **integrity** whether the data remains correct, and **availability** whether authorised users can access it when needed. A risk statement should identify the asset, threat event, weakness, impact and owner. For a fictional café, consider the booking laptop, business email and payment administration accounts.
+
+| Asset | Example threat | Vulnerability | Protective measure |
+|---|---|---|---|
+| Booking laptop | Lost or stolen device | No screen lock or encryption | Device lock, encryption and remote management |
+| Business mailbox | Account takeover | Reused password | Unique credentials and phishing-resistant MFA |
+| Booking records | Accidental deletion | No tested recovery | Versioned backup and restore verification |
+
+### Worked tabletop exercise
+
+1. Define the three assets and their operational importance.
+2. For each, explain **one realistic event** that would interrupt service or expose information.
+3. Estimate likelihood and impact as low, medium or high; state the assumptions behind each rating.
+4. Choose an affordable control, responsible owner and review date.
+5. Test a permitted success case and a blocked/failed case using a fictional setup.
+6. Record residual risk: a control reduces exposure but does not guarantee safety.
+
+**Example:** A shared mailbox may allow a legitimate cashier to read booking enquiries, but individual identities are still needed to establish who performed an action. Least privilege and activity records make investigation possible.
+
+**Knowledge transfer:** Why can a technically secure system still fail its availability objective? Describe a backup, support or continuity control that addresses the gap.
