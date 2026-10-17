@@ -1,5 +1,23 @@
 import React,{useEffect,useState} from 'react';
 const questions:Record<string,{prompt:string;options:[string,string,string,string];correct:number;reason:string}[]> = {
+github:[
+{prompt:'Where are changes prepared for the next Git commit?',options:['Remote branch','Staging index','Release asset','Issue label'],correct:1,reason:'The index stages the next commit snapshot.'},
+{prompt:'What enforces a protected branch review rule?',options:['A README file','A repository ruleset','A commit message','An issue comment'],correct:1,reason:'Rulesets can enforce approvals and status checks.'},
+{prompt:'What follows an exposed live token?',options:['Rotate or revoke it','Wait for a test','Move it to another file','Publish it'],correct:0,reason:'An exposed token must be treated as compromised.'},
+{prompt:'Why use npm ci with a lockfile?',options:['Reproducible dependency installation','To reset passwords','To delete branches','To enable customer checkout'],correct:0,reason:'It installs the locked dependency graph.'},
+{prompt:'Who owns the final decision on an AI code review?',options:['The AI alone','The responsible human reviewer','The public visitor','No one'],correct:1,reason:'A human reviewer is accountable for the change.'}],
+coderabbit:[
+{prompt:'How should an AI review suggestion be treated?',options:['Guaranteed correct','A finding requiring validation','An automatic merge','A payment receipt'],correct:1,reason:'Human reviewers must test and evaluate findings.'},
+{prompt:'Which source can carry prompt injection?',options:['Untrusted pull request content','Verified policy','A signed changelog','An approved rubric'],correct:0,reason:'Repository content may be controlled by contributors.'},
+{prompt:'What proves a defect is corrected?',options:['Comment closed','Reproduction and regression test passing','PR renamed','No code change'],correct:1,reason:'Tests and observed behavior demonstrate remediation.'},
+{prompt:'What is the right token scope?',options:['Organization admin for all work','Least privilege for the integration','Public read/write token','Unlimited access'],correct:1,reason:'Narrow permissions reduce the impact of a breach.'},
+{prompt:'Which metric helps judge AI review quality?',options:['Validated defect rate and false positives','Number of comments only','Colors in UI','PR title length'],correct:0,reason:'Review utility depends on correct relevant findings.'}],
+shopify:[
+{prompt:'What should be validated before a product launch?',options:['Title only','Price, inventory, variants, shipping and policies','Theme accent only','Owner avatar'],correct:1,reason:'Commercial readiness involves the full checkout/fulfilment flow.'},
+{prompt:'What is a sound store staff-access control?',options:['Shared owner password','Minimal assigned staff permission','Public API credentials','Disabled MFA'],correct:1,reason:'Separate duties and require only necessary privileges.'},
+{prompt:'How should a refund request be handled?',options:['Delete the order','Check payment, order state and published policy','Promise any requested outcome','Disable audit'],correct:1,reason:'Order evidence and policies govern the process.'},
+{prompt:'Why run a test checkout?',options:['To verify calculations, payment, shipping and notices','To bypass tax','To access private admin routes','To alter products anonymously'],correct:0,reason:'End-to-end testing proves the buying path.'},
+{prompt:'What is safer customer analytics practice?',options:['Unlimited personal data capture','Purpose-limited consent-aware collection','Copying card numbers','No privacy notice'],correct:1,reason:'Data minimization and lawful processing apply.'}],
 m365:[
 {prompt:'What defines a Microsoft 365 identity boundary?',options:['An Entra tenant','A Word file','A licence','A Teams message'],correct:0,reason:'A tenant defines the identity and administration boundary.'},
 {prompt:'Which privilege is appropriate for routine administration?',options:['Shared Global Administrator','Least-privileged named identity','Guest with all permissions','Anonymous sign-in'],correct:1,reason:'Use named identities and minimum required roles.'},
