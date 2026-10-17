@@ -1,46 +1,47 @@
 ---
-title: "1 — Cloud concepts and service models"
-description: "Foundational cloud computing applied lesson."
+title: "1 — From traditional IT to cloud computing"
+description: "The comparison correctly identifies service dependencies, organisational trade-offs and the limits of cloud availability."
 ---
 
-# Module 1: Cloud concepts and service models
+# Module 1: From traditional IT to cloud computing
 
-**Duration:** 45–70 minutes. **Outcome:** make and justify a safe cloud design or operational decision.
+**Suggested time:** 45–70 minutes. **Competency:** The comparison correctly identifies service dependencies, organisational trade-offs and the limits of cloud availability.
 
-## Understand the concepts
+## Concepts and architecture
 
-Cloud computing supplies computing resources on demand, generally over a network, with measured usage. IaaS gives infrastructure such as virtual machines and networks; PaaS manages more of the application runtime; SaaS delivers a ready-to-use application. Public, private and hybrid describe deployment and ownership contexts, not automatic levels of security. Elasticity, availability, global regions and usage-based pricing can improve operations but require governance. Responsibility for data and configuration never disappears merely because a provider runs the hardware.
+A traditional IT deployment often buys and operates servers, storage and networks in a particular location. Cloud computing provides on-demand access to computing resources through managed services and metered commercial models. Resource pooling, rapid elasticity, measured service and self-service are common properties, but service quality varies by provider and plan. Distinguish public cloud, private cloud, hybrid cloud and multicloud: these describe organisational models, not security guarantees. Moving to cloud does not remove the need for architecture, data governance or business continuity. Edge computing may process data near devices when latency or connectivity matters.
 
-## Worked scenario
+## Workplace scenario
 
-A business currently hosts a brochure website on a local desktop. Compare a managed web service, a virtual machine and a fully managed website builder, listing cost, administration effort and control.
+A fictional retailer runs its ordering system from an office desktop that fails during power outages. Decide which business functions could move to a managed cloud service and what remains dependent on local network connectivity.
 
-## Guided practical
+## Applied exercise
 
-1. Make a service-model table with customer responsibilities for identity, application, data, patches and physical facilities. Select the least complex model that meets the hypothetical requirements.
-2. Draw or tabulate the intended resource, people and trust boundaries.
-3. Identify at least one measurable success test, one failure/denial test and their expected outcomes.
-4. Record your test result or fully specified simulation, then explain a corrective action if it fails.
-5. Present a 100-word recommendation including costs, risk and responsibility.
+1. Sketch a simple traditional architecture with a user, office router, server, storage, backup and support owner.
+2. Sketch a cloud alternative identifying customer, provider region, service, identity, connectivity and shared responsibilities.
+3. Compare benefits and constraints in five areas: cost, scalability, resilience, skill requirements and security.
+4. Name two business needs where keeping a local or hybrid capability may be appropriate.
+5. Explain how a lost internet link could still disrupt an otherwise healthy cloud service.
 
-## Implementation caution
+## Validation and reflection
 
-Do not assume every cloud solution is cheaper, compliant or more secure than on-premises hosting; verify requirements.
+The comparison correctly identifies service dependencies, organisational trade-offs and the limits of cloud availability. Create a verification register with **expected state**, **observed state**, **evidence**, **risk**, **owner** and **follow-up**. At least one test must demonstrate permitted activity and another must show an improper action is blocked or a faulty assumption is detected. Do not perform tests on systems without permission.
 
-## Check understanding
+### Review questions
 
-- Which concern belongs to the cloud provider, and which remains the customer's responsibility here?
-- How could you verify the result without incurring a bill or exposing private information?
+1. What distinguishes a public cloud from a private cloud?
+2. Does cloud migration eliminate operational and governance responsibility?
 
 <details>
-  <summary>Review the expected response</summary>
+  <summary>Read suggested feedback after your attempt</summary>
 
-Credit a response that matches responsibilities to service models, states explicit cost/security assumptions and gives an independently reproducible test. A vendor promise or dashboard image alone does not prove operational readiness.
+Refer to the concept definitions above and justify the proposed configuration, failure behaviour and responsibility boundary. A correct answer includes evidence, risk and an owner. If your answer assumes a cloud service is perfectly available, permanently free or automatically secure, revisit the explanation and rework the diagram.
 
 </details>
 
-## Evidence record
+## Your evidence checkpoint
 
-- [ ] Decision/architecture artefact and assumptions.
-- [ ] Normal and failure test with observed or simulated outcome.
-- [ ] Risks, verification method and next owner.
+- [ ] I can explain the cloud service or control without relying on product jargon.
+- [ ] My diagram or calculation states input assumptions and units.
+- [ ] I recorded a valid and negative test, or a justified safe simulation.
+- [ ] My recommendation includes cost, security and recovery implications.

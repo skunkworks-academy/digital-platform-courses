@@ -1,46 +1,47 @@
 ---
-title: "5 — Cloud pricing, budgets and operational governance"
-description: "Foundational cloud computing applied lesson."
+title: "5 — Cloud pricing, scale, reliability and recovery"
+description: "Budget totals reconcile, hidden cost sources are acknowledged and recovery objectives align with data value."
 ---
 
-# Module 5: Cloud pricing, budgets and operational governance
+# Module 5: Cloud pricing, scale, reliability and recovery
 
-**Duration:** 45–70 minutes. **Outcome:** make and justify a safe cloud design or operational decision.
+**Suggested time:** 45–70 minutes. **Competency:** Budget totals reconcile, hidden cost sources are acknowledged and recovery objectives align with data value.
 
-## Understand the concepts
+## Concepts and architecture
 
-Cloud cost often combines compute time, provisioned resources, storage capacity, network egress, managed databases, support and licensing. A free tier can have location, quantity and time limits. Estimate costs by usage assumptions and set budgets, labels/tags and alerts before deployment. A cost estimate is not a quote unless confirmed by the provider's region and service terms. Rightsizing, scheduled shutdown and lifecycle rules can reduce waste, but must not undermine recovery obligations.
+Cloud costs can combine compute runtime, storage capacity, input/output operations, network egress, managed services, licences and support. A free-tier listing is not a permanent price guarantee. Compare total cost of ownership, including administration, backup, logging and unexpected resource growth. Autoscaling adjusts capacity to demand but requires quotas, application compatibility, observability and cost limits. A service-level agreement (SLA) defines a contractual availability target, not a promise of zero outages. Recovery Time Objective (RTO) is the longest acceptable recovery time; Recovery Point Objective (RPO) is the maximum tolerable data-loss window. Backups do not provide a recovery solution until restores are tested.
 
-## Worked scenario
+## Workplace scenario
 
-A fictional test environment runs a VM for 100 hours rather than 730 hours. Compare scenarios using an assumed hourly price of $0.05 plus fixed $8 storage: $13 vs $44.50, before taxes and transfer charges.
+A training site estimates 100 active users initially and 1,000 during an exam event. Forecast bandwidth and service capacity, then decide what to monitor and which resources require strict budget alerts.
 
-## Guided practical
+## Applied exercise
 
-1. Prepare a monthly cost worksheet with unit, amount, quantity, region assumption and sensitivity for a 2x traffic spike; include a stop-spend trigger.
-2. Draw or tabulate the intended resource, people and trust boundaries.
-3. Identify at least one measurable success test, one failure/denial test and their expected outcomes.
-4. Record your test result or fully specified simulation, then explain a corrective action if it fails.
-5. Present a 100-word recommendation including costs, risk and responsibility.
+1. Create a monthly budget with example unit assumptions for compute, storage, requests, outbound bandwidth, backups and support.
+2. Calculate normal and peak-demand scenarios and state that simulated prices are not vendor quotes.
+3. Set an example monthly budget threshold and an alert escalation owner.
+4. Assign RTO and RPO to a public marketing page versus student assessment records, explaining differences.
+5. Plan a restore test and document which component failure the recovery approach does not cover.
 
-## Implementation caution
+## Validation and reflection
 
-Never enable a paid service during a course unless you understand the billing owner, limits, cancellation and alerts.
+Budget totals reconcile, hidden cost sources are acknowledged and recovery objectives align with data value. Create a verification register with **expected state**, **observed state**, **evidence**, **risk**, **owner** and **follow-up**. At least one test must demonstrate permitted activity and another must show an improper action is blocked or a faulty assumption is detected. Do not perform tests on systems without permission.
 
-## Check understanding
+### Review questions
 
-- Which concern belongs to the cloud provider, and which remains the customer's responsibility here?
-- How could you verify the result without incurring a bill or exposing private information?
+1. What is the difference between RTO and RPO?
+2. Why can a small cloud bill increase after a traffic spike?
 
 <details>
-  <summary>Review the expected response</summary>
+  <summary>Read suggested feedback after your attempt</summary>
 
-Credit a response that matches responsibilities to service models, states explicit cost/security assumptions and gives an independently reproducible test. A vendor promise or dashboard image alone does not prove operational readiness.
+Refer to the concept definitions above and justify the proposed configuration, failure behaviour and responsibility boundary. A correct answer includes evidence, risk and an owner. If your answer assumes a cloud service is perfectly available, permanently free or automatically secure, revisit the explanation and rework the diagram.
 
 </details>
 
-## Evidence record
+## Your evidence checkpoint
 
-- [ ] Decision/architecture artefact and assumptions.
-- [ ] Normal and failure test with observed or simulated outcome.
-- [ ] Risks, verification method and next owner.
+- [ ] I can explain the cloud service or control without relying on product jargon.
+- [ ] My diagram or calculation states input assumptions and units.
+- [ ] I recorded a valid and negative test, or a justified safe simulation.
+- [ ] My recommendation includes cost, security and recovery implications.

@@ -1,34 +1,34 @@
 ---
-title: "Capstone — cloud small-business design"
-description: "Evidence-based foundational cloud project."
+title: "Cloud Computing Fundamentals — Capstone"
+description: "Complete secure cloud planning, cost, testing and recovery deliverables."
 ---
 
-# Capstone: Plan a small-business cloud service
+# Capstone: cloud-ready training business
 
-## Stakeholder scenario
+## Scenario
 
-A fictional training business needs a marketing website, a private file library, low-cost usage and basic recovery capability. It has 15 staff, a part-time administrator and a total illustrative monthly cloud budget of US$80. Your assignment is to recommend a **safe and realistic architecture** with no actual purchases required.
+A fictional training provider wants a web-accessible course catalogue, secure student progress data, predictable monthly costs and a tested incident procedure. You are hired to create an implementation-ready *proposal and simulation*, not to deploy billable systems.
 
-## Submission requirements
+## Deliverable pack
 
-1. Write a requirements brief: functional needs, availability, recovery expectations, privacy and operating capacity.
-2. Compare two service models and select one with evidence and trade-offs.
-3. Draw a labelled logical architecture showing users, public endpoint, app compute, private data, admin identity and monitoring.
-4. Explain cloud provider/customer responsibilities and apply least privilege to at least three roles.
-5. Build a cost estimate from explicit unit prices, volume assumptions, region and a traffic increase scenario; include a budget alert.
-6. Write RTO and RPO targets and a tested/simulated backup-and-recovery method.
-7. Design three positive and three negative tests for access, cost and health/recovery behaviour.
-8. Present a short rollout checklist, safe rollback, support ownership and a 200-word executive recommendation.
+1. Record stakeholders, business scope, user journeys, RTO/RPO targets and sample demand.
+2. Compare IaaS, PaaS and SaaS and select a model with clear provider/customer responsibility boundaries.
+3. Draw public entry, DNS/TLS, app logic, identity, private data store, object storage, logging and backup.
+4. Prepare a twelve-month illustrative budget using stated unit-rate assumptions and both baseline and peak demand.
+5. Implement a four-role access matrix and show one authorised request and one denied request.
+6. Develop three success and three negative test cases including credential misuse, spending limits and regional failure.
+7. Write a monitoring/incident runbook with on-call ownership, alert thresholds, rollback and restore drill.
+8. Summarise risks, assumptions and the next controlled deployment decision for management.
 
-## Marking rubric
+## Scoring rubric
 
-| Competency | Points | Full-credit evidence |
+| Domain | Maximum points | Full-credit criterion |
 |---|---:|---|
-| Needs, constraints and model choice | 15 | Traceable criteria and logical trade-offs |
-| Architecture and access controls | 25 | Clear diagram, data protection and responsibility |
-| Cost, monitoring and recovery | 25 | Accurate assumptions, thresholds, RTO/RPO and rollback |
-| Positive and negative validation | 20 | Six reproducible scenarios, including denied access |
-| Documentation and decision quality | 15 | Clear owner, decision record and reflection |
-| **Passing mark** | **70/100** | **Every critical condition must pass** |
+| Business requirements and model choice | 15 | Explicit user needs and service responsibility allocation |
+| Architecture, governance and least privilege | 25 | Clear boundaries and sensitive data protection |
+| Budget, scale and recovery design | 25 | Checked calculations, RTO/RPO and realistic failure planning |
+| Tested functional/security behaviours | 20 | Six cases with observable results and corrective actions |
+| Operational documentation and reflection | 15 | Monitoring, incident ownership and recovery runbook |
+| **Total** | **100** | **70/100 plus all critical security criteria** |
 
-**Critical rules:** no uncontrolled billable deployment, exposed credentials or real client files; deny anonymous access to private data; no unsupported SLA/security claims. Only a competent assessor can verify course completion.
+**Critical rules:** no live secrets, no unauthorised/billable provisioning, no public access to private data, no unsupported pricing guarantees, and no release without monitoring/recovery ownership. Failure of a critical rule requires remediation even if the numeric score is 70 or above. An authorised human assessor must verify evidence and record the decision before issuing any Academy completion award.

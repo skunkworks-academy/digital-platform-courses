@@ -1,26 +1,32 @@
 ---
-title: "Lab 1 — Select a cloud architecture"
-description: "Applied cloud simulation and evaluation."
+title: "Lab 1 — Design a safe beginner cloud architecture"
+description: "A fictional Academy needs a public course catalogue and private learner progress."
 ---
 
-# Lab 1: Select a cloud architecture
+# Lab 1: Design a safe beginner cloud architecture
 
-**Estimated time:** 70 minutes. **Environment:** Fictional organisation with a basic website, private customer documents and a small budget.
+**Duration:** 85 minutes. **Mode:** no-charge cloud simulation or authorised sandbox.
 
-## Procedure
+## Scenario
 
-1. Write functional and nonfunctional requirements with three measurable success criteria.
-2. Compare SaaS, PaaS and IaaS by operations, resilience and cost for the website.
-3. Draw the chosen service/data/identity diagram including public and private boundaries.
-4. List provider/customer responsibilities and identify three failure modes.
-5. Document one architecture alternative and why it was not selected.
+A fictional Academy needs a public course catalogue and private learner progress.
 
-## Evidence of capability
+## Hands-on lab procedure
 
-**Acceptance criteria:** Clear architecture decision grounded in business needs and explicitly bounded cost/security assumptions.
+1. Specify three user roles and three information classifications.
+2. Choose an IaaS/PaaS/SaaS model with justification for each service.
+3. Draw an HTTPS entry point, app, identity service, database, object storage and logging.
+4. Identify region, optional zone availability and a business-residency restriction.
+5. Mark ingress and egress flows, including a denied public database connection.
+6. Describe two failure conditions and the expected continuity behavior.
+7. Submit a legend explaining who operates every component.
 
-Produce a labelled diagram, worksheet and short decision record with assumptions, quantitative measures where possible, one successful and one denied/failed test, remediation and clear cost implications. Use fictitious systems and avoid actual billable deployments unless they are separately authorised and controlled.
+## Acceptance criterion
 
-## Quality and self-reflection
+Architecture meets public availability needs while denying unauthorised access to learner and payment records.
 
-Can a second person reproduce your design and verify the result? What remains a single point of failure? How would you know if the assumptions became invalid or the monthly budget was exceeded?
+Provide: a scope statement, a labelled diagram or cost workbook, redacted evidence for each key design decision, one positive and one deliberately invalid/denied test, and 100–150 words of lessons learned. For failures, record the hypothesis, observed result, corrective action and safe rollback.
+
+:::warning Safe cloud practice
+Do not use production resources, real credentials or chargeable cloud services without written approval. A detailed spreadsheet or architecture simulation is a valid lab path.
+:::

@@ -1,46 +1,47 @@
 ---
-title: "6 — Deployment, monitoring and recovery"
-description: "Foundational cloud computing applied lesson."
+title: "6 — Deploy, observe, troubleshoot and govern cloud services"
+description: "The operational runbook correlates evidence to hypotheses and contains an authorised, tested rollback path."
 ---
 
-# Module 6: Deployment, monitoring and recovery
+# Module 6: Deploy, observe, troubleshoot and govern cloud services
 
-**Duration:** 45–70 minutes. **Outcome:** make and justify a safe cloud design or operational decision.
+**Suggested time:** 45–70 minutes. **Competency:** The operational runbook correlates evidence to hypotheses and contains an authorised, tested rollback path.
 
-## Understand the concepts
+## Concepts and architecture
 
-A deployment lifecycle covers source, build or configuration, controlled release, validation, rollback and ongoing ownership. Monitor availability, response errors, latency, usage and spend; metrics and alerts need a named responder and useful thresholds. Define recovery time objective (RTO) and recovery point objective (RPO) separately. RTO targets maximum time to recover, while RPO targets acceptable data loss. Run a harmless simulated outage test and confirm recovery dependencies before declaring readiness.
+A secure cloud rollout begins with requirements, environment separation (development/test/production), approvals, tracked configuration and repeatable deployment. Infrastructure as Code allows a reviewed definition of resources; it is not automatically secure. Monitoring includes availability, latency, error rate, resource utilisation, cost and security events. An incident response sequence identifies who is affected, which component is faulty, what changed and how to roll back safely. Logs and metrics answer different questions: metrics quantify performance, while logs show detailed events. Protect monitoring systems against storing credentials or sensitive payloads. Release checklists should include ownership, access review, recovery test, alert routing and documented rollback.
 
-## Worked scenario
+## Workplace scenario
 
-A fictional service wants recovery within four hours and at most one hour of data loss. Record RTO=4h and RPO=1h; then evaluate whether daily backup alone can satisfy the RPO.
+A course site returns HTTP 503 for some users after a deployment. Identify the error budget and service health, inspect the app and dependency logs, test a rollback in staging, then communicate a bounded incident update.
 
-## Guided practical
+## Applied exercise
 
-1. Create a deployment runbook: prerequisites, approvals, health checks, rollback, backup test, incident contact and post-release follow-up.
-2. Draw or tabulate the intended resource, people and trust boundaries.
-3. Identify at least one measurable success test, one failure/denial test and their expected outcomes.
-4. Record your test result or fully specified simulation, then explain a corrective action if it fails.
-5. Present a 100-word recommendation including costs, risk and responsibility.
+1. Write a seven-step deployment checklist including scope, approvals, tests, secrets, monitoring, rollback and owner.
+2. Define three service metrics and two alert thresholds for a fictional cloud web application.
+3. List the diagnostic evidence required for an application failure versus a DNS problem.
+4. Prepare a brief incident report with timestamp, scope, hypothesis, observation and remediation.
+5. Propose one preventive policy guardrail and explain how it would be tested.
 
-## Implementation caution
+## Validation and reflection
 
-Cloud replication without a tested restore strategy does not satisfy a data recovery objective.
+The operational runbook correlates evidence to hypotheses and contains an authorised, tested rollback path. Create a verification register with **expected state**, **observed state**, **evidence**, **risk**, **owner** and **follow-up**. At least one test must demonstrate permitted activity and another must show an improper action is blocked or a faulty assumption is detected. Do not perform tests on systems without permission.
 
-## Check understanding
+### Review questions
 
-- Which concern belongs to the cloud provider, and which remains the customer's responsibility here?
-- How could you verify the result without incurring a bill or exposing private information?
+1. What distinguishes metrics from detailed logs?
+2. Why should recovery and rollback be tested before release?
 
 <details>
-  <summary>Review the expected response</summary>
+  <summary>Read suggested feedback after your attempt</summary>
 
-Credit a response that matches responsibilities to service models, states explicit cost/security assumptions and gives an independently reproducible test. A vendor promise or dashboard image alone does not prove operational readiness.
+Refer to the concept definitions above and justify the proposed configuration, failure behaviour and responsibility boundary. A correct answer includes evidence, risk and an owner. If your answer assumes a cloud service is perfectly available, permanently free or automatically secure, revisit the explanation and rework the diagram.
 
 </details>
 
-## Evidence record
+## Your evidence checkpoint
 
-- [ ] Decision/architecture artefact and assumptions.
-- [ ] Normal and failure test with observed or simulated outcome.
-- [ ] Risks, verification method and next owner.
+- [ ] I can explain the cloud service or control without relying on product jargon.
+- [ ] My diagram or calculation states input assumptions and units.
+- [ ] I recorded a valid and negative test, or a justified safe simulation.
+- [ ] My recommendation includes cost, security and recovery implications.

@@ -1,46 +1,47 @@
 ---
-title: "2 — Compute, regions and availability"
-description: "Foundational cloud computing applied lesson."
+title: "2 — IaaS, PaaS, SaaS and shared responsibility"
+description: "The service comparison assigns responsibilities correctly and recommends a service on measurable needs."
 ---
 
-# Module 2: Compute, regions and availability
+# Module 2: IaaS, PaaS, SaaS and shared responsibility
 
-**Duration:** 45–70 minutes. **Outcome:** make and justify a safe cloud design or operational decision.
+**Suggested time:** 45–70 minutes. **Competency:** The service comparison assigns responsibilities correctly and recommends a service on measurable needs.
 
-## Understand the concepts
+## Concepts and architecture
 
-Virtual machines run operating systems on shared physical hosts; containers package applications but often share the host operating-system kernel. Serverless functions run code triggered by events and scale differently. Regions represent geographic deployment locations, and availability zones provide separate infrastructure within a region where available. Redundancy and backups address different failures; replicated corruption remains corruption. A service-level agreement describes provider commitments, not a guarantee your application architecture will never fail.
+Infrastructure as a Service (IaaS) exposes virtual computing, storage and networking while customers configure operating systems and applications. Platform as a Service (PaaS) delegates more of the underlying platform operations, letting customers focus on applications and data. Software as a Service (SaaS) delivers ready-to-use applications with customer responsibilities for users, information and configuration. Managed databases and serverless functions illustrate a spectrum of responsibilities, not a guarantee of no management. The shared-responsibility model divides duties according to services and agreements: providers secure underlying infrastructure, while customers must still classify data, manage users, select configurations, protect credentials and plan recovery.
 
-## Worked scenario
+## Workplace scenario
 
-A booking site must remain usable during one server failure. Sketch a managed app, health checks, two instances and a data store; explain which components still represent single points of failure.
+A business chooses between hosting a customer database on a virtual machine, using a managed SQL database or subscribing to an online CRM. For each, identify who patches the OS, backs up application data and controls user accounts.
 
-## Guided practical
+## Applied exercise
 
-1. Draw a simple architecture for a small public website and annotate failure domains, region, service dependencies, assumptions and how to observe health.
-2. Draw or tabulate the intended resource, people and trust boundaries.
-3. Identify at least one measurable success test, one failure/denial test and their expected outcomes.
-4. Record your test result or fully specified simulation, then explain a corrective action if it fails.
-5. Present a 100-word recommendation including costs, risk and responsibility.
+1. Create a three-column IaaS/PaaS/SaaS table with one realistic example per column.
+2. For each example, assign ownership of hardware, guest OS, runtime, access control, backup and application data.
+3. Identify a duty that remains with the customer in all three models.
+4. Select the service model best suited to a small team without dedicated system administrators, explaining trade-offs.
+5. List contract questions about service-level agreements, data export, retention and incident reporting.
 
-## Implementation caution
+## Validation and reflection
 
-Never treat two copies on one host or one region as the same protection as a properly designed recovery plan.
+The service comparison assigns responsibilities correctly and recommends a service on measurable needs. Create a verification register with **expected state**, **observed state**, **evidence**, **risk**, **owner** and **follow-up**. At least one test must demonstrate permitted activity and another must show an improper action is blocked or a faulty assumption is detected. Do not perform tests on systems without permission.
 
-## Check understanding
+### Review questions
 
-- Which concern belongs to the cloud provider, and which remains the customer's responsibility here?
-- How could you verify the result without incurring a bill or exposing private information?
+1. Who configures SaaS user access?
+2. Why does PaaS not remove responsibility for data protection?
 
 <details>
-  <summary>Review the expected response</summary>
+  <summary>Read suggested feedback after your attempt</summary>
 
-Credit a response that matches responsibilities to service models, states explicit cost/security assumptions and gives an independently reproducible test. A vendor promise or dashboard image alone does not prove operational readiness.
+Refer to the concept definitions above and justify the proposed configuration, failure behaviour and responsibility boundary. A correct answer includes evidence, risk and an owner. If your answer assumes a cloud service is perfectly available, permanently free or automatically secure, revisit the explanation and rework the diagram.
 
 </details>
 
-## Evidence record
+## Your evidence checkpoint
 
-- [ ] Decision/architecture artefact and assumptions.
-- [ ] Normal and failure test with observed or simulated outcome.
-- [ ] Risks, verification method and next owner.
+- [ ] I can explain the cloud service or control without relying on product jargon.
+- [ ] My diagram or calculation states input assumptions and units.
+- [ ] I recorded a valid and negative test, or a justified safe simulation.
+- [ ] My recommendation includes cost, security and recovery implications.
