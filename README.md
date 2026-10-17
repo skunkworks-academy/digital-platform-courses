@@ -1,25 +1,31 @@
-# Five-Course Skunkworks Academy Pilot — Maria
+# Skunkworks Academy Beginner IT Collection
 
-This draft extends three existing Docusaurus course tracks with two additional proposed titles, so the collection has five.
+**Public Docusaurus website:** https://skunkworks-academy.github.io/digital-platform-courses/
 
-| Code | Course | Proposed price |
-|---|---|---:|
-| SKW-GH-101 | GitHub Foundations & Delivery | USD 50 |
-| SKW-CR-201 | CodeRabbit AI Code Review | USD 50 |
-| SKW-SH-101 | Shopify Store Operations | USD 50 |
-| SKW-M365-101 | Microsoft 365 Administration Essentials | USD 50 |
-| SKW-AUTO-101 | AI Workflow Automation for Business | USD 50 |
+## Five beginner courses
 
-The course topics are **proposals pending Maria's confirmation**, not a final licensed catalogue. Existing three courses retain their full modules, labs and assessment pages. The new two courses include six substantive modules, three guided practicals, a 12-question knowledge check, a capstone rubric, official references and an interactive five-item baseline/end diagnostic.
+| Code | Course | Duration | Public route |
+|---|---|---|---|
+| SKW-BEG-AI-101 | Generative AI & ChatGPT for Beginners | 6–8 hours | /beginner/ai/ |
+| SKW-BEG-SEC-101 | Cybersecurity Essentials & Online Safety | 6–8 hours | /beginner/cybersecurity/ |
+| SKW-BEG-IT-101 | IT Support & Computer Troubleshooting | 8–10 hours | /beginner/it-support/ |
+| SKW-BEG-M365-101 | Microsoft 365 & Excel Productivity Essentials | 8–10 hours | /beginner/microsoft-productivity/ |
+| SKW-BEG-CLD-101 | Cloud Computing Fundamentals | 6–8 hours | /beginner/cloud/ |
 
-**Status:** courseware and UX preview only. PayPal Orders integration, per-course enrolments, protected delivery, verified assessment storage and automatic email fulfilment are **not yet deployed**. Do not send the preview as a live paid-sales link.
+Every course has **six lessons**, **three practical labs**, a twelve-question knowledge check with feedback, a weighted evidence-based capstone, course guide, references and interactive five-item before/after learning diagnostics. A local browser checklist allows students to mark module and practical progress.
 
-## Validation
+## Course operations
+
+This edition publishes full course lessons publicly for learning. Price of USD 50 per course is a **proposed commercial model**, not an active checkout or paid entitlement. No PayPal credentials or private learner records are present in the static site. The Academy Portal payment issue remains open until a backend can verify one-time purchases, bind per-course enrolments, send welcome emails and issue verified achievements.
+
+## Build and QA
 
 ```sh
 npm ci
+npm run validate:pilot
+npm run validate:beginner
 npm run typecheck
 npm run build
 ```
 
-Follow the [payment and access contract](architecture/MARIA-PAYMENT-AND-ACCESS.md) and confirm the exact five course topics, selling entity and payment account before the production merge.
+GitHub Actions validates PRs before merger, then deploys the `build` directory to Pages on `main`. Do not call the collection live until the Pages deployment is successful and the public URLs have been verified.

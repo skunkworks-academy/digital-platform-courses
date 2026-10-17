@@ -20,15 +20,14 @@ const config: Config = {
   } satisfies PresetOptions]],
   themeConfig: {
     image:'img/social-card.svg',
-    metadata:[{name:'description',content:'Five practical assessed self-paced courses from Skunkworks Academy.'}],
+    metadata:[{name:'description',content:'Five beginner and specialist assessed self-paced courses from Skunkworks Academy.'}],
     navbar:{title:'Skunkworks Academy',logo:{alt:'Skunkworks Academy',src:'img/favicon.svg'},items:[
-      {to:'/beginner/',label:'Beginner Courses',position:'left'},
-      {to:'/github/',label:'GitHub',position:'left'},
-      {to:'/coderabbit/',label:'CodeRabbit',position:'left'},
-      {to:'/shopify/',label:'Shopify',position:'left'},
-      {to:'/m365/',label:'Microsoft 365',position:'left'},
-      {to:'/automation/',label:'AI Automation',position:'left'},
-      {to:'/quality/standards',label:'Quality',position:'right'}
+      {to:'/beginner/ai/',label:'AI',position:'left'},
+      {to:'/beginner/cybersecurity/',label:'Cybersecurity',position:'left'},
+      {to:'/beginner/it-support/',label:'IT Support',position:'left'},
+      {to:'/beginner/microsoft-productivity/',label:'Microsoft 365',position:'left'},
+      {to:'/beginner/cloud/',label:'Cloud',position:'left'},
+      {to:'/quality/assessment-policy',label:'Assessment policy',position:'right'}
     ]},
     footer:{style:'dark',links:[{title:'Courses',items:[{label:'Five beginner IT courses',to:'/beginner/'},
       {label:'GitHub',to:'/github/'},{label:'CodeRabbit',to:'/coderabbit/'},{label:'Shopify',to:'/shopify/'},
