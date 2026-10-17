@@ -44,3 +44,31 @@ A strong answer identifies the data source, owner, sharing permissions, calculat
 - [ ] Editable file, structured mock-up or documented alternative.
 - [ ] Formula or permissions test and observed result.
 - [ ] Correction note and clear approval boundary.
+
+## Extended learning: clean, analyse and present structured tables
+
+Each Excel table row should represent one record. Columns need consistent headings and data types. Filtering changes what is visible; sorting should keep all columns for each record together. Duplicate records need explicit business rules before deletion, since two similar rows are not always erroneous.
+
+### Worked expense-register example
+
+| Receipt | Category | Amount |
+|---|---|---:|
+| E101 | Transport | 120 |
+| E102 | Training | 300 |
+| E103 | Transport | 80 |
+| E102 | Training | 300 |
+
+The raw total is **800**. If the second E102 entry is verified to be an accidental duplicate, the corrected total is **500**. The difference must appear in a documented change log. If both entries represent valid purchases, both should remain.
+
+### A repeatable analysis procedure
+
+1. Preserve the untouched source file or dataset.
+2. Identify blanks, duplicate identifiers, inconsistent dates and wrong data types.
+3. Write down the criteria for excluding or correcting records.
+4. Convert the dataset to an Excel table and sort by a stable key.
+5. Compare category totals against a hand-calculated sample.
+6. Use a labelled bar chart or PivotTable with an honest scale and units.
+
+**Practice:** Explain why sorting only the amount column would corrupt this example, and compare the all-record total to the visible-row total after filtering. Test whether hidden rows affect the formula you used.
+
+**Knowledge check:** What makes a grouped summary reproducible? Name the source, record-level corrections, aggregation rule and reviewer.
