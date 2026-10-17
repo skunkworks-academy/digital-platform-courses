@@ -12,7 +12,7 @@ const courseItems=(s:string)=>[
 const sidebars:SidebarsConfig={catalog:[
  'index','learner-guide',
  {type:'category',label:'Beginner 1 — AI & ChatGPT',items:courseItems('beginner/ai')},
- {type:'category',label:'Beginner 2 — Cybersecurity',items:courseItems('beginner/cybersecurity')},
+ {type:'category',label:'Beginner 2 — Cybersecurity',items:courseItems('beginner/cyber')},
  {type:'category',label:'Beginner 3 — IT Support',items:courseItems('beginner/it-support')},
  {type:'category',label:'Beginner 4 — Microsoft 365 & Excel',items:courseItems('beginner/microsoft-productivity')},
  {type:'category',label:'Beginner 5 — Cloud Computing',items:courseItems('beginner/cloud')},
