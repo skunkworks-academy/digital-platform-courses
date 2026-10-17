@@ -1,32 +1,28 @@
 ---
-title: "Lab 3 — Secure deployment and incident tabletop"
-description: "A small business deploys a new cloud web app and encounters a simulated service outage."
+title: "Lab 3 — Cost and recovery challenge"
+description: "Use realistic assumptions for cloud billing and recovery, without deploying chargeable resources."
 ---
 
-# Lab 3: Secure deployment and incident tabletop
+# Lab 3: Cost and recovery challenge
 
-**Duration:** 90 minutes. **Mode:** no-charge cloud simulation or authorised sandbox.
+**Duration:** 75 minutes. **Environment:** offline design or permitted free simulation; avoid live billable resources.
 
-## Scenario
+## Objective
 
-A small business deploys a new cloud web app and encounters a simulated service outage.
+Use realistic assumptions for cloud billing and recovery, without deploying chargeable resources.
 
-## Hands-on lab procedure
+## Steps
 
-1. Create a change ticket, owner list and low-risk release window.
-2. Prepare a least-privilege access matrix and two deny tests.
-3. Specify deployment validation for HTTPS, app health, static assets and database connection.
-4. Simulate a configuration fault leading to partial outage and create a structured event timeline.
-5. Select monitoring signals, support escalation and a safe rollback decision.
-6. Document a restore drill or an equivalent recovery simulation.
-7. Deliver an incident report and a post-incident action list.
+1. Choose fictional hourly compute and monthly storage rates explicitly marked as illustrative, not vendor quotes.
+2. Calculate 30-day costs including two traffic scenarios, requests and data transfer.
+3. Add a budget warning point and resource expiry date.
+4. Select RPO and RTO values for the fake service and plan a restoration test.
+5. Create an operator handover that includes who gets alerted and when resources are removed.
 
-## Acceptance criterion
+## Evidence and acceptance
 
-The learner demonstrates secure staging, deterministic incident response and restored service without privileged shortcuts.
+Formula-driven budget worksheet, price assumption note, recovery test and teardown runbook.
 
-Provide: a scope statement, a labelled diagram or cost workbook, redacted evidence for each key design decision, one positive and one deliberately invalid/denied test, and 100–150 words of lessons learned. For failures, record the hypothesis, observed result, corrective action and safe rollback.
+**Pass criterion:** Cost calculations reconcile, assumptions are disclosed and a reviewable restore procedure exists.
 
-:::warning Safe cloud practice
-Do not use production resources, real credentials or chargeable cloud services without written approval. A detailed spreadsheet or architecture simulation is a valid lab path.
-:::
+Create a test record showing intended action, allowed response, deliberately invalid/unauthorised input and observed or simulated refusal. Distinguish simulated output from actual provider observations. Document a correction and one residual risk.

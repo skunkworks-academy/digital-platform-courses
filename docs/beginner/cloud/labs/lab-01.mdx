@@ -1,32 +1,28 @@
 ---
-title: "Lab 1 — Design a safe beginner cloud architecture"
-description: "A fictional Academy needs a public course catalogue and private learner progress."
+title: "Lab 1 — Choose a cloud architecture for a small organisation"
+description: "Translate business needs into a simple service-model and regional recommendation."
 ---
 
-# Lab 1: Design a safe beginner cloud architecture
+# Lab 1: Choose a cloud architecture for a small organisation
 
-**Duration:** 85 minutes. **Mode:** no-charge cloud simulation or authorised sandbox.
+**Duration:** 60 minutes. **Environment:** offline design or permitted free simulation; avoid live billable resources.
 
-## Scenario
+## Objective
 
-A fictional Academy needs a public course catalogue and private learner progress.
+Translate business needs into a simple service-model and regional recommendation.
 
-## Hands-on lab procedure
+## Steps
 
-1. Specify three user roles and three information classifications.
-2. Choose an IaaS/PaaS/SaaS model with justification for each service.
-3. Draw an HTTPS entry point, app, identity service, database, object storage and logging.
-4. Identify region, optional zone availability and a business-residency restriction.
-5. Mark ingress and egress flows, including a denied public database connection.
-6. Describe two failure conditions and the expected continuity behavior.
-7. Submit a legend explaining who operates every component.
+1. Read three fictional workloads: staff email, public brochure website and custom customer database.
+2. Classify each as SaaS, PaaS or IaaS and record what the customer must still manage.
+3. Choose a region and network boundary based on invented location and confidentiality rules.
+4. Draw a component diagram including staff, provider and approval owner.
+5. Write one alternative and explain its cost, complexity and risk.
 
-## Acceptance criterion
+## Evidence and acceptance
 
-Architecture meets public availability needs while denying unauthorised access to learner and payment records.
+Service-model responsibility matrix, annotated diagram, assumptions and one-page recommendation.
 
-Provide: a scope statement, a labelled diagram or cost workbook, redacted evidence for each key design decision, one positive and one deliberately invalid/denied test, and 100–150 words of lessons learned. For failures, record the hypothesis, observed result, corrective action and safe rollback.
+**Pass criterion:** The proposal reflects legal/data needs, avoids unrestricted public database exposure and states trade-offs.
 
-:::warning Safe cloud practice
-Do not use production resources, real credentials or chargeable cloud services without written approval. A detailed spreadsheet or architecture simulation is a valid lab path.
-:::
+Create a test record showing intended action, allowed response, deliberately invalid/unauthorised input and observed or simulated refusal. Distinguish simulated output from actual provider observations. Document a correction and one residual risk.

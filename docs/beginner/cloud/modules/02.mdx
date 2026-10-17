@@ -1,47 +1,42 @@
 ---
-title: "2 — IaaS, PaaS, SaaS and shared responsibility"
-description: "The service comparison assigns responsibilities correctly and recommends a service on measurable needs."
+title: "2 — Understand IaaS, PaaS, SaaS and deployment options"
+description: "The learner shows which responsibilities remain with the customer for each service model."
 ---
 
-# Module 2: IaaS, PaaS, SaaS and shared responsibility
+# Module 2: Understand IaaS, PaaS, SaaS and deployment options
 
-**Suggested time:** 45–70 minutes. **Competency:** The service comparison assigns responsibilities correctly and recommends a service on measurable needs.
+**Time:** 50–70 minutes. **Learning criterion:** The learner shows which responsibilities remain with the customer for each service model.
 
-## Concepts and architecture
+## Understand the concepts
 
-Infrastructure as a Service (IaaS) exposes virtual computing, storage and networking while customers configure operating systems and applications. Platform as a Service (PaaS) delegates more of the underlying platform operations, letting customers focus on applications and data. Software as a Service (SaaS) delivers ready-to-use applications with customer responsibilities for users, information and configuration. Managed databases and serverless functions illustrate a spectrum of responsibilities, not a guarantee of no management. The shared-responsibility model divides duties according to services and agreements: providers secure underlying infrastructure, while customers must still classify data, manage users, select configurations, protect credentials and plan recovery.
+Infrastructure as a Service (IaaS) supplies virtual machines, storage and virtual networks while the customer controls operating systems, apps and data. Platform as a Service (PaaS) supplies managed application runtimes or databases while developers remain responsible for their code and data. Software as a Service (SaaS) delivers a finished application, but customer identities, permissions and information handling still matter. Public, private, hybrid and multi-cloud describe where and how resources are deployed; using two providers does not automatically provide failover. Service choice affects workload control, skill requirements, patching and cost.
 
-## Workplace scenario
+## Workplace example
 
-A business chooses between hosting a customer database on a virtual machine, using a managed SQL database or subscribing to an online CRM. For each, identify who patches the OS, backs up application data and controls user accounts.
+A small company needs hosted email, a custom bookings website and one older finance application that requires Windows administration.
 
-## Applied exercise
+## Guided practical activity
 
-1. Create a three-column IaaS/PaaS/SaaS table with one realistic example per column.
-2. For each example, assign ownership of hardware, guest OS, runtime, access control, backup and application data.
-3. Identify a duty that remains with the customer in all three models.
-4. Select the service model best suited to a small team without dedicated system administrators, explaining trade-offs.
-5. List contract questions about service-level agreements, data export, retention and incident reporting.
+1. Match SaaS, PaaS and IaaS to the three fictional needs and explain why.
+2. Fill out a shared-responsibility matrix: facility, guest operating system, application, identity and data.
+3. Sketch a hybrid option linking a local office service to a cloud-hosted application.
+4. Identify what would be required to make a multi-cloud failover plan real.
 
-## Validation and reflection
+## Confirm the learning
 
-The service comparison assigns responsibilities correctly and recommends a service on measurable needs. Create a verification register with **expected state**, **observed state**, **evidence**, **risk**, **owner** and **follow-up**. At least one test must demonstrate permitted activity and another must show an improper action is blocked or a faulty assumption is detected. Do not perform tests on systems without permission.
+The learner shows which responsibilities remain with the customer for each service model. In a table, record expected behaviour, observed or simulated behaviour, evidence, risk and next step. At least one negative test must show how an unsafe request is denied or escalated.
 
-### Review questions
+:::warning Safe use
+Managed does not mean the customer can stop securing user accounts and data.
+:::
 
-1. Who configures SaaS user access?
-2. Why does PaaS not remove responsibility for data protection?
+## Self-check and reflective feedback
+
+What are the most relevant ownership, privacy and cost controls in the scenario? Explain how you would verify the result rather than assume success.
 
 <details>
-  <summary>Read suggested feedback after your attempt</summary>
+  <summary>Reflection guide — review after answering</summary>
 
-Refer to the concept definitions above and justify the proposed configuration, failure behaviour and responsibility boundary. A correct answer includes evidence, risk and an owner. If your answer assumes a cloud service is perfectly available, permanently free or automatically secure, revisit the explanation and rework the diagram.
+A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
 
 </details>
-
-## Your evidence checkpoint
-
-- [ ] I can explain the cloud service or control without relying on product jargon.
-- [ ] My diagram or calculation states input assumptions and units.
-- [ ] I recorded a valid and negative test, or a justified safe simulation.
-- [ ] My recommendation includes cost, security and recovery implications.

@@ -1,47 +1,42 @@
 ---
-title: "3 — Cloud architecture: regions, networks, compute and storage"
-description: "The diagram is coherent, segregates sensitive services and identifies realistic failure boundaries."
+title: "3 — Regions, zones, networking and reliability"
+description: "The architecture distinguishes public pages and restricted data and does not expose administrative services."
 ---
 
-# Module 3: Cloud architecture: regions, networks, compute and storage
+# Module 3: Regions, zones, networking and reliability
 
-**Suggested time:** 45–70 minutes. **Competency:** The diagram is coherent, segregates sensitive services and identifies realistic failure boundaries.
+**Time:** 50–70 minutes. **Learning criterion:** The architecture distinguishes public pages and restricted data and does not expose administrative services.
 
-## Concepts and architecture
+## Understand the concepts
 
-A region is a geographic market or area with provider infrastructure; availability zones are separate facilities within a region for fault isolation where a product supports them. Resources may be deployed in a virtual private network or VPC/VNet with subnets, routes and security controls. A virtual machine provides general-purpose compute; containers package applications, while serverless compute executes code without managing traditional servers. Object storage suits durable files and unstructured data, block storage supports virtual disks, and file shares support shared filesystem semantics. DNS maps names to destinations; content delivery networks place cached content nearer clients. Actual durability, replication and recovery depend on configured service tiers.
+A cloud region is a geographic deployment area, while availability zones (where available) are separately engineered failure domains. Placement affects latency, law, service availability and disaster recovery. A virtual network contains subnets with defined address ranges; a route and firewall or security group control traffic. DNS resolves names and TLS can protect data in transit. A content delivery network can accelerate public content but should not be used to accidentally publish confidential records. Reliability requires measurement, tested recovery and avoiding unnecessary single points of failure.
 
-## Workplace scenario
+## Workplace example
 
-A fictional online learning portal requires a public web entry point, protected student records and downloadable public course images. Separate public static content, application processing and nonpublic database storage.
+Learners in Africa and Europe access a training site. Its course pages may be cached publicly, but student identities and grades require protected storage.
 
-## Applied exercise
+## Guided practical activity
 
-1. Draw a labelled architecture with learner browser, domain/DNS, HTTPS endpoint, application layer, identity, database and object storage.
-2. Mark which resource must be public and which must never allow anonymous direct access.
-3. Place the deployment into a hypothetical region and identify a data-residency consideration.
-4. Choose a compute model and two different storage models with a clear rationale.
-5. Explain the potential consequences of a single availability-zone failure and a complete regional outage.
+1. List four criteria for picking a primary region including residency, distance, price and service availability.
+2. Draw browser, public site, authentication service, application API and restricted database.
+3. Show which components may accept public inbound traffic and which must not.
+4. Create one positive connection test and one unauthorised access denial test.
 
-## Validation and reflection
+## Confirm the learning
 
-The diagram is coherent, segregates sensitive services and identifies realistic failure boundaries. Create a verification register with **expected state**, **observed state**, **evidence**, **risk**, **owner** and **follow-up**. At least one test must demonstrate permitted activity and another must show an improper action is blocked or a faulty assumption is detected. Do not perform tests on systems without permission.
+The architecture distinguishes public pages and restricted data and does not expose administrative services. In a table, record expected behaviour, observed or simulated behaviour, evidence, risk and next step. At least one negative test must show how an unsafe request is denied or escalated.
 
-### Review questions
+:::warning Safe use
+Do not open RDP, SSH or database ports to the entire Internet to simplify a lab.
+:::
 
-1. Why should databases normally be private rather than directly public?
-2. How do object storage and block storage differ?
+## Self-check and reflective feedback
+
+What are the most relevant ownership, privacy and cost controls in the scenario? Explain how you would verify the result rather than assume success.
 
 <details>
-  <summary>Read suggested feedback after your attempt</summary>
+  <summary>Reflection guide — review after answering</summary>
 
-Refer to the concept definitions above and justify the proposed configuration, failure behaviour and responsibility boundary. A correct answer includes evidence, risk and an owner. If your answer assumes a cloud service is perfectly available, permanently free or automatically secure, revisit the explanation and rework the diagram.
+A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
 
 </details>
-
-## Your evidence checkpoint
-
-- [ ] I can explain the cloud service or control without relying on product jargon.
-- [ ] My diagram or calculation states input assumptions and units.
-- [ ] I recorded a valid and negative test, or a justified safe simulation.
-- [ ] My recommendation includes cost, security and recovery implications.

@@ -1,47 +1,42 @@
 ---
-title: "4 — Identity, security and data protection in the cloud"
-description: "The controls use minimal access, protect sensitive data and provide explicit authorised and denied tests."
+title: "4 — Cloud identity, access and shared responsibility"
+description: "The permission design has named approval owners, no shared passwords and a demonstrable denied action."
 ---
 
-# Module 4: Identity, security and data protection in the cloud
+# Module 4: Cloud identity, access and shared responsibility
 
-**Suggested time:** 45–70 minutes. **Competency:** The controls use minimal access, protect sensitive data and provide explicit authorised and denied tests.
+**Time:** 50–70 minutes. **Learning criterion:** The permission design has named approval owners, no shared passwords and a demonstrable denied action.
 
-## Concepts and architecture
+## Understand the concepts
 
-Identity is central to cloud security: use named accounts, multifactor authentication and least-privilege role assignments. Resource policies, network segmentation, managed identities and secret managers reduce risk. Encryption in transit commonly uses TLS; encryption at rest and key custody depend on chosen services and provider configuration. Backups, versioning and access logs must be configured and tested. The Zero Trust approach avoids assuming that a request is safe because it originated inside a network. Policies should fail closed; avoid embedding API secrets in repositories or URLs. A configuration screen showing encryption 'on' is not a substitute for access tests, key-recovery design and documented ownership.
+Cloud identity systems issue roles or scoped permissions to users and workloads. Use least privilege, distinct identities for humans and automation, multifactor authentication and auditable changes. In many cloud services the provider secures physical infrastructure, while customers manage user access, classification and permitted configurations. A secret manager is preferred to placing tokens in files, URLs or browser scripts. Logs support auditing but should not unnecessarily collect sensitive input. The zero-trust principle is to authenticate and authorise each request based on context, not simply trust a network location.
 
-## Workplace scenario
+## Workplace example
 
-A developer wants to copy a cloud access key into JavaScript served by a public website. Explain how this exposes the key and design a safer service-to-service authorization arrangement.
+A trainee should inspect the storage inventory but must not delete any objects or change an organisation's billing information.
 
-## Applied exercise
+## Guided practical activity
 
-1. Define a simple role matrix for student, course editor, support technician and administrator.
-2. For each role, identify permitted actions and a prohibited action.
-3. Design a multi-factor login and credential-recovery path for administrators.
-4. Mark data classification and encryption requirements for course images, learner grades and billing records.
-5. Write two negative tests: an anonymous student attempting to read grades and an unauthorised editor attempting to delete a database backup.
+1. Design a permissions table for learner, storage administrator and billing reviewer.
+2. Choose a read-only role for the trainee and explain the exact permitted actions.
+3. Show a simulated failed deletion attempt and how you would record the denial without storing credentials.
+4. Write an emergency access and account offboarding checklist.
 
-## Validation and reflection
+## Confirm the learning
 
-The controls use minimal access, protect sensitive data and provide explicit authorised and denied tests. Create a verification register with **expected state**, **observed state**, **evidence**, **risk**, **owner** and **follow-up**. At least one test must demonstrate permitted activity and another must show an improper action is blocked or a faulty assumption is detected. Do not perform tests on systems without permission.
+The permission design has named approval owners, no shared passwords and a demonstrable denied action. In a table, record expected behaviour, observed or simulated behaviour, evidence, risk and next step. At least one negative test must show how an unsafe request is denied or escalated.
 
-### Review questions
+:::warning Safe use
+Never publish or email real API keys, tokens, client secrets or recovery codes.
+:::
 
-1. Why is a secret in client-side JavaScript unsafe?
-2. What proves a least-privilege policy works?
+## Self-check and reflective feedback
+
+What are the most relevant ownership, privacy and cost controls in the scenario? Explain how you would verify the result rather than assume success.
 
 <details>
-  <summary>Read suggested feedback after your attempt</summary>
+  <summary>Reflection guide — review after answering</summary>
 
-Refer to the concept definitions above and justify the proposed configuration, failure behaviour and responsibility boundary. A correct answer includes evidence, risk and an owner. If your answer assumes a cloud service is perfectly available, permanently free or automatically secure, revisit the explanation and rework the diagram.
+A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
 
 </details>
-
-## Your evidence checkpoint
-
-- [ ] I can explain the cloud service or control without relying on product jargon.
-- [ ] My diagram or calculation states input assumptions and units.
-- [ ] I recorded a valid and negative test, or a justified safe simulation.
-- [ ] My recommendation includes cost, security and recovery implications.

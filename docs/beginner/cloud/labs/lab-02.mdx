@@ -1,32 +1,28 @@
 ---
-title: "Lab 2 — Cloud cost and scale planning simulation"
-description: "A six-month public training campaign has variable traffic and a limited budget."
+title: "Lab 2 — Identity and network security tabletop"
+description: "Protect a course application without requiring a paid cloud account."
 ---
 
-# Lab 2: Cloud cost and scale planning simulation
+# Lab 2: Identity and network security tabletop
 
-**Duration:** 80 minutes. **Mode:** no-charge cloud simulation or authorised sandbox.
+**Duration:** 75 minutes. **Environment:** offline design or permitted free simulation; avoid live billable resources.
 
-## Scenario
+## Objective
 
-A six-month public training campaign has variable traffic and a limited budget.
+Protect a course application without requiring a paid cloud account.
 
-## Hands-on lab procedure
+## Steps
 
-1. Build a spreadsheet with synthetic compute, storage, requests, egress, support and backup usage.
-2. Calculate normal monthly cost and three-times-traffic scenario from stated unit assumptions.
-3. Add alerts for spend above 70% and 90% of the limit; set an accountable owner.
-4. Compare the resulting cost to a fixed-resource alternative without hiding operational labour.
-5. Set example RTO and RPO for catalogue pages and learner grades.
-6. Describe how to test a recovery plan on simulated resources.
-7. Write an exception response for projected budget overrun.
+1. Sketch a learner browser, static pages, protected API, identity service and restricted database.
+2. Design read-only and admin roles with justifications.
+3. Document authenticated allowed traffic and three explicitly denied connections.
+4. Simulate a compromised account and the safe session-revocation/escalation response.
+5. Describe where provider credentials would reside and how activity would be audited.
 
-## Acceptance criterion
+## Evidence and acceptance
 
-Cost model is mathematically consistent and explicitly labels every provider rate as an example, not a guaranteed price.
+Threat-aware architecture diagram, access matrix, one positive test, two negative tests and incident checklist.
 
-Provide: a scope statement, a labelled diagram or cost workbook, redacted evidence for each key design decision, one positive and one deliberately invalid/denied test, and 100–150 words of lessons learned. For failures, record the hypothesis, observed result, corrective action and safe rollback.
+**Pass criterion:** No secret, student grade or database administrative endpoint is publicly exposed in the design.
 
-:::warning Safe cloud practice
-Do not use production resources, real credentials or chargeable cloud services without written approval. A detailed spreadsheet or architecture simulation is a valid lab path.
-:::
+Create a test record showing intended action, allowed response, deliberately invalid/unauthorised input and observed or simulated refusal. Distinguish simulated output from actual provider observations. Document a correction and one residual risk.

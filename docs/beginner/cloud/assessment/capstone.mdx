@@ -1,34 +1,31 @@
 ---
-title: "Cloud Computing Fundamentals — Capstone"
-description: "Complete secure cloud planning, cost, testing and recovery deliverables."
+title: "Cloud capstone"
+description: "End-to-end small-business cloud architecture assessment."
 ---
 
-# Capstone: cloud-ready training business
+# Capstone: secure, affordable learner portal
 
-## Scenario
+A fictional school wishes to publish open course descriptions, accept user authentication and store private grades. Propose a cloud hosting design with a realistic budget and recovery strategy. No actual infrastructure deployment is required.
 
-A fictional training provider wants a web-accessible course catalogue, secure student progress data, predictable monthly costs and a tested incident procedure. You are hired to create an implementation-ready *proposal and simulation*, not to deploy billable systems.
+## Required deliverables
 
-## Deliverable pack
+1. Business brief stating expected audience, functional requirements, limitations and owner.
+2. An annotated architecture with public browser, web delivery/CDN, identity, API, restricted database and backup boundary.
+3. A shared-responsibility and access-control matrix covering students, instructors and administrators.
+4. A cost estimate using labelled *illustrative* rates, monthly usage quantities, budget alerts and teardown plan.
+5. RPO/RTO targets and a safe restore test for invented student records.
+6. Three positive and three negative test cases including unauthorised data access and unexpected charging.
+7. Management summary and a reflection on trade-offs and future improvement.
 
-1. Record stakeholders, business scope, user journeys, RTO/RPO targets and sample demand.
-2. Compare IaaS, PaaS and SaaS and select a model with clear provider/customer responsibility boundaries.
-3. Draw public entry, DNS/TLS, app logic, identity, private data store, object storage, logging and backup.
-4. Prepare a twelve-month illustrative budget using stated unit-rate assumptions and both baseline and peak demand.
-5. Implement a four-role access matrix and show one authorised request and one denied request.
-6. Develop three success and three negative test cases including credential misuse, spending limits and regional failure.
-7. Write a monitoring/incident runbook with on-call ownership, alert thresholds, rollback and restore drill.
-8. Summarise risks, assumptions and the next controlled deployment decision for management.
+## Analytic scoring
 
-## Scoring rubric
-
-| Domain | Maximum points | Full-credit criterion |
+| Domain | Points | Full credit |
 |---|---:|---|
-| Business requirements and model choice | 15 | Explicit user needs and service responsibility allocation |
-| Architecture, governance and least privilege | 25 | Clear boundaries and sensitive data protection |
-| Budget, scale and recovery design | 25 | Checked calculations, RTO/RPO and realistic failure planning |
-| Tested functional/security behaviours | 20 | Six cases with observable results and corrective actions |
-| Operational documentation and reflection | 15 | Monitoring, incident ownership and recovery runbook |
-| **Total** | **100** | **70/100 plus all critical security criteria** |
+| Requirements and outcome | 15 | Clear user needs, constraints, owner |
+| Architecture and security | 25 | Suitable services and deny-by-default access |
+| Reproducible cost/recovery plan | 25 | Traceable assumptions and verified calculations |
+| Positive and negative tests | 20 | Six meaningful scenarios with correct outcomes |
+| Operational governance | 15 | Monitoring, responsibility, teardown, reflection |
+| **Total** | **100** | **70 minimum and every critical condition** |
 
-**Critical rules:** no live secrets, no unauthorised/billable provisioning, no public access to private data, no unsupported pricing guarantees, and no release without monitoring/recovery ownership. Failure of a critical rule requires remediation even if the numeric score is 70 or above. An authorised human assessor must verify evidence and record the decision before issuing any Academy completion award.
+**Critical conditions:** no public private grades, no credential exposure, no billable action without authorisation, no claims of tested restoration without evidence. A competent human assessor must review artefacts and record official outcomes using an authenticated system.

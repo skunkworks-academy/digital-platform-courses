@@ -1,47 +1,42 @@
 ---
-title: "1 — From traditional IT to cloud computing"
-description: "The comparison correctly identifies service dependencies, organisational trade-offs and the limits of cloud availability."
+title: "1 — Cloud services and how they work"
+description: "The comparison reflects cost and operational trade-offs, identifies a decision owner and lists any information still needed."
 ---
 
-# Module 1: From traditional IT to cloud computing
+# Module 1: Cloud services and how they work
 
-**Suggested time:** 45–70 minutes. **Competency:** The comparison correctly identifies service dependencies, organisational trade-offs and the limits of cloud availability.
+**Time:** 50–70 minutes. **Learning criterion:** The comparison reflects cost and operational trade-offs, identifies a decision owner and lists any information still needed.
 
-## Concepts and architecture
+## Understand the concepts
 
-A traditional IT deployment often buys and operates servers, storage and networks in a particular location. Cloud computing provides on-demand access to computing resources through managed services and metered commercial models. Resource pooling, rapid elasticity, measured service and self-service are common properties, but service quality varies by provider and plan. Distinguish public cloud, private cloud, hybrid cloud and multicloud: these describe organisational models, not security guarantees. Moving to cloud does not remove the need for architecture, data governance or business continuity. Edge computing may process data near devices when latency or connectivity matters.
+Cloud computing offers shared pools of configurable computing resources over a network. Common characteristics are on-demand self-service, broad network access, resource pooling, rapid elasticity and measured service. Renting capacity can shorten the time to experiment, but responsibility for design, billing, data and access remains. Cloud services depend on network access and provider operations; they are neither automatically inexpensive nor immune to failure. Contrast a physical server, a hosted virtual machine, a managed application and an Internet-delivered file service.
 
-## Workplace scenario
+## Workplace example
 
-A fictional retailer runs its ordering system from an office desktop that fails during power outages. Decide which business functions could move to a managed cloud service and what remains dependent on local network connectivity.
+A local training agency sees large spikes in learner registrations twice yearly. It needs short-term capacity without purchasing hardware used for only a few weeks.
 
-## Applied exercise
+## Guided practical activity
 
-1. Sketch a simple traditional architecture with a user, office router, server, storage, backup and support owner.
-2. Sketch a cloud alternative identifying customer, provider region, service, identity, connectivity and shared responsibilities.
-3. Compare benefits and constraints in five areas: cost, scalability, resilience, skill requirements and security.
-4. Name two business needs where keeping a local or hybrid capability may be appropriate.
-5. Explain how a lost internet link could still disrupt an otherwise healthy cloud service.
+1. Explain the five defining cloud characteristics in plain language.
+2. Build a comparison table for owning a small server and purchasing hosted capacity: hardware, support, security, connectivity, speed and cost.
+3. Write three reasons the agency might use cloud services and two situations where an on-site workload could still be suitable.
+4. Record one measurable criterion for evaluating the proposed migration.
 
-## Validation and reflection
+## Confirm the learning
 
-The comparison correctly identifies service dependencies, organisational trade-offs and the limits of cloud availability. Create a verification register with **expected state**, **observed state**, **evidence**, **risk**, **owner** and **follow-up**. At least one test must demonstrate permitted activity and another must show an improper action is blocked or a faulty assumption is detected. Do not perform tests on systems without permission.
+The comparison reflects cost and operational trade-offs, identifies a decision owner and lists any information still needed. In a table, record expected behaviour, observed or simulated behaviour, evidence, risk and next step. At least one negative test must show how an unsafe request is denied or escalated.
 
-### Review questions
+:::warning Safe use
+Never present cloud services as free or guaranteed to be available in every region.
+:::
 
-1. What distinguishes a public cloud from a private cloud?
-2. Does cloud migration eliminate operational and governance responsibility?
+## Self-check and reflective feedback
+
+What are the most relevant ownership, privacy and cost controls in the scenario? Explain how you would verify the result rather than assume success.
 
 <details>
-  <summary>Read suggested feedback after your attempt</summary>
+  <summary>Reflection guide — review after answering</summary>
 
-Refer to the concept definitions above and justify the proposed configuration, failure behaviour and responsibility boundary. A correct answer includes evidence, risk and an owner. If your answer assumes a cloud service is perfectly available, permanently free or automatically secure, revisit the explanation and rework the diagram.
+A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
 
 </details>
-
-## Your evidence checkpoint
-
-- [ ] I can explain the cloud service or control without relying on product jargon.
-- [ ] My diagram or calculation states input assumptions and units.
-- [ ] I recorded a valid and negative test, or a justified safe simulation.
-- [ ] My recommendation includes cost, security and recovery implications.
