@@ -48,3 +48,35 @@ The answer must demonstrate the principles taught above: verification against ev
 - [ ] Explicit expected and observed results.
 - [ ] One failure or negative test and corrective action.
 - [ ] A concise reflection explaining the relevance to daily work.
+
+## Extended learning: prompt structure and systematic improvement
+
+### A useful prompt is a testable specification
+
+A prompt is easier to assess when its **role, task, approved context, audience, output format and boundaries** are explicit. The prompt should also say what to do with unknown values. Giving a model extra irrelevant context can increase confusion or disclosure risk; provide the minimum useful information. A few-shot example is helpful when it demonstrates the expected structure without exposing private material.
+
+Compare the following prompts:
+
+| Element | Weak request | Improved request |
+|---|---|---|
+| Task | Write an email | Draft a reply to a fictional course enquiry |
+| Audience | Not specified | A first-time IT learner |
+| Source facts | Make up details | Use only the supplied approved course titles |
+| Format | Anything | Subject plus three short paragraphs |
+| Uncertainty | Hidden | Write “date not confirmed” when no date was supplied |
+| Review | None | List the facts a staff member must check before sending |
+
+### Worked example: controlled revision
+
+1. Create a fictional enquiry asking about two courses, a start date and a discount.
+2. Supply two confirmed course titles but **no** date or approved discount.
+3. Request a draft no longer than 130 words. Instruct the assistant not to invent dates, prices or approvals.
+4. Inspect the result: underline every factual claim and trace each to the supplied brief.
+5. Ask for a second revision that improves tone without changing facts.
+6. Compare the two drafts against **accuracy, usefulness, tone and review time**, each scored from one to five.
+
+### Troubleshooting poor output
+
+If the response wanders off task, reduce scope. If it adds facts, explicitly forbid assumptions and demand a missing-information list. If the formatting is inconsistent, give a brief example with fictional data. If the task involves consequential decisions, divide drafting, verification and approval into separate steps.
+
+**Practice:** Write two prompts that produce the same content in different formats, such as a table and a short email. Explain which is easier to verify and why.

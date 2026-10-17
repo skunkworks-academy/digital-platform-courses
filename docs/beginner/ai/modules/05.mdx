@@ -48,3 +48,33 @@ The answer must demonstrate the principles taught above: verification against ev
 - [ ] Explicit expected and observed results.
 - [ ] One failure or negative test and corrective action.
 - [ ] A concise reflection explaining the relevance to daily work.
+
+## Extended learning: AI-assisted data reasoning
+
+### Separate arithmetic, analysis and explanation
+
+A model may describe a correct formula while calculating the wrong result. Use a spreadsheet or calculator as the **independent numerical source of truth**, and treat the model's narrative as a draft interpretation. For data work, inspect units, missing values, duplicates and the denominator used for percentages. A change over time is not proof that a particular intervention caused it.
+
+### Worked example: a small training register
+
+The fictional table below shows completed training seats:
+
+| Course | Planned | Completed | Completion rate |
+|---|---:|---:|---:|
+| IT fundamentals | 20 | 16 | 80% |
+| Cybersecurity | 15 | 12 | 80% |
+| Spreadsheet basics | 10 | 9 | 90% |
+| **Total** | **45** | **37** | **82.2%** |
+
+The **overall** rate is 37 divided by 45, approximately 82.2%; it is not necessarily the average of the three percentages. Recalculate with a spreadsheet formula or calculator and explain why weighting matters. Now imagine that the second row was imported twice: the totals may look plausible but would describe a different population.
+
+### A repeatable verification sequence
+
+1. State the question: “What proportion of planned seats were completed?”
+2. Define every field and identify whether rows are independent records.
+3. Detect duplicates and blanks; describe how they will be treated before deleting anything.
+4. Calculate totals and rates with visible formulas.
+5. Check a sample by hand, and reconcile the grand total with the source.
+6. Draft a short conclusion that reports the result without claiming why it happened.
+
+**Practice:** Increase the completed value for spreadsheet basics from 9 to 10. Recompute both the course rate and overall rate. Explain which claims the new data **does not** support, such as proving that a new learning platform caused improvement.

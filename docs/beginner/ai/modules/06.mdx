@@ -48,3 +48,34 @@ The answer must demonstrate the principles taught above: verification against ev
 - [ ] Explicit expected and observed results.
 - [ ] One failure or negative test and corrective action.
 - [ ] A concise reflection explaining the relevance to daily work.
+
+## Extended learning: safe personal AI operating procedure
+
+### Treat the workflow as a controlled process
+
+A reliable workflow needs a **trigger, approved inputs, transformation, validation, decision gate, output and recovery procedure**. Safety cannot rely on the model being instructed to be careful. Consequential actions such as sending a customer quote, editing an official register or providing regulated advice require controls outside the generative response.
+
+### Worked example: a training enquiry assistant
+
+The fictional workflow is designed to draft answers without sending them automatically:
+
+1. **Intake:** Receive a permitted enquiry in an authorised mailbox.
+2. **Classification:** Identify requested courses and whether personal information is present.
+3. **Minimal input:** Provide only the necessary, non-sensitive facts and approved catalogue data to the assistant.
+4. **Generation:** Produce a draft plus a list of uncertain items such as unconfirmed prices.
+5. **Review gate:** Staff compare the output against the approved course catalogue and pricing record.
+6. **Decision:** An authorised person approves, edits or rejects the draft.
+7. **Record:** Keep a minimal audit note of source, decision and corrections without storing secrets.
+
+### Define failure handling
+
+| Failure | Required response |
+|---|---|
+| AI invents a discount | Remove claim and confirm price with authorised owner |
+| Customer submits sensitive documents | Do not copy them into an unapproved tool; follow policy |
+| Source catalogue unavailable | Pause the quote instead of guessing |
+| Reviewer cannot verify a date | Mark as pending and request confirmation |
+
+Measure success using **correction rate, turnaround time and escalation quality**, not just the number of messages generated.
+
+**Capstone preparation:** Draw the workflow as a diagram with a visible human approval decision. Add one deliberately malformed enquiry and describe how the process rejects or escalates it.
