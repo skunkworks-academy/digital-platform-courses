@@ -57,3 +57,6 @@ body:has(.swa-global-footer) .footer{display:none!important}
 @container(max-width:650px){.studioHero{grid-template-columns:1fr}.studioHeroArt{height:185px;min-height:0;order:-1}.studioFlow,.studioCardGrid{grid-template-columns:1fr}.studioFlow li::after{content:"↓";top:auto;bottom:-.75rem;right:47%}}
 @media(max-width:650px){.studioFlow,.studioCardGrid{grid-template-columns:1fr}.studioHero{grid-template-columns:1fr}.studioHeroArt{height:190px;min-height:0;order:-1}}
 @media(prefers-reduced-motion:reduce){.studioFlip{transition:none}}
+
+.studioCourseCover{display:block;width:100%;height:auto;aspect-ratio:5/3;object-fit:cover;margin:0 0 1rem;border-radius:.65rem;border:1px solid var(--ifm-color-emphasis-300)}
+.courseCard:focus-within{outline:2px solid var(--ifm-color-primary);outline-offset:4px}
