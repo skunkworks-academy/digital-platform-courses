@@ -9,7 +9,8 @@
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
     "typecheck": "tsc --noEmit",
-    "validate:pilot": "node scripts/validate-maria-pilot.mjs"
+    "validate:pilot": "node scripts/validate-maria-pilot.mjs",
+    "validate:beginner": "node scripts/validate-beginner-courses.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.2",

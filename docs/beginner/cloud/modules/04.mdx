@@ -1,0 +1,42 @@
+---
+title: "4 — Cloud identity, access and shared responsibility"
+description: "The permission design has named approval owners, no shared passwords and a demonstrable denied action."
+---
+
+# Module 4: Cloud identity, access and shared responsibility
+
+**Time:** 50–70 minutes. **Learning criterion:** The permission design has named approval owners, no shared passwords and a demonstrable denied action.
+
+## Understand the concepts
+
+Cloud identity systems issue roles or scoped permissions to users and workloads. Use least privilege, distinct identities for humans and automation, multifactor authentication and auditable changes. In many cloud services the provider secures physical infrastructure, while customers manage user access, classification and permitted configurations. A secret manager is preferred to placing tokens in files, URLs or browser scripts. Logs support auditing but should not unnecessarily collect sensitive input. The zero-trust principle is to authenticate and authorise each request based on context, not simply trust a network location.
+
+## Workplace example
+
+A trainee should inspect the storage inventory but must not delete any objects or change an organisation's billing information.
+
+## Guided practical activity
+
+1. Design a permissions table for learner, storage administrator and billing reviewer.
+2. Choose a read-only role for the trainee and explain the exact permitted actions.
+3. Show a simulated failed deletion attempt and how you would record the denial without storing credentials.
+4. Write an emergency access and account offboarding checklist.
+
+## Confirm the learning
+
+The permission design has named approval owners, no shared passwords and a demonstrable denied action. In a table, record expected behaviour, observed or simulated behaviour, evidence, risk and next step. At least one negative test must show how an unsafe request is denied or escalated.
+
+:::warning Safe use
+Never publish or email real API keys, tokens, client secrets or recovery codes.
+:::
+
+## Self-check and reflective feedback
+
+What are the most relevant ownership, privacy and cost controls in the scenario? Explain how you would verify the result rather than assume success.
+
+<details>
+  <summary>Reflection guide — review after answering</summary>
+
+A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
+
+</details>

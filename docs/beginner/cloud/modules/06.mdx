@@ -1,0 +1,42 @@
+---
+title: "6 — Cloud pricing, governance and a safe first deployment"
+description: "The plan has an authorised owner, capped assumptions, safe resource design and a scheduled removal procedure."
+---
+
+# Module 6: Cloud pricing, governance and a safe first deployment
+
+**Time:** 50–70 minutes. **Learning criterion:** The plan has an authorised owner, capped assumptions, safe resource design and a scheduled removal procedure.
+
+## Understand the concepts
+
+Cloud bills may measure compute hours, provisioned capacity, stored gigabytes, requests, bandwidth, region and optional support. Free tiers can have eligibility and usage limits; a subscription without guardrails may incur charges. Build an estimate from documented quantities and current official rates before deploying. Apply resource tags, a named financial owner, budget alerts, quotas and an explicit teardown date. A production-ready pilot requires identity, logging, least-privilege networking, valid backups, test evidence, incident ownership and rollback.
+
+## Workplace example
+
+A fictional company wants a four-week pilot of an online brochure and enquiry form, using no real customer information and no more than an approved budget.
+
+## Guided practical activity
+
+1. Create a cost worksheet with quantity, unit, estimated price, total and uncertainty columns.
+2. Compare a static hosted page, managed application and always-on virtual machine conceptually.
+3. Set fictional budget thresholds and a cleanup date and list charges that might exceed expectations.
+4. Write an approval/validation/teardown checklist and explain a potential exception.
+
+## Confirm the learning
+
+The plan has an authorised owner, capped assumptions, safe resource design and a scheduled removal procedure. In a table, record expected behaviour, observed or simulated behaviour, evidence, risk and next step. At least one negative test must show how an unsafe request is denied or escalated.
+
+:::warning Safe use
+Do not create live billable cloud resources or assume trial credits cover all usage without approval.
+:::
+
+## Self-check and reflective feedback
+
+What are the most relevant ownership, privacy and cost controls in the scenario? Explain how you would verify the result rather than assume success.
+
+<details>
+  <summary>Reflection guide — review after answering</summary>
+
+A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
+
+</details>

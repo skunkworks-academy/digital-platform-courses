@@ -1,0 +1,31 @@
+---
+title: "Cloud capstone"
+description: "End-to-end small-business cloud architecture assessment."
+---
+
+# Capstone: secure, affordable learner portal
+
+A fictional school wishes to publish open course descriptions, accept user authentication and store private grades. Propose a cloud hosting design with a realistic budget and recovery strategy. No actual infrastructure deployment is required.
+
+## Required deliverables
+
+1. Business brief stating expected audience, functional requirements, limitations and owner.
+2. An annotated architecture with public browser, web delivery/CDN, identity, API, restricted database and backup boundary.
+3. A shared-responsibility and access-control matrix covering students, instructors and administrators.
+4. A cost estimate using labelled *illustrative* rates, monthly usage quantities, budget alerts and teardown plan.
+5. RPO/RTO targets and a safe restore test for invented student records.
+6. Three positive and three negative test cases including unauthorised data access and unexpected charging.
+7. Management summary and a reflection on trade-offs and future improvement.
+
+## Analytic scoring
+
+| Domain | Points | Full credit |
+|---|---:|---|
+| Requirements and outcome | 15 | Clear user needs, constraints, owner |
+| Architecture and security | 25 | Suitable services and deny-by-default access |
+| Reproducible cost/recovery plan | 25 | Traceable assumptions and verified calculations |
+| Positive and negative tests | 20 | Six meaningful scenarios with correct outcomes |
+| Operational governance | 15 | Monitoring, responsibility, teardown, reflection |
+| **Total** | **100** | **70 minimum and every critical condition** |
+
+**Critical conditions:** no public private grades, no credential exposure, no billable action without authorisation, no claims of tested restoration without evidence. A competent human assessor must review artefacts and record official outcomes using an authenticated system.

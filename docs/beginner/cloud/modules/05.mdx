@@ -1,0 +1,42 @@
+---
+title: "5 — Compute, storage, databases and backup fundamentals"
+description: "The proposed storage choice, ownership and recovery tests are consistent with the sensitivity of each dataset."
+---
+
+# Module 5: Compute, storage, databases and backup fundamentals
+
+**Time:** 50–70 minutes. **Learning criterion:** The proposed storage choice, ownership and recovery tests are consistent with the sensitivity of each dataset.
+
+## Understand the concepts
+
+Compute can run as virtual machines (guest OS), containers (packaged processes) or event-based/serverless functions. Data services include object storage for documents/images, block storage for disk volumes and file storage for shared directory access. A managed database reduces some operational responsibilities but still requires customer permissions, schema correctness, backup policy and secure connections. Availability zones, replication and storage versioning reduce some types of failure but do not replace independent backups and tested restores. RPO is the acceptable window of data loss; RTO is the desired service recovery time.
+
+## Workplace example
+
+A charity stores public images, member applications and internal financial reports. Recommend sensible data services with different access and restore requirements.
+
+## Guided practical activity
+
+1. Map each dataset to a data service category and permitted user role.
+2. Specify illustrative RPO and RTO values and what they mean during an outage.
+3. Design a test recovery exercise using fictional files and a dated restore checklist.
+4. List two risks that replication does not fully solve, including accidental deletion.
+
+## Confirm the learning
+
+The proposed storage choice, ownership and recovery tests are consistent with the sensitivity of each dataset. In a table, record expected behaviour, observed or simulated behaviour, evidence, risk and next step. At least one negative test must show how an unsafe request is denied or escalated.
+
+:::warning Safe use
+A 'backup completed' alert does not prove files can be restored.
+:::
+
+## Self-check and reflective feedback
+
+What are the most relevant ownership, privacy and cost controls in the scenario? Explain how you would verify the result rather than assume success.
+
+<details>
+  <summary>Reflection guide — review after answering</summary>
+
+A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
+
+</details>

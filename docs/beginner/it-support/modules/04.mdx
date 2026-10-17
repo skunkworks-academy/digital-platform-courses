@@ -1,0 +1,50 @@
+---
+title: "4 — Networking basics: IP, DNS, Wi-Fi and Internet access"
+description: "A network diagnostic table maps each test to the OSI-relevant layer, expected result and next action."
+---
+
+# Module 4: Networking basics: IP, DNS, Wi-Fi and Internet access
+
+**Estimated time:** 45–70 minutes. **Outcome:** A network diagnostic table maps each test to the OSI-relevant layer, expected result and next action.
+
+## Core concepts and why they matter
+
+LAN connects local devices; WAN connects distant networks. An IP address identifies an interface within a network; a subnet mask or prefix indicates local range; a default gateway forwards traffic beyond that range. DHCP typically leases addressing; DNS resolves names into resource records. Wi-Fi signal quality, authentication and interference are distinct from Internet routing. A useful sequence checks physical/radio connection, address and gateway, local connectivity, DNS resolution and external service.
+
+## Worked workplace scenario
+
+A computer can reach 1.1.1.1 but cannot open example.com. DNS is one plausible cause, but the technician also checks proxy settings, firewall controls and site availability.
+
+## Guided hands-on application
+
+1. Interpret a sample IPv4 configuration with IP, /24 prefix, gateway and DNS resolver.
+2. Use OS settings or read-only tools (ipconfig/ifconfig/ip/route) to record addressing.
+3. Compare the result of a local gateway connection and a safe DNS name lookup.
+4. Document two possible reasons Wi-Fi can show connected but not provide Internet access.
+
+## Verification and failure test
+
+A network diagnostic table maps each test to the OSI-relevant layer, expected result and next action. Create a table identifying expected result, actual result, date, supporting evidence and next action. Use one deliberately invalid or unexpected input to confirm the control does not silently fail.
+
+:::warning Safety and ethics
+Do not scan third-party networks, circumvent managed DNS controls or change production router settings without approval.
+:::
+
+## Knowledge reflection
+
+1. Why does a successful IP ping not prove DNS works?
+2. What is the role of the default gateway?
+
+<details>
+  <summary>Instructor guidance after answering</summary>
+
+A satisfactory response must apply the concepts above, define who may act, describe observable evidence, and explain why at least one unsafe alternative would be rejected. Review the scenario and repeat the experiment if your answer lacks a reproducible verification step.
+
+</details>
+
+## Evidence checklist
+
+- [ ] Written purpose and accepted input.
+- [ ] Reproducible procedure and observed result.
+- [ ] Negative or failure test, with safe remediation.
+- [ ] Reflection and next improvement.

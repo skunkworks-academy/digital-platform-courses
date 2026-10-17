@@ -1,0 +1,42 @@
+---
+title: "3 — Regions, zones, networking and reliability"
+description: "The architecture distinguishes public pages and restricted data and does not expose administrative services."
+---
+
+# Module 3: Regions, zones, networking and reliability
+
+**Time:** 50–70 minutes. **Learning criterion:** The architecture distinguishes public pages and restricted data and does not expose administrative services.
+
+## Understand the concepts
+
+A cloud region is a geographic deployment area, while availability zones (where available) are separately engineered failure domains. Placement affects latency, law, service availability and disaster recovery. A virtual network contains subnets with defined address ranges; a route and firewall or security group control traffic. DNS resolves names and TLS can protect data in transit. A content delivery network can accelerate public content but should not be used to accidentally publish confidential records. Reliability requires measurement, tested recovery and avoiding unnecessary single points of failure.
+
+## Workplace example
+
+Learners in Africa and Europe access a training site. Its course pages may be cached publicly, but student identities and grades require protected storage.
+
+## Guided practical activity
+
+1. List four criteria for picking a primary region including residency, distance, price and service availability.
+2. Draw browser, public site, authentication service, application API and restricted database.
+3. Show which components may accept public inbound traffic and which must not.
+4. Create one positive connection test and one unauthorised access denial test.
+
+## Confirm the learning
+
+The architecture distinguishes public pages and restricted data and does not expose administrative services. In a table, record expected behaviour, observed or simulated behaviour, evidence, risk and next step. At least one negative test must show how an unsafe request is denied or escalated.
+
+:::warning Safe use
+Do not open RDP, SSH or database ports to the entire Internet to simplify a lab.
+:::
+
+## Self-check and reflective feedback
+
+What are the most relevant ownership, privacy and cost controls in the scenario? Explain how you would verify the result rather than assume success.
+
+<details>
+  <summary>Reflection guide — review after answering</summary>
+
+A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
+
+</details>
