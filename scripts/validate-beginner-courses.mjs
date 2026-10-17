@@ -33,14 +33,10 @@ assert.equal((quiz.match(/^### \d+\./gm)||[]).length,12,'Not 12 questions '+slug
 const cap=read(base+'/assessment/capstone.mdx');assert.ok(cap.includes('70')&&cap.includes('20'),'Capstone rubric incomplete '+slug);
 }
 const gallery=read('docs/beginner/index.mdx');
-const studio=read('src/components/VisualLearningStudio/index.tsx');
-const layout=read('src/theme/DocItem/Content/index.tsx');
-const data=read('src/data/learningStudio.ts');
-const chrome=read('docusaurus.config.ts');
 assert.ok(studio.includes('aria-pressed')&&studio.includes('role="status"'),'Accessible practice interactions missing');
-assert.ok(layout.includes('<VisualLearningStudio docId={id}/>'),'Missing global document studio integration');
-assert.ok(chrome.includes('assets/skunkworks-ui.js')&&chrome.includes('assets/skunkworks-footer.js'),'Missing shared Academy header/footer');
-assert.ok(data.includes('const')&&data.includes('scenes'),'Missing topic-specific learning content');
+assert.ok(wrapper.includes('<VisualLearningStudio docId={id}/>'),'Missing global document studio integration');
+assert.ok(config.includes('assets/skunkworks-ui.js')&&config.includes('assets/skunkworks-footer.js'),'Missing shared Academy header/footer');
+assert.ok(data.includes('studioCourses')&&data.includes('scenes'),'Missing topic-specific learning content');
 for(const [slug] of tracks){
  assert.ok(gallery.includes('<CourseCover course="'+slug+'" />'),'Missing visual course gallery card for '+slug);
  assert.ok(has('static/img/learning-studio/'+slug+'.svg'),'Missing original learning illustration: '+slug);
