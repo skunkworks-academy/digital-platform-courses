@@ -3,6 +3,7 @@ import {join} from 'node:path';
 import assert from 'node:assert/strict';
 const root=process.cwd(), read=(p)=>readFileSync(join(root,p),'utf8');
 const required=['docs/index.mdx','src/components/SkillsDiagnostic/index.tsx','src/css/custom.css','sidebars.ts','architecture/MARIA-PAYMENT-AND-ACCESS.md'];
+assert.ok(existsSync(join(root,'src/components/CourseProgress/index.tsx')),'Missing learner progress widget');
 const courseIds=['github','coderabbit','shopify','m365','automation'];
 for(const p of required)assert.ok(existsSync(join(root,p)),`Missing ${p}`);
 const catalog=read('docs/index.mdx'), sidebars=read('sidebars.ts'),component=read('src/components/SkillsDiagnostic/index.tsx');
@@ -12,6 +13,7 @@ for(const slug of courseIds){
  const path=['github','coderabbit','shopify'].includes(slug)?`docs/${slug}/index.mdx`:`docs/maria/${slug}.mdx`;
  const doc=read(path);
  assert.match(doc,new RegExp(`<SkillsDiagnostic\\s+course="${slug}"\\s*/>`),`Missing baseline/final assessment for ${slug}`);
+ assert.match(doc,new RegExp(`<CourseProgress\\s+course="${slug}"\\s*/>`),`Missing progress control for ${slug}`);
  assert.ok(sidebars.includes(slug),`Missing ${slug} sidebar`);
  assert.ok(component.includes(`${slug}:[`),`Missing ${slug} diagnostic bank`);
 }
