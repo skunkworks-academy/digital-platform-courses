@@ -6,8 +6,10 @@ const required=['docs/index.mdx','src/components/SkillsDiagnostic/index.tsx','sr
 assert.ok(existsSync(join(root,'src/components/CourseProgress/index.tsx')),'Missing learner progress widget');
 const courseIds=['github','coderabbit','shopify','m365','automation'];
 for(const p of required)assert.ok(existsSync(join(root,p)),`Missing ${p}`);
+assert.ok(existsSync(join(root,'src/components/CourseCart/index.tsx')),'Missing draft storefront');
 const catalog=read('docs/index.mdx'), sidebars=read('sidebars.ts'),component=read('src/components/SkillsDiagnostic/index.tsx');
 const expectedCodes=['SKW-GH-101','SKW-CR-201','SKW-SH-101','SKW-M365-101','SKW-AUTO-101'];
+assert.ok(catalog.includes('<CourseCart />'),'Storefront is not mounted');
 for(const code of expectedCodes)assert.ok(catalog.includes(code),`Missing SKU ${code}`);
 for(const slug of courseIds){
  const path=['github','coderabbit','shopify'].includes(slug)?`docs/${slug}/index.mdx`:`docs/maria/${slug}.mdx`;
