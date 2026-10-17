@@ -23,7 +23,7 @@ const config: Config = {
     metadata:[{name:'description',content:'Five beginner and specialist assessed self-paced courses from Skunkworks Academy.'}],
     navbar:{title:'Skunkworks Academy',logo:{alt:'Skunkworks Academy',src:'img/favicon.svg'},items:[
       {to:'/beginner/ai/',label:'AI',position:'left'},
-      {to:'/beginner/cybersecurity/',label:'Cybersecurity',position:'left'},
+      {to:'/beginner/cyber/',label:'Cybersecurity',position:'left'},
       {to:'/beginner/it-support/',label:'IT Support',position:'left'},
       {to:'/beginner/microsoft-productivity/',label:'Microsoft 365',position:'left'},
       {to:'/beginner/cloud/',label:'Cloud',position:'left'},
