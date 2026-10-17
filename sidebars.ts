@@ -1,4 +1,9 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const items=(s:string)=>[s+'/index',s+'/course-guide',{type:'category' as const,label:'Learn',items:[s+'/modules/01',s+'/modules/02',s+'/modules/03',s+'/modules/04',s+'/modules/05',s+'/modules/06']},{type:'category' as const,label:'Practise',items:[s+'/labs/lab-01',s+'/labs/lab-02',s+'/labs/lab-03']},{type:'category' as const,label:'Prove your skill',items:[s+'/assessment/knowledge-check',s+'/assessment/capstone',s+'/assessment/rubric']},s+'/references'];
-const sidebars:SidebarsConfig={catalog:['index','learner-guide',{type:'category',label:'GitHub Foundations & Delivery',items:items('github')},{type:'category',label:'CodeRabbit AI Code Review',items:items('coderabbit')},{type:'category',label:'Shopify Store Operations',items:items('shopify')},{type:'category',label:'Microsoft 365 Administration',items:['maria/m365']},{type:'category',label:'AI Workflow Automation',items:['maria/automation']},{type:'category',label:'Quality & Governance',items:['quality/assessment-policy','quality/standards']}]};
+const sidebars:SidebarsConfig={catalog:['index','beginner/index','learner-guide',
+ {type:'category',label:'Beginner: Generative AI & ChatGPT',items:items('beginner/ai')},
+ {type:'category',label:'Beginner: Cybersecurity & Online Safety',items:items('beginner/cyber')},
+ {type:'category',label:'Beginner: IT Support & Troubleshooting',items:items('beginner/it-support')},
+ {type:'category',label:'Beginner: Microsoft 365 & Excel',items:items('beginner/microsoft-productivity')},
+ {type:'category',label:'Beginner: Cloud Fundamentals',items:items('beginner/cloud')},{type:'category',label:'GitHub Foundations & Delivery',items:items('github')},{type:'category',label:'CodeRabbit AI Code Review',items:items('coderabbit')},{type:'category',label:'Shopify Store Operations',items:items('shopify')},{type:'category',label:'Microsoft 365 Administration',items:['maria/m365']},{type:'category',label:'AI Workflow Automation',items:['maria/automation']},{type:'category',label:'Quality & Governance',items:['quality/assessment-policy','quality/standards']}]};
 export default sidebars;
