@@ -2,13 +2,14 @@
   "name": "skunkworks-digital-platform-courses",
   "version": "1.0.0",
   "private": true,
-  "description": "Self-paced GitHub, CodeRabbit, and Shopify courses for Skunkworks Academy.",
+  "description": "Five-course Skunkworks Academy self-paced pilot with formative assessments and practical labs.",
   "scripts": {
     "start": "docusaurus start --host 0.0.0.0",
     "build": "docusaurus build",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "validate:pilot": "node scripts/validate-maria-pilot.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.2",
