@@ -1,0 +1,47 @@
+---
+title: "4 — Excel formulas, functions and quality checks"
+description: "Every aggregate is independently reproducible and errors, blanks and duplicate handling are documented."
+---
+
+# Module 4: Excel formulas, functions and quality checks
+
+**Estimated study:** 45–70 minutes. **Capability outcome:** Every aggregate is independently reproducible and errors, blanks and duplicate handling are documented.
+
+## Explanation and concepts
+
+Excel formulas can express deterministic business rules. SUM adds numbers, AVERAGE returns arithmetic mean, MIN and MAX identify extremes, COUNT counts numeric cells and COUNTA counts nonblank cells. IF evaluates a condition and returns two alternative values; SUMIF and COUNTIF aggregate data matching criteria. Use parentheses to make calculation order clear. Divide-by-zero, missing values and duplicate rows can silently distort a report. A spreadsheet is not a database with guaranteed uniqueness; define input validation and error handling consciously. Verify totals using a manual sample and a cross-check or second formula before distributing a management report.
+
+## Worked business situation
+
+A fictional operations spreadsheet tracks ticket durations of 12, 18, 15, 20 and 10 minutes. SUM must show 75, AVERAGE 15 and COUNT 5. A duplicate sixth entry will change the denominator unless checked.
+
+## Follow-along practical
+
+1. Calculate row totals and overall total with SUM.
+2. Apply AVERAGE, MIN, MAX and COUNT to a five-row synthetic numeric range; compare the results manually.
+3. Add a Status column and test =IF(E2>30,"Review","OK") against at least three sample values.
+4. Use COUNTIF to count entries requiring review and SUMIF to total a category; note which source columns must be true numbers.
+5. Insert one blank and one duplicate; record how they affect outcomes and document a validation rule.
+
+## Validate and improve
+
+Every aggregate is independently reproducible and errors, blanks and duplicate handling are documented. Build an evidence table with **expected result**, **observed result**, **data source**, **decision**, **next action**. Include one valid and one deliberately invalid input. If a simulated environment is used, label the simulation clearly.
+
+## Knowledge reflection
+
+1. Why can an average be misleading after duplicated data?
+2. Which formula would count items in a specific status?
+
+<details>
+  <summary>Reveal guided feedback after answering</summary>
+
+A competent response uses the precise terms from the explanation above, identifies the owner of the activity, and distinguishes an observed result from an assumption. Show how the learner verifies output and handles invalid input without exposing data or granting unnecessary privileges.
+
+</details>
+
+## Evidence checkpoint
+
+- [ ] I can explain the concept in my own words.
+- [ ] I can reproduce the worked situation in a safe sandbox or on paper.
+- [ ] I checked both the successful and negative result.
+- [ ] I recorded one likely failure mode and how to correct it.
