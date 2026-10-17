@@ -10,6 +10,7 @@ assert.ok(studio.includes('aria-pressed') && studio.includes('role="status"'),'S
 assert.ok(studio.includes('useBaseUrl'),'Course illustrations must use deployed base path');
 assert.ok(wrapper.includes('VisualLearningStudio key=') && wrapper.includes('PageWorkbook key='),'Every learner page must remount an interactive visual studio and workbook');
 assert.ok(wrapper.includes('href="#learning-studio"')&&wrapper.includes('href="#page-workbook"'),'Learning page shortcuts missing');
+assert.ok(wrapper.includes('isCompletion=id.endsWith')&&wrapper.includes('isBeginner&&!isCompletion'),'Completion pages must not render interactive drills or workbooks after the course ends');
 assert.ok(has('src/components/PageWorkbook/index.tsx'),'Missing page workbook');
 assert.ok(has('src/components/CourseCompletion/index.tsx'),'Missing end-of-course completion component');
 assert.ok(sidebar.includes("s.startsWith('beginner/')"),'Course ends must contain their own final page');
@@ -64,4 +65,4 @@ for(const [slug] of tracks){
 }
 const css=read('src/css/custom.css');for(const hex of ['#03033a','#1e6bd0','#f7f9fc'])assert.ok(css.toLowerCase().includes(hex),'Missing brand colour '+hex);
 assert.ok(home.includes('No PayPal or card payment is taken'),'Missing truthful payment disclaimer');
-console.log('Five illustrated 15-page beginner courses validated: 30 modules, 15 practical labs, 5 capstones, 60 quiz questions, five diagnostics, theme and commerce disclaimers.');
+console.log('Five illustrated 16-page beginner courses validated: 30 modules, 15 practical labs, 5 capstones, 60 quiz questions, five diagnostics, theme and commerce disclaimers.');
