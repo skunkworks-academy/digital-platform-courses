@@ -48,3 +48,28 @@ A satisfactory response must apply the concepts above, define who may act, descr
 - [ ] Reproducible procedure and observed result.
 - [ ] Negative or failure test, with safe remediation.
 - [ ] Reflection and next improvement.
+
+## Extended learning: relate a symptom to a system component
+
+A computer's **CPU** executes instructions, **RAM** holds active working data, and **storage** retains files and applications across restarts. The operating system coordinates devices and processes; drivers allow it to communicate with peripherals. Symptoms are not diagnoses: a slow application can result from storage pressure, network latency, insufficient RAM or a remote service issue.
+
+### Worked example: “The computer is slow”
+
+1. Ask when the problem started and whether it affects all programs or one task.
+2. Record the operating system version, model, free storage, memory use and running applications using approved **read-only** tools.
+3. Check power status, cables and peripheral connections before replacing components.
+4. Compare an affected application with a known-good application or user workflow.
+5. Identify the most likely layer, document what is still unknown and escalate changes requiring permission.
+
+| Symptom | Initial hypothesis | Safer first check |
+|---|---|---|
+| No power indication | Power or charging issue | Approved outlet, adapter and indicator inspection |
+| Frequent freezes | Resource, software or device problem | Resource graphs and event history |
+| External display blank | Cable, display mode or port | Connection and display settings |
+| Files unavailable | Permissions, sync or storage | Location and error message |
+
+### Try it in a safe environment
+
+Use your own computer to document five hardware/software characteristics **without changing settings**. Make a table with observed value, source and possible relevance to a support ticket.
+
+**Think critically:** Why should an engineer confirm backup and authorisation before suggesting a factory reset? Describe what customer data could be lost and which tests should come first.

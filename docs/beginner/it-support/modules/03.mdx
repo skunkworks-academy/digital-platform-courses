@@ -48,3 +48,29 @@ A satisfactory response must apply the concepts above, define who may act, descr
 - [ ] Reproducible procedure and observed result.
 - [ ] Negative or failure test, with safe remediation.
 - [ ] Reflection and next improvement.
+
+## Extended learning: read-only diagnostics in Windows and Linux
+
+A support technician should distinguish **observation** from **remediation**. Start with built-in read-only status commands or graphical tools appropriate to the installed system. Commands and paths differ across distributions and Windows releases; verify what is available before running anything. Administrative privileges are rarely needed to inspect the first layer of a user issue.
+
+### Comparison of safe diagnostic categories
+
+| Question | Windows approach | Linux approach |
+|---|---|---|
+| Which OS is installed? | Settings → System → About | System information or \`uname -a\` |
+| What network settings exist? | \`ipconfig /all\` | \`ip address\` where available |
+| What is running? | Task Manager | Desktop system monitor or \`ps\` |
+| Is storage low? | File Explorer / Storage settings | \`df -h\` |
+
+### Worked example: a failing application
+
+1. Capture the exact error and application version.
+2. Check whether the issue affects one account, one computer or all users.
+3. Review available application and system logs **within your permission level**.
+4. Observe available memory and storage before assuming an application bug.
+5. Compare results with the vendor's supported configuration.
+6. Escalate updates or reinstallations through the approved change process.
+
+An error log may contain personal information or authentication tokens. **Redact before sharing** and store the evidence in an authorised support system.
+
+**Practice:** With fictional log entries, mark the timestamp, severity, component and likely next diagnostic question. Explain why deleting event logs is harmful to troubleshooting.
