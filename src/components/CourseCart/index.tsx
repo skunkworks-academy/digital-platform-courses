@@ -1,7 +1,7 @@
 import React,{useMemo,useState} from 'react';
 const courses=[
 {id:'SKW-BEG-AI-101',name:"Generative AI & ChatGPT for Beginners"},
-{id:'SKW-BEG-CYB-101',name:"Cybersecurity Essentials & Online Safety"},
+{id:'SKW-BEG-SEC-101',name:"Cybersecurity Essentials & Online Safety"},
 {id:'SKW-BEG-IT-101',name:"IT Support & Computer Troubleshooting Fundamentals"},
 {id:'SKW-BEG-M365-101',name:"Microsoft 365 & Excel Productivity Essentials"},
 {id:'SKW-BEG-CLD-101',name:"Cloud Computing Fundamentals"}
