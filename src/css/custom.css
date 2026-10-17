@@ -85,3 +85,11 @@ body:has(.swa-global-footer) .footer{display:none!important}
 .studio,.pageWorkbook,.masteryQuiz,.skillsDiagnostic,.courseProgress{scroll-margin-top:100px}
 .masteryQuestion{scroll-margin-top:105px}
 @media(max-width:540px){.workbookActions{flex-direction:column}.workbookActions button{width:100%}.workbookHeading{align-items:flex-start}}
+
+/* Accessible retry, assessment feedback and workbook buttons */
+.workbookActions button{color:#fff}
+.masteryQuiz progress{display:block;width:100%;height:1rem;accent-color:#1e6bd0;margin:0 0 1rem}
+.masteryFeedback[data-correct=true]{border-left-color:#13824b}
+.progressControls{display:flex;gap:.65rem;flex-wrap:wrap}
+.progressControls button{min-height:44px;border:2px solid var(--ifm-color-primary);border-radius:.5rem;background:transparent;color:var(--ifm-font-color-base);font:inherit;font-weight:700;padding:.6rem .95rem;cursor:pointer}
+.progressControls button:focus-visible{outline:3px solid var(--ifm-color-primary);outline-offset:3px}
