@@ -7,9 +7,11 @@ import PageWorkbook from '@site/src/components/PageWorkbook';
 export default function DocItemContentWrapper(props:React.ComponentProps<typeof Content>){
   const {metadata}=useDoc();
   const id=metadata.id;
+  const isBeginner=/^beginner\/(ai|cyber|it-support|microsoft-productivity|cloud)(\/|$)/.test(id);
+  const isCompletion=id.endsWith('/assessment/completion');
   return <>
-    {/^beginner\/(ai|cyber|it-support|microsoft-productivity|cloud)(\/|$)/.test(id)&&<nav className="learningPageJumps" aria-label="Learning page shortcuts"><a href="#learning-studio">Interactive practice</a><a href="#page-workbook">My page workbook</a></nav>}
+    {isBeginner&&!isCompletion&&<nav className="learningPageJumps" aria-label="Learning page shortcuts"><a href="#learning-studio">Interactive practice</a><a href="#page-workbook">My page workbook</a></nav>}
     <Content {...props}/>
-    {/^beginner\/(ai|cyber|it-support|microsoft-productivity|cloud)(\/|$)/.test(id)&&<><VisualLearningStudio key={'studio-'+id} docId={id}/><PageWorkbook key={'workbook-'+id} docId={id}/></>}
+    {isBeginner&&!isCompletion&&<><VisualLearningStudio key={'studio-'+id} docId={id}/><PageWorkbook key={'workbook-'+id} docId={id}/></>}
   </>;
 }

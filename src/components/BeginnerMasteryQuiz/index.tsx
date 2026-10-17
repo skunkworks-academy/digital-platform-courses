@@ -20,6 +20,7 @@ export default function BeginnerMasteryQuiz({course}:{course:string}){
   }
   const correct=questions.reduce((n,q,i)=>n+(q.correct===answers[i]?1:0),0);
   setScore(correct);
+  try{window.localStorage.setItem('skw-beginner-knowledge-v1:'+course,JSON.stringify({correct,total:questions.length,passed:correct>=10,recordedAt:new Date().toISOString()}));}catch{}
   setStatus(correct>=10?'Formative self-check passed. Complete the capstone and request an authorised review.':'Review explanations, revisit the relevant lessons, then retry.');
  }
  function reset(){

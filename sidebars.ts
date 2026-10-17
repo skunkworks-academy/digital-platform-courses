@@ -7,7 +7,7 @@ const courseItems=(s:string)=>[
  s+'/labs/lab-01',s+'/labs/lab-02',s+'/labs/lab-03']},
  {type:'category' as const,label:'3. Assess capability',collapsed:true,items:[
  s+'/assessment/knowledge-check',s+'/assessment/capstone',s+'/assessment/rubric']},
- s+'/references'
+ s+'/references',...(s.startsWith('beginner/')?[s+'/assessment/completion']:[])
 ];
 const sidebars:SidebarsConfig={catalog:[
  'index','learner-guide',
