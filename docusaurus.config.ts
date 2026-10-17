@@ -5,7 +5,7 @@ const config: Config = {
   title: 'Skunkworks Academy | Digital Platforms',
   tagline: 'Practical beginner IT skills through five interactive self-paced courses',
   favicon: 'img/favicon.svg',
-  url: 'https://skunkworks-academy.github.io',
+  url: process.env.SKW_CANONICAL_SITE_URL || 'https://skunkworks-academy.github.io',
   baseUrl: '/digital-platform-courses/',
   organizationName: 'skunkworks-academy',
   projectName: 'digital-platform-courses',
@@ -20,7 +20,7 @@ const config: Config = {
   } satisfies PresetOptions]],
   themeConfig: {
     image:'img/social-card.svg',
-    metadata:[{name:'description',content:'Five beginner and specialist assessed self-paced courses from Skunkworks Academy.'}],
+    metadata:[{name:'description',content:'Five beginner and specialist assessed self-paced courses from Skunkworks Academy.'},{name:'robots',content:process.env.SKW_CANONICAL_SITE_URL ? 'index, follow' : 'noindex, follow'}],
     navbar:{title:'Skunkworks Academy',logo:{alt:'Skunkworks Academy',src:'img/favicon.svg'},items:[
       {to:'/beginner/ai/',label:'AI',position:'left'},
       {to:'/beginner/cyber/',label:'Cybersecurity',position:'left'},
