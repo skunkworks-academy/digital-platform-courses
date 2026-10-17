@@ -21,8 +21,15 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run validate:pilot
       - run: npm run typecheck
       - run: npm run build
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'pull_request'
+        with:
+          name: maria-course-preview-build
+          path: build
+          retention-days: 7
       - uses: actions/upload-pages-artifact@v4
         if: github.event_name != 'pull_request'
         with:
