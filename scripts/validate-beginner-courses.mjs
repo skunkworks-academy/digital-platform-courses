@@ -8,7 +8,11 @@ assert.ok(has('src/components/BeginnerMasteryQuiz/index.tsx'),'Missing interacti
 const studio=read('src/components/VisualLearningStudio/index.tsx'),wrapper=read('src/theme/DocItem/Content/index.tsx'),data=read('src/data/learningStudio.ts'),config=read('docusaurus.config.ts');
 assert.ok(studio.includes('aria-pressed') && studio.includes('role="status"'),'Studio interactions must be accessible');
 assert.ok(studio.includes('useBaseUrl'),'Course illustrations must use deployed base path');
-assert.ok(wrapper.includes('VisualLearningStudio docId={id}'),'All beginner docs must receive visual studio');
+assert.ok(wrapper.includes('VisualLearningStudio key=') && wrapper.includes('PageWorkbook key='),'Every learner page must remount an interactive visual studio and workbook');
+assert.ok(wrapper.includes('href="#learning-studio"')&&wrapper.includes('href="#page-workbook"'),'Learning page shortcuts missing');
+assert.ok(has('src/components/PageWorkbook/index.tsx'),'Missing page workbook');
+const workbook=read('src/components/PageWorkbook/index.tsx');
+assert.ok(workbook.includes('navigator.clipboard')&&workbook.includes('localStorage')&&workbook.includes('Confirm clear saved work'),'Missing functional copy, persistence and safe reset controls');
 for(const file of ['skunkworks-ui.js','skunkworks-footer.js'])assert.ok(config.includes('https://www.skunkworksacademy.com/assets/'+file),'Missing Academy shared chrome '+file);
 
 for(const [slug,code] of tracks){
@@ -25,7 +29,13 @@ assert.ok(mastery.includes('"beginner-'+slug+'"'),'Missing scored quiz bank '+sl
 assert.ok(doc.includes('<SkillsDiagnostic course="beginner-'+slug+'" />'),'Missing before/after '+slug);
 assert.ok(doc.includes('<CourseProgress course="beginner-'+slug+'" />'),'Missing progress tracking '+slug);
 const required=['course-guide.mdx','references.mdx','assessment/knowledge-check.mdx','assessment/capstone.mdx','assessment/rubric.mdx'];
-for(let n=1;n<=6;n++)required.push('modules/'+String(n).padStart(2,'0')+'.mdx');
+for(let n=1;n<=6;n++){
+ const modulePath=base+'/modules/'+String(n).padStart(2,'0')+'.mdx';
+ const content=read(modulePath);
+ assert.ok(content.includes('## Extended learning:'),'Missing expanded deep dive '+modulePath);
+ assert.ok(content.split(/\s+/).length>=570,'Module lacks sufficient explanatory depth '+modulePath);
+ required.push('modules/'+String(n).padStart(2,'0')+'.mdx');
+}
 for(let n=1;n<=3;n++)required.push('labs/lab-'+String(n).padStart(2,'0')+'.mdx');
 for(const file of required){const path=base+'/'+file;assert.ok(has(path),'Missing '+path);assert.ok(read(path).length>250,'Incomplete '+path)}
 assert.ok(quiz.includes('<BeginnerMasteryQuiz course="beginner-'+slug+'" />'),'Missing mounted interactive knowledge check '+slug);
@@ -34,7 +44,7 @@ const cap=read(base+'/assessment/capstone.mdx');assert.ok(cap.includes('70')&&ca
 }
 const gallery=read('docs/beginner/index.mdx');
 assert.ok(studio.includes('aria-pressed')&&studio.includes('role="status"'),'Accessible practice interactions missing');
-assert.ok(wrapper.includes('<VisualLearningStudio docId={id}/>'),'Missing global document studio integration');
+assert.ok(wrapper.includes('VisualLearningStudio key=')&&wrapper.includes('PageWorkbook key='),'Missing per-page interactive studio and workbook');
 assert.ok(config.includes('assets/skunkworks-ui.js')&&config.includes('assets/skunkworks-footer.js'),'Missing shared Academy header/footer');
 assert.ok(data.includes('studioCourses')&&data.includes('scenes'),'Missing topic-specific learning content');
 for(const [slug] of tracks){

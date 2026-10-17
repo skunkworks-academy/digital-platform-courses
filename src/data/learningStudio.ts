@@ -191,30 +191,6 @@ export const studioCourses = {
         "Asset ownership and access needs inform proportionate security controls."
       ],
       [
-        "Passwords and MFA",
-        "Strong authentication reduces the impact of password theft.",
-        [
-          "Unique secret",
-          "Use distinct passwords or passkeys per service."
-        ],
-        [
-          "Second factor",
-          "Require a separate, phishing-resistant factor where available."
-        ],
-        [
-          "Recovery",
-          "Protect account recovery methods and devices."
-        ],
-        "A staff member reuses one password on five sites. Best recommendation?",
-        [
-          "Keep it but rotate every year",
-          "Use a password manager and unique credentials",
-          "Email the password to management"
-        ],
-        1,
-        "Credential reuse multiplies the impact of one compromise."
-      ],
-      [
         "Spot social engineering",
         "Urgency, secrecy and unfamiliar payment instructions deserve verification.",
         [
@@ -237,6 +213,30 @@ export const studioCourses = {
         ],
         0,
         "Independently verify payment changes through a known channel."
+      ],
+      [
+        "Passwords and MFA",
+        "Strong authentication reduces the impact of password theft.",
+        [
+          "Unique secret",
+          "Use distinct passwords or passkeys per service."
+        ],
+        [
+          "Second factor",
+          "Require a separate, phishing-resistant factor where available."
+        ],
+        [
+          "Recovery",
+          "Protect account recovery methods and devices."
+        ],
+        "A staff member reuses one password on five sites. Best recommendation?",
+        [
+          "Keep it but rotate every year",
+          "Use a password manager and unique credentials",
+          "Email the password to management"
+        ],
+        1,
+        "Credential reuse multiplies the impact of one compromise."
       ],
       [
         "Secure your devices",
@@ -527,30 +527,6 @@ export const studioCourses = {
         "Semantic heading styles provide meaningful document structure."
       ],
       [
-        "Collaborate securely",
-        "Sharing a file does not require sharing it with everyone.",
-        [
-          "Recipients",
-          "Choose the smallest appropriate audience."
-        ],
-        [
-          "Rights",
-          "Use view access when editing is not needed."
-        ],
-        [
-          "Audit",
-          "Review and remove obsolete access."
-        ],
-        "A colleague only needs to read a report. Give them:",
-        [
-          "An anonymous edit link",
-          "Owner permissions",
-          "Read-only access to the appropriate file"
-        ],
-        2,
-        "Grant only the permissions needed for the task."
-      ],
-      [
         "Use Excel formulas",
         "Well-formed formulas refer to clear ranges and can be recalculated.",
         [
@@ -597,6 +573,30 @@ export const studioCourses = {
         ],
         1,
         "A labelled bar chart enables readable category comparison."
+      ],
+      [
+        "Collaborate securely",
+        "Sharing a file does not require sharing it with everyone.",
+        [
+          "Recipients",
+          "Choose the smallest appropriate audience."
+        ],
+        [
+          "Rights",
+          "Use view access when editing is not needed."
+        ],
+        [
+          "Audit",
+          "Review and remove obsolete access."
+        ],
+        "A colleague only needs to read a report. Give them:",
+        [
+          "An anonymous edit link",
+          "Owner permissions",
+          "Read-only access to the appropriate file"
+        ],
+        2,
+        "Grant only the permissions needed for the task."
       ],
       [
         "Coordinate office workflows",
@@ -731,52 +731,52 @@ export const studioCourses = {
         "Customers are responsible for their own access configuration under shared responsibility."
       ],
       [
-        "Understand cloud costs",
-        "Small unmonitored resources can produce avoidable spend.",
+        "Compute, storage and databases",
+        "Match a workload's running code, public files and private records to the correct service with explicit access boundaries.",
         [
-          "Estimate",
-          "Predict storage, compute and traffic usage."
+          "Compute",
+          "Runs your application logic or background jobs."
         ],
         [
-          "Limit",
-          "Set budgets and alerts."
+          "Object storage",
+          "Keeps published course files and other objects behind suitable access rules."
         ],
         [
-          "Review",
-          "Stop unused resources and compare actual spend."
+          "Database",
+          "Manages structured records such as enrolments, with authenticated access."
         ],
-        "What helps prevent surprise usage bills?",
+        "A course platform needs a place for confidential learner progress. What is the safest design?",
         [
-          "Ignore invoices",
-          "Use budgets, alerts and resource reviews",
-          "Make all services permanent"
+          "Put grades in a public document bucket",
+          "Protect the database behind an authenticated application",
+          "Embed the data in the public page source"
         ],
         1,
-        "Cost controls require visibility and deliberate limits."
+        "Private learner records belong behind explicit authentication and authorisation, not in publicly retrievable assets."
       ],
       [
-        "Plan a beginner cloud solution",
-        "Document functional, security and operational requirements before launch.",
+        "Costs, governance and deployment",
+        "A safe first deployment needs an accountable owner, spending controls, least privilege and a tested rollback.",
         [
-          "Design",
-          "Choose a service model and target users."
+          "Budget",
+          "Estimate usage and enable spending alerts before creating chargeable services."
         ],
         [
-          "Protect",
-          "Set least privilege, backups and region."
+          "Change gate",
+          "Check identity permissions, recovery and approvals."
         ],
         [
-          "Validate",
-          "Test availability, cost and restore evidence."
+          "Decommission",
+          "Remove unused resources and verify the billing state."
         ],
-        "Which is a reasonable first deployment plan?",
+        "What should you do before starting a potentially chargeable cloud trial?",
         [
-          "A diagram, owner, budget, controls and rollback",
-          "An undocumented production launch",
-          "A shared administrator password"
+          "Turn on budgets/alerts and agree an owner",
+          "Deploy first and ignore costs until next quarter",
+          "Share an administrator password"
         ],
         0,
-        "A documented design enables safe implementation and review."
+        "Budget visibility, ownership and access controls should precede any deployment that could incur charges."
       ]
     ]
   }

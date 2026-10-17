@@ -40,3 +40,28 @@ What are the most relevant ownership, privacy and cost controls in the scenario?
 A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
 
 </details>
+
+## Extended learning: choose IaaS, PaaS, SaaS and placement responsibly
+
+Cloud service models divide responsibilities. With infrastructure as a service (IaaS), the customer manages operating systems and applications above provider-managed infrastructure. Platform as a service (PaaS) often manages the runtime and middleware. Software as a service (SaaS) offers a finished application. Responsibilities vary by product and contract, so always consult its current shared-responsibility guidance.
+
+### Worked example: three ways to host a training portal
+
+| Model | Customer typically configures | Provider typically operates |
+|---|---|---|
+| IaaS virtual machine | OS patches, app, identities and data | Physical facilities, host infrastructure |
+| PaaS web service | App code, access, deployment and data | Managed runtime platform |
+| SaaS learning system | Users, content, configuration and data governance | Application and underlying stack |
+
+### Deployment choices
+
+- **Public cloud:** Shared provider infrastructure with segregated customer environments.
+- **Private cloud:** Infrastructure dedicated to one organisation, whether self-managed or hosted.
+- **Hybrid:** A coordinated mix of on-premises or private systems with public-cloud services.
+- **Multi-cloud:** Services from multiple cloud providers, with added integration and governance concerns.
+
+### Practice
+
+Choose a model for an organisation that has no dedicated server administrator and wants a basic course website. Compare cost visibility, maintenance burden, security ownership and recovery options. Record the assumptions that could change your choice.
+
+**Pitfall:** A managed service does not automatically handle permission design, legal obligations or data accuracy for the customer.

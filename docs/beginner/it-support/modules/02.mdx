@@ -48,3 +48,32 @@ A satisfactory response must apply the concepts above, define who may act, descr
 - [ ] Reproducible procedure and observed result.
 - [ ] Negative or failure test, with safe remediation.
 - [ ] Reflection and next improvement.
+
+## Extended learning: build repeatable diagnostic tickets
+
+An incident ticket records a service interruption; a service request is a planned change or access request. A useful ticket separates **symptoms**, **impact**, **recent changes**, **tests**, **results** and **next owner**. Avoid premature root-cause claims such as “network broken” when the only observation is that one website did not load.
+
+### Worked example: login failure
+
+A fictional user cannot sign in to a training portal. Collect:
+
+| Field | Example entry |
+|---|---|
+| Reported at | 09:10, local time |
+| Affected scope | One user; three others unaffected |
+| Exact symptom | “Account requires additional verification” |
+| Known change | User changed mobile device yesterday |
+| Approved test | Confirm account status and approved recovery process |
+| Escalation | Identity administrator if MFA method cannot be recovered |
+
+1. Ask for the exact error text but **not** the password or one-time code.
+2. Reproduce a harmless part of the issue with the user.
+3. Compare affected and known-good conditions, changing only one factor at a time.
+4. Record the expected result, actual result and time of every test.
+5. Escalate when administrative access, potential compromise or data loss is involved.
+
+### Severity and communication
+
+Impact asks how many people or services are affected; urgency asks how quickly the consequence matters. A single payroll failure may be more urgent than a cosmetic issue affecting many users. Explain the triage rationale in plain language.
+
+**Practice:** Write a five-line ticket for “The printer doesn't work”. Replace vague language with device name, affected users, observations and specific reproducible steps.

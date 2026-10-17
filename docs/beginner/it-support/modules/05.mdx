@@ -48,3 +48,29 @@ A satisfactory response must apply the concepts above, define who may act, descr
 - [ ] Reproducible procedure and observed result.
 - [ ] Negative or failure test, with safe remediation.
 - [ ] Reflection and next improvement.
+
+## Extended learning: minimise risk during application and account repairs
+
+A failed login, missing licence, application crash or stale session can appear similar to a user. Diagnose the **identity, entitlement, device, application, network and provider-service** layers separately. Reinstallation should not be the first response when the service has an outage or the user is not assigned the required licence.
+
+### Worked example: application will not activate
+
+1. Verify the product and signed-in account **without asking for passwords**.
+2. Check the appropriate subscription or entitlement through authorised administration.
+3. Look for published service-health notices before modifying the device.
+4. Compare the issue with an approved test account or known-good device.
+5. Record a proposed change, approval, backup state and rollback option.
+6. Apply only authorised changes and confirm the original work task succeeds.
+
+### Backup, sync and updates
+
+Synchronisation mirrors state, which may include accidental deletion. Version history may help but has retention limitations. A **tested independent backup** is a separate recoverable copy. Updates reduce known risks but can cause compatibility changes; make a change plan rather than clicking through blindly.
+
+| Condition | Safer action |
+|---|---|
+| Service-wide outage | Inform users and monitor provider updates |
+| Missing licence | Request verified entitlement adjustment |
+| Suspected malware | Follow incident escalation policy |
+| Unapproved admin request | Pause and seek authorisation |
+
+**Practice:** Draft a recovery plan for a fictional damaged training file, including backup location, restore test and acceptance criteria. Include one rejected unsafe action.

@@ -48,3 +48,28 @@ A satisfactory response must apply the concepts above, define who may act, descr
 - [ ] Reproducible procedure and observed result.
 - [ ] Negative or failure test, with safe remediation.
 - [ ] Reflection and next improvement.
+
+## Extended learning: isolate IP, DNS and service problems
+
+An IP address identifies an interface on a network; a subnet determines local address scope, and a default gateway provides a path to other networks. **DNS** maps names to addresses. A wireless connection can be associated with a router while internet access or DNS resolution still fails. A successful ping does not mean every application protocol works.
+
+### Worked example: a website name fails
+
+1. Record the network interface, IP configuration, gateway and DNS resolver using approved tools.
+2. Check whether the device can access an internal resource or a known-safe IP endpoint.
+3. Compare hostname resolution for an approved test domain.
+4. Distinguish a DNS name failure from a connection or website-service failure.
+5. Document results and escalate router, firewall or DNS changes to the appropriate administrator.
+
+| Observation | Possible next area to investigate |
+|---|---|
+| No usable IP address | Adapter, wireless association or DHCP |
+| IP reachability works, name lookup fails | DNS configuration or resolver availability |
+| Only one application fails | Application settings, proxy, TLS or service |
+| All devices lose connectivity | Shared gateway, ISP or upstream issue |
+
+### Knowledge transfer exercise
+
+Draw a six-box flow: device → Wi-Fi/router → default gateway → DNS lookup → internet connection → website service. Mark where three different failures might occur and what observable test isolates each.
+
+**Safety:** Do not run scanning tools against third-party networks. Use only permitted addresses and non-disruptive diagnostic steps.

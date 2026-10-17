@@ -44,3 +44,31 @@ A strong answer identifies the data source, owner, sharing permissions, calculat
 - [ ] Editable file, structured mock-up or documented alternative.
 - [ ] Formula or permissions test and observed result.
 - [ ] Correction note and clear approval boundary.
+
+## Extended learning: collaborative access, versioning and ownership
+
+OneDrive typically supports personal working files while SharePoint team libraries offer a team-managed location. Teams makes shared conversations easier but is not a substitute for checking file permissions. A pasted sharing link may provide more access than intended.
+
+### Worked example: review a draft policy
+
+1. Place a fictional policy document in a permitted team workspace.
+2. Assign the document owner and a reviewer responsible for sign-off.
+3. Give the reviewer edit access, while recipients who only read the final document receive view access.
+4. Collect comments and use version history to record changes.
+5. Remove temporary access when the review ends.
+6. Test with a permitted account that an unauthorised reader cannot open the link.
+
+| Symptom | Investigate |
+|---|---|
+| Access denied | Identity, tenant, permissions and link scope |
+| Conflicting changes | Co-authoring state and version history |
+| Wrong document shared | File name, version, owner and location |
+| Anonymous editor can open | Link settings and excessive privileges |
+
+**Practice:** Design an access matrix covering owner, editor, guest reviewer and learner. Label exactly which role can view, edit and reshare. Do not use real student documents to demonstrate mistakes.
+
+### Sharing permission review: a worked negative test
+
+Suppose a guest reviewer only needs a view-only copy of a draft guide. A learner should verify the link's audience, permitted operations and expiry before sharing. Record **expected: invited reviewer can read** and **expected: unrelated account is denied**. Where a real guest account is unavailable, describe a tabletop simulation rather than claiming you tested a live tenant. A strong evidence note includes the file owner, intended reviewers, permissions, observed or simulated result, correction and residual risk.
+
+Avoid uploading real learner lists to demonstrate permissions. If a link turns out to be publicly editable, stop distribution, have an authorised owner replace or revoke the link, and document the change.

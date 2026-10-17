@@ -40,3 +40,26 @@ What are the most relevant ownership, privacy and cost controls in the scenario?
 A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
 
 </details>
+
+## Extended learning: identity, responsibility and least privilege
+
+Cloud providers secure parts of the underlying service, but customers commonly remain responsible for identities, configuration and authorised access. A role or permission should permit **only the actions the workload or human actually needs**. A network location alone is not sufficient trust; examine authentication and authorisation on each sensitive request.
+
+### Worked example: review-only storage access
+
+| Identity | Allowed | Explicitly denied |
+|---|---|---|
+| Learner | View approved practice materials | Delete shared files |
+| Course editor | Update assigned course materials | Change billing details |
+| Billing reviewer | View cost reports | Publish course content |
+| Platform administrator | Manage approved infrastructure | Use shared passwords |
+
+1. Create a permissions matrix with named owners and no live credentials.
+2. Choose the narrowest suitable role for each actor.
+3. Simulate a permitted read and an unauthorised deletion attempt.
+4. Record the expected denial and identify the audit evidence to retain.
+5. Describe how contractor accounts and sessions are revoked at offboarding.
+
+**Safety:** Never paste API keys, client secrets or recovery tokens into course submissions, emails or publicly accessible repositories.
+
+**Practice:** Explain how a provider-managed database can still expose customer records if the customer mistakenly grants public access. Identify the control owner and the corrective review.

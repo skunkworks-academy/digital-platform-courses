@@ -44,3 +44,30 @@ A strong answer identifies the data source, owner, sharing permissions, calculat
 - [ ] Editable file, structured mock-up or documented alternative.
 - [ ] Formula or permissions test and observed result.
 - [ ] Correction note and clear approval boundary.
+
+## Extended learning: formulas, relative references and numerical checks
+
+Excel formulas start with an equals sign and can refer to other cells. A relative reference changes when copied; an absolute reference stays anchored with dollar markers. Correct formatting does not prove correct arithmetic. Recompute a sample outside Excel to verify a workbook.
+
+### Worked example: course pricing table
+
+| Cell | Example value or formula | Expected result |
+|---|---|---|
+| B2 | 3 delegates | 3 |
+| C2 | 250 per delegate | 250 |
+| D2 | B2 multiplied by C2 | 750 |
+| B3 | 2 delegates | 2 |
+| C3 | 180 per delegate | 180 |
+| D3 | B3 multiplied by C3 | 360 |
+| D4 | Sum of D2 through D3 | 1,110 |
+
+In an actual workbook, enter a multiplication formula into D2 beginning with an equals sign, then copy it to D3. To add the totals, use the SUM function over D2:D3. The total **must not** include the total cell itself.
+
+### References and errors
+
+- A reference to B2 is relative and adjusts during copying.
+- A reference to $B$1 is absolute and preserves both row and column.
+- Text containing digits is not automatically a valid number.
+- Division by zero yields a formula error that needs investigation, not cosmetic hiding.
+
+**Practice:** Put a fictional surcharge rate in F1 and reference it absolutely when calculating a rate for several rows. Then deliberately enter one invalid value and document the observed error. Avoid changing a production financial workbook during training.

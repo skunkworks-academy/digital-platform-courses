@@ -24,7 +24,7 @@ export default function VisualLearningStudio({docId}:{docId:string}){
   const cards=[c1,c2,c3];
   const isLab=parts[2]==='labs';
   const pageType=isLab?'Lab practice':rawModule?'Learning module':parts[2]==='assessment'?'Assessment support':'Guided learning';
-  return <section className="studio" aria-label={'Interactive learning studio for '+course.title} key={docId}>
+  return <section id="learning-studio" className="studio" aria-label={'Interactive learning studio for '+course.title} key={docId}>
     <div className="studioHeader">
       <div className="studioHero">
         <div className="studioHeroCopy">

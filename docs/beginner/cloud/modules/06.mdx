@@ -40,3 +40,31 @@ What are the most relevant ownership, privacy and cost controls in the scenario?
 A strong answer correctly applies this module's terminology, names a responsible party, documents an observable test and explains at least one rejected unsafe action. Return to the example if these elements are missing.
 
 </details>
+
+## Extended learning: cost management and safe deployments
+
+Cloud spend can arise from compute time, storage, databases, requests, network traffic and support plans. A low initial price does not mean the final bill is fixed. Budgets and alerts should be configured **before** starting chargeable experiments. Tags, ownership and regular reviews help teams identify idle services.
+
+### Worked example: fictional monthly estimate
+
+| Cost category | Illustrative estimate |
+|---|---:|
+| Small app runtime | 120 units |
+| Storage | 30 units |
+| Outbound data | 50 units |
+| Database | 100 units |
+| **Estimated total** | **300 units** |
+
+These numbers are **illustrative only**, not a provider quotation. Verify actual current regional rates with the relevant pricing calculator. A 20% contingency on this example is 60 units, giving a planning allowance of 360 units.
+
+### Controlled first deployment
+
+1. Define the workload, expected users and business owner.
+2. Choose the service model, region, access pattern and recovery requirement.
+3. Estimate consumption and set budget alerts plus spending reviews.
+4. Specify role-based permissions and prohibit shared admin credentials.
+5. Test a fictional deployment and failed-access scenario before any real launch.
+6. Define rollback, backup restore and criteria for decommissioning.
+7. Shut down unneeded trial resources and confirm final billing state.
+
+**Practice:** Explain why an orphaned test environment can continue generating charges. Write a release checklist with explicit ownership, cost controls, a sign-off gate and a safe decommission procedure.
