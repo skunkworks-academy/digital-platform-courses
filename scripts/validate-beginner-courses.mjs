@@ -9,6 +9,7 @@ const studio=read('src/components/VisualLearningStudio/index.tsx'),wrapper=read(
 assert.ok(studio.includes('aria-pressed') && studio.includes('role="status"'),'Studio interactions must be accessible');
 assert.ok(studio.includes('useBaseUrl'),'Course illustrations must use deployed base path');
 assert.ok(wrapper.includes('VisualLearningStudio key=') && wrapper.includes('PageWorkbook key='),'Every learner page must remount an interactive visual studio and workbook');
+assert.ok(wrapper.includes('href="#learning-studio"')&&wrapper.includes('href="#page-workbook"'),'Learning page shortcuts missing');
 assert.ok(has('src/components/PageWorkbook/index.tsx'),'Missing page workbook');
 const workbook=read('src/components/PageWorkbook/index.tsx');
 assert.ok(workbook.includes('navigator.clipboard')&&workbook.includes('localStorage')&&workbook.includes('Confirm clear saved work'),'Missing functional copy, persistence and safe reset controls');

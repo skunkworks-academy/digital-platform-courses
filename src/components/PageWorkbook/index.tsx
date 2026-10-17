@@ -61,7 +61,7 @@ export default function PageWorkbook({docId}:{docId:string}){
    }
  }
  const done=data.marks.filter(Boolean).length;
- return <section className="pageWorkbook" aria-label="Practice workbook for this learning page">
+ return <section id="page-workbook" className="pageWorkbook" aria-label="Practice workbook for this learning page">
   <div className="workbookHeading">
     <div><p className="studioKicker">Your practical learning aid</p><h2>Evidence and reflection workbook</h2></div>
     <strong className="workbookCount" aria-live="polite">{done}/{milestones.length} checks</strong>

@@ -8,6 +8,7 @@ export default function DocItemContentWrapper(props:React.ComponentProps<typeof 
   const {metadata}=useDoc();
   const id=metadata.id;
   return <>
+    {/^beginner\/(ai|cyber|it-support|microsoft-productivity|cloud)(\/|$)/.test(id)&&<nav className="learningPageJumps" aria-label="Learning page shortcuts"><a href="#learning-studio">Interactive practice</a><a href="#page-workbook">My page workbook</a></nav>}
     <Content {...props}/>
     {/^beginner\/(ai|cyber|it-support|microsoft-productivity|cloud)(\/|$)/.test(id)&&<><VisualLearningStudio key={'studio-'+id} docId={id}/><PageWorkbook key={'workbook-'+id} docId={id}/></>}
   </>;

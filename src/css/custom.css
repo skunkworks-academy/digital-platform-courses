@@ -93,3 +93,9 @@ body:has(.swa-global-footer) .footer{display:none!important}
 .progressControls{display:flex;gap:.65rem;flex-wrap:wrap}
 .progressControls button{min-height:44px;border:2px solid var(--ifm-color-primary);border-radius:.5rem;background:transparent;color:var(--ifm-font-color-base);font:inherit;font-weight:700;padding:.6rem .95rem;cursor:pointer}
 .progressControls button:focus-visible{outline:3px solid var(--ifm-color-primary);outline-offset:3px}
+
+.learningPageJumps{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;padding:.75rem 1rem;margin:0 0 1.5rem;background:var(--ifm-color-emphasis-100);border:1px solid var(--ifm-color-emphasis-300);border-radius:.7rem}
+.learningPageJumps a{display:inline-flex;align-items:center;min-height:44px;padding:.45rem .8rem;border:2px solid var(--ifm-color-primary);border-radius:.6rem;color:var(--ifm-color-primary);font-weight:800;text-decoration:none}
+.learningPageJumps a:hover{background:var(--ifm-color-primary);color:#fff}
+.learningPageJumps a:focus-visible{outline:3px solid var(--ifm-color-primary);outline-offset:3px}
+#learning-studio,#page-workbook{scroll-margin-top:105px}
