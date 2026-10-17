@@ -1,0 +1,50 @@
+---
+title: "2 — Support tickets and diagnostic reasoning"
+description: "Every ticket includes impact, symptoms, attempted steps, timestamps and verifiable acceptance criteria."
+---
+
+# Module 2: Support tickets and diagnostic reasoning
+
+**Estimated time:** 45–70 minutes. **Outcome:** Every ticket includes impact, symptoms, attempted steps, timestamps and verifiable acceptance criteria.
+
+## Core concepts and why they matter
+
+An incident is an unplanned service interruption; a service request is a routine fulfilment need. Capture the user's symptoms, actual impact, start time, recent changes, error messages, reproducibility and affected users. Use an evidence-first cycle: observe, form hypothesis, select low-risk test, evaluate, fix, verify and document. Priority considers business impact and urgency; the loudest user is not automatically the highest priority. Ask permission before remote access and avoid collecting unrelated personal information.
+
+## Worked workplace scenario
+
+Ten people cannot sign in to a web service while one user also needs a mouse replaced. Explain incident priority and what shared dependency you would test first.
+
+## Guided hands-on application
+
+1. Create tickets for a password reset, failed Wi-Fi connection and a printer queue backlog.
+2. Choose category, impact, urgency, ownership and an agreed response time for each.
+3. Write two alternative root-cause hypotheses for a single issue.
+4. Create a closure checklist requiring user confirmation and observed functionality.
+
+## Verification and failure test
+
+Every ticket includes impact, symptoms, attempted steps, timestamps and verifiable acceptance criteria. Create a table identifying expected result, actual result, date, supporting evidence and next action. Use one deliberately invalid or unexpected input to confirm the control does not silently fail.
+
+:::warning Safety and ethics
+Do not request users' passwords or one-time codes to troubleshoot sign-in failures.
+:::
+
+## Knowledge reflection
+
+1. What is the difference between an incident and service request?
+2. Why verify a fix with the user?
+
+<details>
+  <summary>Instructor guidance after answering</summary>
+
+A satisfactory response must apply the concepts above, define who may act, describe observable evidence, and explain why at least one unsafe alternative would be rejected. Review the scenario and repeat the experiment if your answer lacks a reproducible verification step.
+
+</details>
+
+## Evidence checklist
+
+- [ ] Written purpose and accepted input.
+- [ ] Reproducible procedure and observed result.
+- [ ] Negative or failure test, with safe remediation.
+- [ ] Reflection and next improvement.

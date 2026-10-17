@@ -1,0 +1,50 @@
+---
+title: "5 — Applications, accounts, updates and backup"
+description: "The resulting runbook has safe checkpoints, approved actions, escalation and a tested rollback path."
+---
+
+# Module 5: Applications, accounts, updates and backup
+
+**Estimated time:** 45–70 minutes. **Outcome:** The resulting runbook has safe checkpoints, approved actions, escalation and a tested rollback path.
+
+## Core concepts and why they matter
+
+Users may experience faults because of expired sessions, missing licences, application permissions, outdated software or corrupted configuration. Distinguish app outage from identity issue by testing the same authorised app with a known-good account or another device while protecting account privacy. Updates address bugs and security risks but can disrupt business software; assess changes and rollback. Backups preserve recoverable data only when restores are tested. Malware suspicions require containment and escalation, not ad-hoc installation of unknown tools.
+
+## Worked workplace scenario
+
+A user cannot open a licensed office application after a subscription change. Check entitlement and service health before reinstalling the OS.
+
+## Guided hands-on application
+
+1. Build a safe triage chart: account, application, device, network and service status.
+2. Write a patching checklist including backup, maintenance window and post-update validation.
+3. Differentiate synchronisation from a true independent backup.
+4. Document a restore test using a fictional file and integrity check.
+
+## Verification and failure test
+
+The resulting runbook has safe checkpoints, approved actions, escalation and a tested rollback path. Create a table identifying expected result, actual result, date, supporting evidence and next action. Use one deliberately invalid or unexpected input to confirm the control does not silently fail.
+
+:::warning Safety and ethics
+Never remove licences or change production accounts casually; the change may affect data access.
+:::
+
+## Knowledge reflection
+
+1. Why is a sync folder not always an independent backup?
+2. What should be checked before reinstalling an application?
+
+<details>
+  <summary>Instructor guidance after answering</summary>
+
+A satisfactory response must apply the concepts above, define who may act, describe observable evidence, and explain why at least one unsafe alternative would be rejected. Review the scenario and repeat the experiment if your answer lacks a reproducible verification step.
+
+</details>
+
+## Evidence checklist
+
+- [ ] Written purpose and accepted input.
+- [ ] Reproducible procedure and observed result.
+- [ ] Negative or failure test, with safe remediation.
+- [ ] Reflection and next improvement.
