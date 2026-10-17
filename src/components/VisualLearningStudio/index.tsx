@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import {studioCourses} from '@site/src/data/learningStudio';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 // Progressive disclosure is explicit and works by keyboard, touch and pointer.
 type CourseSlug=keyof typeof studioCourses;
@@ -19,7 +20,7 @@ export default function VisualLearningStudio({docId}:{docId:string}){
   if(!course||!scene)return null;
   const [topic,point,c1,c2,c3,question,options,correct,explanation]=scene;
   const cards=[c1,c2,c3];
-  const illustration='/img/learning-studio/'+slug+'.svg';
+  const illustration=useBaseUrl('/img/learning-studio/'+slug+'.svg');
   const isLab=parts[2]==='labs';
   const pageType=isLab?'Lab practice':rawModule?'Learning module':parts[2]==='assessment'?'Assessment support':'Guided learning';
   return <section className="studio" aria-label={'Interactive learning studio for '+course.title} key={docId}>
