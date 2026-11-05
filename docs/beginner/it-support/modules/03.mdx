@@ -1,0 +1,76 @@
+---
+title: "3 — Windows and Linux fundamentals for support"
+description: "Evidence shows operating-system state and that no unapproved destructive action was performed."
+---
+
+# Module 3: Windows and Linux fundamentals for support
+
+**Estimated time:** 45–70 minutes. **Outcome:** Evidence shows operating-system state and that no unapproved destructive action was performed.
+
+## Core concepts and why they matter
+
+Identify OS version, user profile, running processes, storage usage, startup applications, updates and event logs. Windows offers Task Manager, Settings, Event Viewer, Resource Monitor and built-in troubleshooters. Linux offers commands such as pwd, ls, df -h, free -h, top and journalctl on appropriate systems. Permissions restrict changes: regular users should not elevate automatically. A command's output is evidence and can be recorded, but not every command is available on every OS or edition.
+
+## Worked workplace scenario
+
+A user reports low disk space. The technician checks usage categories and known temporary directories rather than deleting system files.
+
+## Guided hands-on application
+
+1. Find the operating-system version and device uptime using read-only settings.
+2. Identify the largest fictional file category in a sample storage report.
+3. Interpret process CPU and RAM usage, and name one possible performance bottleneck.
+4. Design a safe update and rollback process for a business computer.
+
+## Verification and failure test
+
+Evidence shows operating-system state and that no unapproved destructive action was performed. Create a table identifying expected result, actual result, date, supporting evidence and next action. Use one deliberately invalid or unexpected input to confirm the control does not silently fail.
+
+:::warning Safety and ethics
+Avoid 'cleaner' tools, copied shell commands or registry edits without validation and rollback.
+:::
+
+## Knowledge reflection
+
+1. What is the purpose of Task Manager or top?
+2. Why inspect permission scope before running an administrative command?
+
+<details>
+  <summary>Instructor guidance after answering</summary>
+
+A satisfactory response must apply the concepts above, define who may act, describe observable evidence, and explain why at least one unsafe alternative would be rejected. Review the scenario and repeat the experiment if your answer lacks a reproducible verification step.
+
+</details>
+
+## Evidence checklist
+
+- [ ] Written purpose and accepted input.
+- [ ] Reproducible procedure and observed result.
+- [ ] Negative or failure test, with safe remediation.
+- [ ] Reflection and next improvement.
+
+## Extended learning: read-only diagnostics in Windows and Linux
+
+A support technician should distinguish **observation** from **remediation**. Start with built-in read-only status commands or graphical tools appropriate to the installed system. Commands and paths differ across distributions and Windows releases; verify what is available before running anything. Administrative privileges are rarely needed to inspect the first layer of a user issue.
+
+### Comparison of safe diagnostic categories
+
+| Question | Windows approach | Linux approach |
+|---|---|---|
+| Which OS is installed? | Settings → System → About | System information or \`uname -a\` |
+| What network settings exist? | \`ipconfig /all\` | \`ip address\` where available |
+| What is running? | Task Manager | Desktop system monitor or \`ps\` |
+| Is storage low? | File Explorer / Storage settings | \`df -h\` |
+
+### Worked example: a failing application
+
+1. Capture the exact error and application version.
+2. Check whether the issue affects one account, one computer or all users.
+3. Review available application and system logs **within your permission level**.
+4. Observe available memory and storage before assuming an application bug.
+5. Compare results with the vendor's supported configuration.
+6. Escalate updates or reinstallations through the approved change process.
+
+An error log may contain personal information or authentication tokens. **Redact before sharing** and store the evidence in an authorised support system.
+
+**Practice:** With fictional log entries, mark the timestamp, severity, component and likely next diagnostic question. Explain why deleting event logs is harmful to troubleshooting.

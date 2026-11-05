@@ -1,0 +1,76 @@
+---
+title: "5 — Applications, accounts, updates and backup"
+description: "The resulting runbook has safe checkpoints, approved actions, escalation and a tested rollback path."
+---
+
+# Module 5: Applications, accounts, updates and backup
+
+**Estimated time:** 45–70 minutes. **Outcome:** The resulting runbook has safe checkpoints, approved actions, escalation and a tested rollback path.
+
+## Core concepts and why they matter
+
+Users may experience faults because of expired sessions, missing licences, application permissions, outdated software or corrupted configuration. Distinguish app outage from identity issue by testing the same authorised app with a known-good account or another device while protecting account privacy. Updates address bugs and security risks but can disrupt business software; assess changes and rollback. Backups preserve recoverable data only when restores are tested. Malware suspicions require containment and escalation, not ad-hoc installation of unknown tools.
+
+## Worked workplace scenario
+
+A user cannot open a licensed office application after a subscription change. Check entitlement and service health before reinstalling the OS.
+
+## Guided hands-on application
+
+1. Build a safe triage chart: account, application, device, network and service status.
+2. Write a patching checklist including backup, maintenance window and post-update validation.
+3. Differentiate synchronisation from a true independent backup.
+4. Document a restore test using a fictional file and integrity check.
+
+## Verification and failure test
+
+The resulting runbook has safe checkpoints, approved actions, escalation and a tested rollback path. Create a table identifying expected result, actual result, date, supporting evidence and next action. Use one deliberately invalid or unexpected input to confirm the control does not silently fail.
+
+:::warning Safety and ethics
+Never remove licences or change production accounts casually; the change may affect data access.
+:::
+
+## Knowledge reflection
+
+1. Why is a sync folder not always an independent backup?
+2. What should be checked before reinstalling an application?
+
+<details>
+  <summary>Instructor guidance after answering</summary>
+
+A satisfactory response must apply the concepts above, define who may act, describe observable evidence, and explain why at least one unsafe alternative would be rejected. Review the scenario and repeat the experiment if your answer lacks a reproducible verification step.
+
+</details>
+
+## Evidence checklist
+
+- [ ] Written purpose and accepted input.
+- [ ] Reproducible procedure and observed result.
+- [ ] Negative or failure test, with safe remediation.
+- [ ] Reflection and next improvement.
+
+## Extended learning: minimise risk during application and account repairs
+
+A failed login, missing licence, application crash or stale session can appear similar to a user. Diagnose the **identity, entitlement, device, application, network and provider-service** layers separately. Reinstallation should not be the first response when the service has an outage or the user is not assigned the required licence.
+
+### Worked example: application will not activate
+
+1. Verify the product and signed-in account **without asking for passwords**.
+2. Check the appropriate subscription or entitlement through authorised administration.
+3. Look for published service-health notices before modifying the device.
+4. Compare the issue with an approved test account or known-good device.
+5. Record a proposed change, approval, backup state and rollback option.
+6. Apply only authorised changes and confirm the original work task succeeds.
+
+### Backup, sync and updates
+
+Synchronisation mirrors state, which may include accidental deletion. Version history may help but has retention limitations. A **tested independent backup** is a separate recoverable copy. Updates reduce known risks but can cause compatibility changes; make a change plan rather than clicking through blindly.
+
+| Condition | Safer action |
+|---|---|
+| Service-wide outage | Inform users and monitor provider updates |
+| Missing licence | Request verified entitlement adjustment |
+| Suspected malware | Follow incident escalation policy |
+| Unapproved admin request | Pause and seek authorisation |
+
+**Practice:** Draft a recovery plan for a fictional damaged training file, including backup location, restore test and acceptance criteria. Include one rejected unsafe action.

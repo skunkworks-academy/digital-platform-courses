@@ -1,8 +1,123 @@
-:root {--ifm-color-primary:#4338ca;--ifm-color-primary-dark:#3730a3;--ifm-color-primary-light:#6366f1;--ifm-font-family-base:Inter,system-ui,sans-serif;--ifm-heading-font-family:Inter,system-ui,sans-serif;}
-[data-theme='dark'] {--ifm-color-primary:#a5b4fc;}
-.heroBanner{padding:4rem 2rem;border-radius:1.5rem;background:linear-gradient(135deg,#111827,#312e81 55%,#0f766e);color:#fff;margin-bottom:2rem;}
-.heroBanner h1{font-size:clamp(2.3rem,6vw,4.6rem);line-height:1.02;max-width:900px}.heroBanner p{font-size:1.2rem;max-width:760px;color:#e0e7ff}
-.courseGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin:2rem 0}.courseCard{border:1px solid var(--ifm-color-emphasis-300);border-radius:1.2rem;padding:1.5rem;background:var(--ifm-background-surface-color);box-shadow:0 12px 30px rgba(15,23,42,.08)}
-.courseCard h2{margin:.5rem 0}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--ifm-color-primary)}.meta{display:flex;gap:.5rem;flex-wrap:wrap}.pill{font-size:.82rem;border-radius:999px;background:var(--ifm-color-emphasis-200);padding:.3rem .65rem}.buttonLink{display:inline-block;margin-top:.8rem;padding:.65rem 1rem;border-radius:.65rem;background:var(--ifm-color-primary);color:#fff;font-weight:700}.buttonLink:hover{color:#fff;text-decoration:none;filter:brightness(1.1)}
-.checkpoint{border-left:4px solid #0f766e;background:rgba(15,118,110,.08);padding:1rem 1.25rem;margin:1.25rem 0}.evidence{border:1px dashed var(--ifm-color-primary);padding:1rem;border-radius:.8rem}
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+:root{--ifm-color-primary:#1e6bd0;--ifm-color-primary-dark:#1559b0;--ifm-color-primary-darker:#144d99;--ifm-color-primary-darkest:#103f7b;--ifm-color-primary-light:#357ddd;--ifm-color-primary-lighter:#4b8de4;--ifm-color-primary-lightest:#76aaf0;--ifm-background-color:#f7f9fc;--ifm-font-color-base:#15171a;--ifm-font-family-base:'Open Sans',system-ui,sans-serif;--ifm-heading-font-family:Inter,system-ui,sans-serif;}
+[data-theme='dark']{--ifm-color-primary:#9bc5ff;--ifm-color-primary-dark:#76afff;--ifm-color-primary-darker:#5996e9;--ifm-color-primary-darkest:#4384d0;--ifm-color-primary-light:#bfdcff;--ifm-color-primary-lighter:#d3e7ff;--ifm-color-primary-lightest:#edf6ff;--ifm-background-color:#101115;--ifm-background-surface-color:#1a1b21;--ifm-font-color-base:#f7f9fc;}
+.navbar,.footer{background:#fff;color:#15171a;}[data-theme='dark'] .navbar,[data-theme='dark'] .footer{background:#050505;color:#f7f9fc;}.navbar__title,.navbar__link,.footer__title,.footer__link-item{color:inherit;}
+.heroBanner{padding:3rem 2rem;border-radius:1.25rem;background:#03033a;color:#fff;margin-bottom:2rem}.heroBanner p{color:#fff}.courseGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin:2rem 0}.courseCard{padding:1.4rem;border:1px solid var(--ifm-color-emphasis-300);border-radius:1rem;background:var(--ifm-background-surface-color);min-width:0}.courseCard h2{font-size:1.3rem}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--ifm-color-primary)}.meta{display:flex;flex-wrap:wrap;gap:.5rem}.pill{display:inline-block;background:var(--ifm-color-emphasis-200);border-radius:99px;padding:.3rem .65rem;font-size:.82rem}.buttonLink{display:inline-block;border-radius:.55rem;background:#1e6bd0;color:#fff!important;padding:.65rem 1rem;margin-top:.75rem;font-weight:700;text-decoration:none;min-height:44px}.buttonLink:hover{background:#1559b0;color:#fff;text-decoration:none}.checkpoint{border-left:4px solid #1e6bd0;background:var(--ifm-color-emphasis-100);padding:1rem}.evidence{border:1px dashed var(--ifm-color-primary);padding:1rem;border-radius:.6rem}
+.skillsDiagnostic{padding:clamp(1rem,3vw,2rem);margin:2rem 0;border:1px solid var(--ifm-color-emphasis-300);border-radius:1rem;background:var(--ifm-background-surface-color)}.diagnosticControls{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.diagnosticControls button,.diagnosticSubmit{padding:.55rem 1rem;min-height:44px;border:2px solid var(--ifm-color-primary);border-radius:.5rem;font:inherit;cursor:pointer;background:transparent;color:var(--ifm-font-color-base)}.diagnosticControls button[aria-pressed=true],.diagnosticSubmit{background:#1e6bd0;color:#fff;border-color:#1e6bd0}.diagnosticQuestion{border:1px solid var(--ifm-color-emphasis-300);border-radius:.55rem;padding:1rem;margin:1rem 0;min-width:0}.diagnosticQuestion legend{font-weight:700;padding:0 .3rem}.diagnosticQuestion label{display:block;padding:.4rem;cursor:pointer}.diagnosticQuestion input{margin-right:.5rem}.diagnosticFeedback{border-left:3px solid #1e6bd0;background:var(--ifm-color-emphasis-100);padding:.5rem .8rem}@media(max-width:650px){.courseGrid{grid-template-columns:1fr}.heroBanner{padding:2rem 1rem}.skillsDiagnostic{padding:1rem}}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.courseProgress{border:1px solid var(--ifm-color-emphasis-300);border-radius:1rem;background:var(--ifm-background-surface-color);padding:clamp(1rem,3vw,2rem);margin:2rem 0}.courseProgress h2{margin-top:0}.courseProgress progress{width:100%;height:1rem;accent-color:#1e6bd0}.progressItems{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.65rem;margin:1rem 0}.progressItems label{display:flex;align-items:center;gap:.6rem;padding:.75rem;border:1px solid var(--ifm-color-emphasis-300);border-radius:.5rem;min-height:44px;cursor:pointer}.progressItems label:focus-within{outline:2px solid var(--ifm-color-primary);outline-offset:2px}.progressItems input{width:1.15rem;height:1.15rem;accent-color:#1e6bd0}.progressDisclaimer{font-size:.9rem;color:var(--ifm-color-content-secondary)}@media(max-width:450px){.progressItems{grid-template-columns:1fr}}
+
+.mariaCart{padding:clamp(1rem,3vw,2rem);margin:2rem 0;border:1px solid var(--ifm-color-emphasis-300);border-radius:1rem;background:var(--ifm-background-surface-color)}.mariaCart h2{margin-top:0}.mariaCartGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.7rem}.mariaCartItem{display:flex;gap:.75rem;align-items:flex-start;padding:1rem;min-height:74px;cursor:pointer;border:1px solid var(--ifm-color-emphasis-300);border-radius:.65rem}.mariaCartItem:focus-within{outline:2px solid var(--ifm-color-primary);outline-offset:2px}.mariaCartItem input{width:1.2rem;height:1.2rem;accent-color:#1e6bd0;flex:none;margin-top:.25rem}.mariaCartItem span{flex:1;min-width:0}.mariaCartItem small{display:block;margin-top:.3rem;color:var(--ifm-color-content-secondary)}.mariaCartItem b{white-space:nowrap}.mariaCartSummary{display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap;padding:1.25rem 0}.mariaRequest{border:0;border-radius:.6rem;min-height:44px;padding:.65rem 1rem;font:inherit;font-weight:700;cursor:pointer;background:#1e6bd0;color:#fff}.mariaRequest:disabled{cursor:not-allowed;opacity:.6}.mariaCartNotice{margin-top:.75rem;color:var(--ifm-color-content-secondary);font-size:.88rem}@media(max-width:450px){.mariaCartGrid{grid-template-columns:1fr}.mariaCartSummary{flex-direction:column}}
+
+/* Beginner courses: high contrast, touch-friendly assessment controls */
+.masteryQuiz{padding:clamp(1rem,3vw,2rem);border:1px solid var(--ifm-color-emphasis-300);border-radius:1rem;background:var(--ifm-background-surface-color);margin:2rem 0}.masteryQuestion{border:1px solid var(--ifm-color-emphasis-300);border-radius:.75rem;padding:1rem;margin:1rem 0;min-width:0}.masteryQuestion legend{font-weight:700;padding:0 .4rem}.masteryQuestion label{display:flex;align-items:flex-start;gap:.6rem;padding:.55rem .2rem;cursor:pointer;min-height:40px;line-height:1.5}.masteryQuestion label input{width:1.15rem;height:1.15rem;margin-top:.2rem;flex-shrink:0;accent-color:#1e6bd0}.masteryQuestion label:focus-within{outline:2px solid var(--ifm-color-primary);outline-offset:2px}.masteryFeedback{margin:.8rem 0 0;border-left:3px solid var(--ifm-color-primary);padding:.6rem 1rem;background:var(--ifm-color-emphasis-100)}.masteryActions{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}.masteryActions button{background:#1e6bd0;color:#fff;border:0;border-radius:.5rem;padding:.7rem 1rem;min-height:44px;font:inherit;font-weight:700;cursor:pointer}.masteryActions button:focus-visible{outline:3px solid var(--ifm-color-primary);outline-offset:3px}@media(max-width:420px){.masteryQuestion{padding:.75rem}.masteryActions{flex-direction:column;align-items:stretch}}
+
+
+/* Skunkworks Academy beginner course studio — responsive and accessible */
+body.swa-has-global-nav .navbar{display:none!important}
+body.swa-has-global-nav{--ifm-navbar-height:0px}
+body:has(.swa-global-footer) .footer{display:none!important}
+:root{--studio-blue:#1e6bd0;--studio-orange:#f24208;--studio-navy:#03033a}
+.studio{margin:2.5rem 0 1.5rem;container-type:inline-size;color:var(--ifm-font-color-base)}
+.studio *, .studio *::before,.studio *::after{box-sizing:border-box}
+.studioHeader{background:var(--ifm-background-surface-color);border:1px solid var(--ifm-color-emphasis-300);border-radius:1.15rem;overflow:hidden;box-shadow:0 12px 35px rgb(1 14 40 / 7%)}
+.studioHero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:stretch}
+.studioHeroCopy{padding:clamp(1rem,3vw,2.2rem);min-width:0}
+.studioKicker{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ifm-color-primary);margin-bottom:.65rem}
+.studioHeroCopy h2{font-size:clamp(1.4rem,3vw,2.15rem);line-height:1.2;margin:.25rem 0 1rem}
+.studioHeroCopy p{max-width:65ch;color:var(--ifm-font-color-base);line-height:1.7}
+.studioHeroArt{width:100%;height:100%;min-height:210px;object-fit:cover}
+.studioSection{margin-top:1.5rem;padding:clamp(1rem,3vw,1.6rem);border:1px solid var(--ifm-color-emphasis-300);border-radius:1.05rem;background:var(--ifm-background-surface-color)}
+.studioSection h3{font-size:clamp(1.12rem,2.6vw,1.5rem);margin:0 0 .7rem}
+.studioIntro{color:var(--ifm-font-color-base);opacity:.86}
+.studioFlow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;list-style:none;padding:0;margin:1.1rem 0}
+.studioFlow li{position:relative;padding:1rem;min-width:0;border:1px solid var(--ifm-color-emphasis-300);border-top:4px solid var(--studio-blue);border-radius:.7rem;background:var(--ifm-background-color)}
+.studioFlow li::after{content:"→";position:absolute;right:-.85rem;top:40%;z-index:1;font-weight:900;background:var(--ifm-background-surface-color);border-radius:50%;padding:.05rem .25rem;color:var(--ifm-font-color-base)}
+.studioFlow li:last-child::after{content:none}
+.studioFlowNumber{display:block;color:var(--ifm-color-content-secondary);font-size:.75rem;font-weight:800;margin-bottom:.35rem}
+.studioFlow strong{display:block;overflow-wrap:anywhere;line-height:1.35}
+.studioCardGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin-top:1rem}
+.studioFlip{display:flex;flex-direction:column;text-align:left;align-items:stretch;width:100%;min-height:172px;padding:1.1rem;border:2px solid var(--ifm-color-emphasis-300);border-radius:.9rem;background:var(--ifm-background-color);color:var(--ifm-font-color-base);font:inherit;cursor:pointer;transition:box-shadow .15s ease,border-color .15s ease,transform .15s ease}
+.studioFlip:hover{box-shadow:0 8px 20px rgb(0 0 0 / 10%);border-color:var(--ifm-color-primary)}
+.studioFlip[aria-pressed=true]{border-color:var(--ifm-color-primary);background:var(--ifm-color-emphasis-100)}
+.studioFlip:focus-visible,.studioChoice:focus-visible,.studioReset:focus-visible{outline:3px solid var(--ifm-color-primary);outline-offset:4px}
+.studioFlipIcon{font-size:1.25rem;margin-bottom:.75rem;font-weight:800;color:var(--ifm-color-primary)}
+.studioFlipTitle{font-weight:800;line-height:1.3}
+.studioFlipBody{font-size:.91rem;line-height:1.55;margin:.55rem 0}
+.studioFlipHint{font-size:.77rem;color:var(--ifm-color-content-secondary);margin-top:auto}
+.studioChoices{display:grid;gap:.65rem}
+.studioChoice{padding:.9rem 1rem;border-radius:.65rem;border:2px solid var(--ifm-color-emphasis-300);background:var(--ifm-background-color);color:var(--ifm-font-color-base);text-align:left;font:inherit;cursor:pointer;min-height:48px}
+.studioChoice:hover{border-color:var(--ifm-color-primary)}
+.studioChoice[aria-pressed=true]{border-color:var(--ifm-color-primary);background:var(--ifm-color-emphasis-100)}
+.studioFeedback{margin-top:1rem;padding:1rem;border-left:5px solid var(--studio-orange);background:var(--ifm-color-emphasis-100);border-radius:.4rem}
+.studioFeedback[data-correct=true]{border-left-color:#13824b}
+.studioReset{margin-top:.7rem;border:2px solid var(--ifm-color-primary);border-radius:.55rem;background:transparent;color:var(--ifm-font-color-base);min-height:44px;padding:.6rem .9rem;font:inherit;font-weight:700;cursor:pointer}
+.studioNote{font-size:.9rem;line-height:1.6;margin:.7rem 0 0}
+.studioEvidence{border-left:4px solid var(--studio-blue);padding:1rem;background:var(--ifm-color-emphasis-100);border-radius:.5rem}
+.studioSmallPrint{font-size:.8rem;color:var(--ifm-color-content-secondary);margin-top:1rem}
+@container(max-width:650px){.studioHero{grid-template-columns:1fr}.studioHeroArt{height:185px;min-height:0;order:-1}.studioFlow,.studioCardGrid{grid-template-columns:1fr}.studioFlow li::after{content:"↓";top:auto;bottom:-.75rem;right:47%}}
+@media(max-width:650px){.studioFlow,.studioCardGrid{grid-template-columns:1fr}.studioHero{grid-template-columns:1fr}.studioHeroArt{height:190px;min-height:0;order:-1}}
+@media(prefers-reduced-motion:reduce){.studioFlip{transition:none}}
+
+.studioCourseCover{display:block;width:100%;height:auto;aspect-ratio:5/3;object-fit:cover;margin:0 0 1rem;border-radius:.65rem;border:1px solid var(--ifm-color-emphasis-300)}
+.courseCard:focus-within{outline:2px solid var(--ifm-color-primary);outline-offset:4px}
+
+
+/* Every beginner course page: evidence workbook and touch-friendly actions. */
+.pageWorkbook{border:1px solid var(--ifm-color-emphasis-300);background:var(--ifm-background-surface-color);border-radius:1.05rem;margin:2rem 0;padding:clamp(1rem,3vw,1.8rem);color:var(--ifm-font-color-base);max-width:100%;overflow-wrap:anywhere}
+.workbookHeading{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.workbookHeading h2{margin:.2rem 0 .7rem;font-size:clamp(1.25rem,3vw,1.7rem)}
+.workbookCount{padding:.45rem .75rem;border-radius:2rem;background:var(--ifm-color-emphasis-200);white-space:nowrap}
+.workbookChecks{border:0;margin:1.2rem 0;padding:0;min-width:0}
+.workbookChecks legend{font-size:1.1rem;font-weight:800;margin-bottom:.5rem}
+.workbookChecks label{display:flex;align-items:flex-start;gap:.65rem;padding:.85rem .6rem;border:1px solid var(--ifm-color-emphasis-300);border-radius:.6rem;margin-bottom:.6rem;cursor:pointer;min-height:46px}
+.workbookChecks input{width:1.25rem;height:1.25rem;accent-color:#1e6bd0;flex:none;margin-top:.1rem}
+.workbookLabel{display:block;font-weight:700;margin:.75rem 0 .4rem}
+.pageWorkbook textarea{font:inherit;color:var(--ifm-font-color-base);background:var(--ifm-background-color);border:2px solid var(--ifm-color-emphasis-400);border-radius:.65rem;width:100%;max-width:100%;padding:.85rem;resize:vertical;min-height:100px}
+.workbookCounter{text-align:right;font-size:.85rem;color:var(--ifm-color-content-secondary)}
+.workbookActions{display:flex;gap:.7rem;flex-wrap:wrap;margin:.75rem 0}
+.workbookActions button{border:2px solid var(--ifm-color-primary);border-radius:.55rem;background:var(--ifm-color-primary);color:var(--ifm-button-color);font:inherit;font-weight:700;min-height:44px;padding:.65rem 1rem;cursor:pointer}
+.workbookActions button:nth-child(n+2){background:transparent;color:var(--ifm-font-color-base)}
+.workbookActions .workbookDanger{border-color:#af2121;color:#af2121}
+.pageWorkbook :is(button,input,textarea):focus-visible{outline:3px solid var(--ifm-color-primary);outline-offset:3px}
+.workbookStatus{font-weight:600;min-height:1.5rem}
+.workbookFallback{display:block;font-weight:700;margin-top:1rem}
+.workbookFallback textarea{display:block;margin-top:.5rem}
+.studio,.pageWorkbook,.masteryQuiz,.skillsDiagnostic,.courseProgress{scroll-margin-top:100px}
+.masteryQuestion{scroll-margin-top:105px}
+@media(max-width:540px){.workbookActions{flex-direction:column}.workbookActions button{width:100%}.workbookHeading{align-items:flex-start}}
+
+/* Accessible retry, assessment feedback and workbook buttons */
+.workbookActions button{color:#fff}
+.masteryQuiz progress{display:block;width:100%;height:1rem;accent-color:#1e6bd0;margin:0 0 1rem}
+.masteryFeedback[data-correct=true]{border-left-color:#13824b}
+.progressControls{display:flex;gap:.65rem;flex-wrap:wrap}
+.progressControls button{min-height:44px;border:2px solid var(--ifm-color-primary);border-radius:.5rem;background:transparent;color:var(--ifm-font-color-base);font:inherit;font-weight:700;padding:.6rem .95rem;cursor:pointer}
+.progressControls button:focus-visible{outline:3px solid var(--ifm-color-primary);outline-offset:3px}
+
+.learningPageJumps{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;padding:.75rem 1rem;margin:0 0 1.5rem;background:var(--ifm-color-emphasis-100);border:1px solid var(--ifm-color-emphasis-300);border-radius:.7rem}
+.learningPageJumps a{display:inline-flex;align-items:center;min-height:44px;padding:.45rem .8rem;border:2px solid var(--ifm-color-primary);border-radius:.6rem;color:var(--ifm-color-primary);font-weight:800;text-decoration:none}
+.learningPageJumps a:hover{background:var(--ifm-color-primary);color:#fff}
+.learningPageJumps a:focus-visible{outline:3px solid var(--ifm-color-primary);outline-offset:3px}
+#learning-studio,#page-workbook{scroll-margin-top:105px}
+
+/* Beginner pathways finish at their own completion page. */
+.academyCompletion{border:1px solid var(--ifm-color-emphasis-300);border-radius:1rem;padding:clamp(1rem,3vw,2rem);margin:1rem 0 2rem;background:var(--ifm-background-surface-color);color:var(--ifm-font-color-base)}
+.academyCompletionEyebrow{color:var(--ifm-color-primary);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.academyCompletionSteps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem;margin:1.5rem 0}
+.academyCompletionSteps>div{border:1px solid var(--ifm-color-emphasis-300);padding:1.05rem;border-radius:.75rem;background:var(--ifm-background-color)}
+.academyCompletionSteps strong{display:block;font-size:clamp(1.25rem,2.4vw,1.8rem);color:var(--ifm-color-primary)}
+.academyCompletionSteps span{font-size:.88rem;line-height:1.45;display:block;margin-top:.4rem}
+.academyCompletionInfo{border-left:4px solid #f24208;padding:1rem;background:var(--ifm-color-emphasis-100);border-radius:.5rem}
+.academyCompletionAward{display:grid;grid-template-columns:135px minmax(0,1fr);gap:1.5rem;padding:1.5rem;margin:1.5rem 0;border:2px solid #1e6bd0;border-radius:1rem}
+.academyCompletionSeal{display:flex;align-items:center;justify-content:center;flex-direction:column;width:125px;height:125px;border-radius:50%;border:5px double #1e6bd0;background:#03033a;color:#fff;font-size:2rem;font-weight:800}
+.academyCompletionSeal span{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}
+.academyCompletionAward input{display:block;width:min(100%,450px);padding:.65rem .75rem;min-height:44px;margin:.5rem 0 1rem;border:2px solid var(--ifm-color-emphasis-400);background:var(--ifm-background-color);color:var(--ifm-font-color-base);border-radius:.55rem;font:inherit}
+.academyCompletionAward label{font-weight:700}
+.academyCompletionButtons{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
+.academyCompletionButtons a,.academyCompletionPrimary{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.65rem 1rem;border-radius:.55rem;border:2px solid #1e6bd0;font-weight:800;text-decoration:none!important}
+.academyCompletionPrimary{color:#fff!important;background:#1e6bd0}
+.academyCompletionButtons a:not(.academyCompletionPrimary){color:var(--ifm-color-primary)}
+.academyCompletionButtons a:focus-visible,.academyCompletionPrimary:focus-visible{outline:3px solid #f24208;outline-offset:3px}
+.academyCompletionNote{font-size:.88rem;color:var(--ifm-color-content-secondary)}
+.academyCompletionFinish{border-top:1px solid var(--ifm-color-emphasis-300);padding-top:1.5rem}
+@media(max-width:720px){.academyCompletionSteps{grid-template-columns:1fr}.academyCompletionAward{grid-template-columns:1fr}.academyCompletionButtons{align-items:stretch;flex-direction:column}.academyCompletionButtons a{width:100%}}

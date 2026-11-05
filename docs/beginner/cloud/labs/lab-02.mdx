@@ -1,0 +1,28 @@
+---
+title: "Lab 2 — Identity and network security tabletop"
+description: "Protect a course application without requiring a paid cloud account."
+---
+
+# Lab 2: Identity and network security tabletop
+
+**Duration:** 75 minutes. **Environment:** offline design or permitted free simulation; avoid live billable resources.
+
+## Objective
+
+Protect a course application without requiring a paid cloud account.
+
+## Steps
+
+1. Sketch a learner browser, static pages, protected API, identity service and restricted database.
+2. Design read-only and admin roles with justifications.
+3. Document authenticated allowed traffic and three explicitly denied connections.
+4. Simulate a compromised account and the safe session-revocation/escalation response.
+5. Describe where provider credentials would reside and how activity would be audited.
+
+## Evidence and acceptance
+
+Threat-aware architecture diagram, access matrix, one positive test, two negative tests and incident checklist.
+
+**Pass criterion:** No secret, student grade or database administrative endpoint is publicly exposed in the design.
+
+Create a test record showing intended action, allowed response, deliberately invalid/unauthorised input and observed or simulated refusal. Distinguish simulated output from actual provider observations. Document a correction and one residual risk.

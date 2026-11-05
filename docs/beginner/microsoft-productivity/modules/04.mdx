@@ -1,0 +1,74 @@
+---
+title: "4 — Cleaning tables, sorting and analysis"
+description: "Microsoft productivity applied lesson."
+---
+
+# Module 4: Cleaning tables, sorting and analysis
+
+**Study time:** 50–70 minutes. **Outcome:** apply this productivity capability using accurate, accessible and appropriately shared information.
+
+## Learn the principles
+
+Well-structured tables have a single header row, consistent types, unique transaction IDs and no blank separator rows. Filtering changes visible records, not the stored dataset; sorting one column without the entire table can corrupt row associations. Conditional formatting may help spot exceptions but is not evidence of a valid calculation. A PivotTable or grouped summary aggregates categories; a chart should have an honest axis and relevant units.
+
+## Worked business case
+
+A fictional expense register has a duplicated receipt, mixed date formats and an empty category. Standardise values, flag duplicates, then compare category totals.
+
+## Practical walkthrough
+
+1. Convert a ten-row CSV into a proper Excel table, filter one category, sort by date and calculate an unfiltered total with a clear method.
+2. Capture the task objective, input data or document version, expected result and who will review it.
+3. Produce a draft artefact or spreadsheet formula, then check one ordinary and one erroneous/unauthorised condition.
+4. Correct the observed issue and preserve a simple change history.
+5. Produce a short user-facing explanation of the final result and any outstanding limitation.
+
+## Errors to avoid
+
+Do not delete exceptions before documenting the correction rule. Confirm whether the business wants subtotals, visible-row totals or all-row totals.
+
+## Knowledge and reflection checkpoint
+
+- Which two checks must be performed before a document or calculation is shared?
+- How would a colleague reproduce your work and detect a missing or incorrect value?
+
+<details>
+  <summary>Expected assessment feedback</summary>
+
+A strong answer identifies the data source, owner, sharing permissions, calculation or content accuracy, repeatable verification and responsible approval. Appearance alone is not evidence of correctness.
+
+</details>
+
+## Module evidence
+
+- [ ] Editable file, structured mock-up or documented alternative.
+- [ ] Formula or permissions test and observed result.
+- [ ] Correction note and clear approval boundary.
+
+## Extended learning: clean, analyse and present structured tables
+
+Each Excel table row should represent one record. Columns need consistent headings and data types. Filtering changes what is visible; sorting should keep all columns for each record together. Duplicate records need explicit business rules before deletion, since two similar rows are not always erroneous.
+
+### Worked expense-register example
+
+| Receipt | Category | Amount |
+|---|---|---:|
+| E101 | Transport | 120 |
+| E102 | Training | 300 |
+| E103 | Transport | 80 |
+| E102 | Training | 300 |
+
+The raw total is **800**. If the second E102 entry is verified to be an accidental duplicate, the corrected total is **500**. The difference must appear in a documented change log. If both entries represent valid purchases, both should remain.
+
+### A repeatable analysis procedure
+
+1. Preserve the untouched source file or dataset.
+2. Identify blanks, duplicate identifiers, inconsistent dates and wrong data types.
+3. Write down the criteria for excluding or correcting records.
+4. Convert the dataset to an Excel table and sort by a stable key.
+5. Compare category totals against a hand-calculated sample.
+6. Use a labelled bar chart or PivotTable with an honest scale and units.
+
+**Practice:** Explain why sorting only the amount column would corrupt this example, and compare the all-record total to the visible-row total after filtering. Test whether hidden rows affect the formula you used.
+
+**Knowledge check:** What makes a grouped summary reproducible? Name the source, record-level corrections, aggregation rule and reviewer.

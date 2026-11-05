@@ -1,0 +1,28 @@
+---
+title: "Lab 3 — Cost and recovery challenge"
+description: "Use realistic assumptions for cloud billing and recovery, without deploying chargeable resources."
+---
+
+# Lab 3: Cost and recovery challenge
+
+**Duration:** 75 minutes. **Environment:** offline design or permitted free simulation; avoid live billable resources.
+
+## Objective
+
+Use realistic assumptions for cloud billing and recovery, without deploying chargeable resources.
+
+## Steps
+
+1. Choose fictional hourly compute and monthly storage rates explicitly marked as illustrative, not vendor quotes.
+2. Calculate 30-day costs including two traffic scenarios, requests and data transfer.
+3. Add a budget warning point and resource expiry date.
+4. Select RPO and RTO values for the fake service and plan a restoration test.
+5. Create an operator handover that includes who gets alerted and when resources are removed.
+
+## Evidence and acceptance
+
+Formula-driven budget worksheet, price assumption note, recovery test and teardown runbook.
+
+**Pass criterion:** Cost calculations reconcile, assumptions are disclosed and a reviewable restore procedure exists.
+
+Create a test record showing intended action, allowed response, deliberately invalid/unauthorised input and observed or simulated refusal. Distinguish simulated output from actual provider observations. Document a correction and one residual risk.

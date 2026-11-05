@@ -1,0 +1,269 @@
+---
+title: "Microsoft 365 Administration Essentials"
+slug: /m365/
+description: "Microsoft 365 Administration Essentials with labs, knowledge checks and practical capstone."
+---
+
+import SkillsDiagnostic from '@site/src/components/SkillsDiagnostic';
+import CourseProgress from '@site/src/components/CourseProgress';
+
+# Microsoft 365 Administration Essentials
+
+**SKW-M365-101 · 12 hours · Self-paced · Proposed US$50**
+
+**Audience:** IT support analysts, junior cloud administrators and small-business operators. **Prerequisites:** An authorized disposable Microsoft 365 training tenant or an offline simulation.
+
+## Learning outcomes
+
+By completion you can apply the six capabilities in the modules below, produce three lab evidence packs and defend a capstone design. Work in training environments only; never place real customer records, credentials or private business documents into a course submission.
+
+<SkillsDiagnostic course="m365" />
+
+<CourseProgress course="m365" />
+
+## Course content and formative checkpoints
+
+### Module 1 — Tenant and licensing foundations
+
+**Theory and rationale.** Distinguish an Entra tenant, verified domain, Microsoft 365 subscription, user account, service plan and workload. Licences enable eligible services; they do not create users or replace identity governance.
+
+**Guided worked exercise.** Draw a tenant map for a 25-seat fictional business, with identity tenant, domain, roles, workloads and ownership. Explain how you would verify subscription eligibility before changing production configuration.
+
+**Failure analysis.** A licence is assigned but a service is unavailable. Check service-plan provisioning, assignment errors, sign-in state and service health rather than assuming DNS is the cause.
+
+**Checkpoint:** Identify the desired state, the user role responsible, one positive test, one negative test and the evidence required to verify both. Write the answers before checking them against the module's underlying control principle. Your test should deny unauthorized or invalid actions without relying on visual appearance.
+
+**Deliverable:** one diagram or configuration matrix, a risk note and a four-row test log with expected and actual outcomes. Estimate 45–70 minutes.
+
+### Module 2 — Identity, users and groups
+
+**Theory and rationale.** Separate security groups, Microsoft 365 groups, distribution lists and role assignments. Use named identities, least privilege, approved access reviews and a joiner/mover/leaver lifecycle. Privileged administrator accounts need stronger controls than routine user identities.
+
+**Guided worked exercise.** Create a fictional staff access matrix with job roles, group membership, licence, approval authority and removal conditions. Include the status of delegated mailbox permissions when someone leaves.
+
+**Failure analysis.** Disabling an account is not enough if delegated access, active sessions or application grants remain. Specify test evidence for each removal control.
+
+**Checkpoint:** Identify the desired state, the user role responsible, one positive test, one negative test and the evidence required to verify both. Write the answers before checking them against the module's underlying control principle. Your test should deny unauthorized or invalid actions without relying on visual appearance.
+
+**Deliverable:** one diagram or configuration matrix, a risk note and a four-row test log with expected and actual outcomes. Estimate 45–70 minutes.
+
+### Module 3 — Multifactor authentication and Conditional Access
+
+**Theory and rationale.** Differentiate MFA registration, authentication strength, Conditional Access enforcement, emergency access and privileged-role activation. Licensing affects Conditional Access availability. Pilot policies in report-only mode and maintain a tested recovery path.
+
+**Guided worked exercise.** Draft sign-in conditions for regular users, external collaborators and administrators. Record app scope, identity group, exceptions, log evidence and rollback.
+
+**Failure analysis.** A tenant-wide policy locks out administrators. Describe the controlled recovery process without weakening every identity.
+
+**Checkpoint:** Identify the desired state, the user role responsible, one positive test, one negative test and the evidence required to verify both. Write the answers before checking them against the module's underlying control principle. Your test should deny unauthorized or invalid actions without relying on visual appearance.
+
+**Deliverable:** one diagram or configuration matrix, a risk note and a four-row test log with expected and actual outcomes. Estimate 45–70 minutes.
+
+### Module 4 — Exchange Online and Teams
+
+**Theory and rationale.** Explain recipients, shared mailboxes, Send As versus Full Access, Teams ownership and external collaboration. In DNS, MX routes inbound mail while SPF, DKIM and DMARC contribute to sender authentication and policy.
+
+**Guided worked exercise.** Design a support workflow for an external guest joining a Teams project and a shared mailbox delegated to two staff members. List approval, permissions and verification.
+
+**Failure analysis.** When mail sends as an unexpected identity, inspect delegate rights, cached clients, recipient policy and audit evidence.
+
+**Checkpoint:** Identify the desired state, the user role responsible, one positive test, one negative test and the evidence required to verify both. Write the answers before checking them against the module's underlying control principle. Your test should deny unauthorized or invalid actions without relying on visual appearance.
+
+**Deliverable:** one diagram or configuration matrix, a risk note and a four-row test log with expected and actual outcomes. Estimate 45–70 minutes.
+
+### Module 5 — SharePoint, OneDrive and protection
+
+**Theory and rationale.** Describe site ownership, files shared via Teams, OneDrive permissions, guest links, data classifications, retention policies and recovery limitations. A recycle bin is not a complete backup strategy; features depend on subscription.
+
+**Guided worked exercise.** Build a sharing-policy matrix for public, internal and confidential data, using link scopes and required approvals.
+
+**Failure analysis.** A file remains visible via a previously created public link after group removal. Revoke the link and test with an unauthorized identity.
+
+**Checkpoint:** Identify the desired state, the user role responsible, one positive test, one negative test and the evidence required to verify both. Write the answers before checking them against the module's underlying control principle. Your test should deny unauthorized or invalid actions without relying on visual appearance.
+
+**Deliverable:** one diagram or configuration matrix, a risk note and a four-row test log with expected and actual outcomes. Estimate 45–70 minutes.
+
+### Module 6 — Operations, logging and incident response
+
+**Theory and rationale.** Use service health, sign-in records, unified audit information, change records and ticket evidence to establish root cause. Separate failure symptoms from verified hypotheses and assess business impact before remediation.
+
+**Guided worked exercise.** Write a weekly operational runbook listing owner, baseline, logs, licensing checks, access review, restoration decision, exception management and incident escalation.
+
+**Failure analysis.** An outage occurs after a policy change. Correlate timestamp, affected users, policy decision, provider status and rollback evidence before concluding causation.
+
+**Checkpoint:** Identify the desired state, the user role responsible, one positive test, one negative test and the evidence required to verify both. Write the answers before checking them against the module's underlying control principle. Your test should deny unauthorized or invalid actions without relying on visual appearance.
+
+**Deliverable:** one diagram or configuration matrix, a risk note and a four-row test log with expected and actual outcomes. Estimate 45–70 minutes.
+
+## Three applied practical labs
+
+### Lab 1: User and access lifecycle
+
+**Procedure:** Use two mock user identities in a test tenant or table. Design an onboarding approval; assign limited groups and licences; record MFA readiness; then simulate offboarding, session revocation and delegated-access review.
+
+**Evidence:** Redacted before-and-after state, role matrix, activity log and rollback checklist.
+
+**Acceptance criteria:** a peer can reproduce the intended authorized path and see the unauthorized, duplicated or invalid path fail safely. Include a redacted record of initial state, decisions, tests and rollback. Estimate 60 minutes.
+
+### Lab 2: Secure collaboration review
+
+**Procedure:** Build a disposable project site, mock or actual. Configure authorized access, attempt one deliberately unauthorized access test, check link scope and expiration, and record a corrected design.
+
+**Evidence:** Three-class data sharing matrix, deny-by-default test evidence and external-guest approval decision.
+
+**Acceptance criteria:** a peer can reproduce the intended authorized path and see the unauthorized, duplicated or invalid path fail safely. Include a redacted record of initial state, decisions, tests and rollback. Estimate 60 minutes.
+
+### Lab 3: Tenant operations incident
+
+**Procedure:** Given a fictional support incident, list plausible causes; select sign-in, configuration and service-health evidence; validate hypotheses with safe tests; produce a remediation sequence and rollback.
+
+**Evidence:** Structured incident report with timeline, evidence, decision, corrective control and verification result.
+
+**Acceptance criteria:** a peer can reproduce the intended authorized path and see the unauthorized, duplicated or invalid path fail safely. Include a redacted record of initial state, decisions, tests and rollback. Estimate 60 minutes.
+
+## Summative knowledge check — 12 questions
+
+Answer before viewing the key. Each question is worth one mark; **at least 10/12** meets the 80% knowledge standard.
+
+**1. Which boundary defines user identity administration?**
+
+A. An Entra tenant  
+B. A Word document  
+C. A single licence  
+D. A Teams message
+
+**2. What grants eligible use of Microsoft 365 services?**
+
+A. A subscription licence and service plan  
+B. A wallpaper  
+C. A domain name alone  
+D. A private folder
+
+**3. How should administrator access be granted?**
+
+A. Shared root login  
+B. Minimum required role on a named identity  
+C. Anonymous sign-in  
+D. No audit logging
+
+**4. Why test Conditional Access policies first?**
+
+A. To verify impact without locking out users  
+B. To remove the need for MFA  
+C. To publish a public token  
+D. To bypass policy
+
+**5. What does an MX DNS record mainly affect?**
+
+A. Mail reception routing  
+B. MFA enrolment  
+C. File retention  
+D. Password strength
+
+**6. Which mailbox permission is distinct from Full Access?**
+
+A. Send As  
+B. Site owner  
+C. Global Reader  
+D. Power User
+
+**7. What should happen at user departure?**
+
+A. Revoke sessions and review delegated access  
+B. Only delete a desktop shortcut  
+C. Give out a password  
+D. Disable compliance logs
+
+**8. Which test proves an external sharing boundary?**
+
+A. An unauthorized identity is denied  
+B. The owner sees the file  
+C. A button has a border  
+D. The site title looks correct
+
+**9. What is least privilege?**
+
+A. Granting only required access  
+B. All users are Global Admins  
+C. Disabling policy  
+D. Shared accounts
+
+**10. Are all compliance features included in every licence?**
+
+A. No, verify service eligibility  
+B. Yes  
+C. Only on mobile  
+D. Only on Linux
+
+**11. What supports a defensible incident conclusion?**
+
+A. Correlated logs and verified remediation  
+B. The first guess  
+C. Only an angry email  
+D. A missing favicon
+
+**12. What must a risky change include?**
+
+A. Test and rollback plan  
+B. A public credential  
+C. No record  
+D. No approver
+
+<details>
+  <summary>Reveal answer key after the attempt</summary>
+
+1. A — An Entra tenant
+
+2. A — A subscription licence and service plan
+
+3. B — Minimum required role on a named identity
+
+4. A — To verify impact without locking out users
+
+5. A — Mail reception routing
+
+6. A — Send As
+
+7. A — Revoke sessions and review delegated access
+
+8. A — An unauthorized identity is denied
+
+9. A — Granting only required access
+
+10. A — No, verify service eligibility
+
+11. A — Correlated logs and verified remediation
+
+12. A — Test and rollback plan
+
+</details>
+
+## Capstone: practical business implementation
+
+**Brief:** A fictional 40-person services company needs to modernize the capability covered by this course. Act as the implementation owner. Provide an evidence-led plan and working sandbox or reproducible paper simulation.
+
+| Criterion | Weight | Required evidence |
+|---|---:|---|
+| Problem, stakeholders and measurable goals | 15 | Scope, personas, baseline and explicit acceptance criteria |
+| Design, access and risk controls | 25 | Diagram, data inventory, decision ownership, least privilege |
+| Reproducible implementation | 25 | Steps, dependencies, revision history and rollback |
+| Positive and negative tests | 20 | At least three of each, with expected versus actual result |
+| Operability and reflection | 15 | Runbook, cost/benefit, support owner and improvement plan |
+| **Total** | **100** | **70/100 minimum plus all mandatory security controls** |
+
+**Mandatory security controls:** no real credentials or customer information; high-impact actions are approved; unauthorized access fails closed; outcomes are verified with evidence. A critical security failure means remediation is required even if the points total is 70 or higher.
+
+**Feedback and retakes:** compare evidence against each rubric row; create a corrective action for every failed criterion; resubmit after feedback using an equivalent scenario. Only an authorized Academy assessor can award verified completion after authenticated enrolment and recorded assessment results. Browser diagnostics are not certificates.
+
+## Final skills reflection
+
+Return to the five-item diagnostic above and take the **After learning** attempt. Compare baseline versus final score, identify two areas of measurable improvement and one skill that requires further practice. Your self-assessment remains in this browser only.
+
+## Official references and current information
+
+- [Microsoft 365 admin](https://learn.microsoft.com/en-us/microsoft-365/admin/)
+- [Microsoft Entra](https://learn.microsoft.com/en-us/entra/)
+- [Exchange Online](https://learn.microsoft.com/en-us/exchange/exchange-online)
+- [SharePoint](https://learn.microsoft.com/en-us/sharepoint/)
+
+**Important:** Confirm feature availability, vendor terms and licence eligibility against current official documentation. This is independent Academy training, not an official vendor qualification.

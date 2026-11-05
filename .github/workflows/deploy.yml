@@ -21,12 +21,16 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run validate:pilot
+      - run: npm run validate:beginner
       - run: npm run typecheck
       - run: npm run build
-      - name: Install and verify Academy search favicons
-        uses: skunkworks-academy/www/.github/actions/search-favicons@070f621875577a66ae43cdffa7e9d20c65efdc71
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'pull_request'
         with:
-          artifact-path: "build"
+          name: maria-course-preview-build
+          path: build
+          retention-days: 7
       - uses: actions/upload-pages-artifact@v4
         if: github.event_name != 'pull_request'
         with:

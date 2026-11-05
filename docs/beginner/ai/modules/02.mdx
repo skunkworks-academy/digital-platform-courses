@@ -1,0 +1,82 @@
+---
+title: "2 — Writing prompts that produce useful results"
+description: "The improved prompt should reduce unsupported assumptions, make missing facts visible and produce a format that is easy to review."
+---
+
+# Module 2: Writing prompts that produce useful results
+
+**Time:** about 45–60 minutes. **Outcome:** The improved prompt should reduce unsupported assumptions, make missing facts visible and produce a format that is easy to review.
+
+## Learn: core concepts
+
+A reliable prompt states the task, business context, audience, format, constraints and success criteria. Zero-shot prompting provides only an instruction; few-shot prompting also supplies examples. Asking for a structured table or schema makes outputs easier to check. Complex tasks often perform better when divided into small, verifiable stages: outline, draft, review, final edit. Tell the tool to identify missing facts and uncertainties rather than invent details.
+
+## Realistic workplace scenario
+
+Weak: 'Write an email.' Better: 'Draft a 120-word professional reply for a training buyer, confirm the two requested topics, do not invent dates or pricing, and return an email subject followed by three short paragraphs.'
+
+## Guided activity
+
+1. Write a weak prompt for a common workplace task, and capture its output with synthetic details.
+2. Rewrite it with task, context, audience, format, length, exclusions and verification criteria.
+3. Run or simulate both outputs. Score relevance, clarity, factual confidence and editing time from one to five.
+4. Add a second example and test whether it improves consistency without leaking private details.
+
+## Verify your result
+
+The improved prompt should reduce unsupported assumptions, make missing facts visible and produce a format that is easy to review. Produce a brief validation table with columns **expected result**, **actual result**, **evidence**, **decision** and **remediation**. The observed result must match the stated purpose without accidental disclosure or unapproved action.
+
+:::warning Responsible practice
+Overly detailed prompts can still fail. Restrict output, not human oversight; never allow customer text to override system instructions.
+:::
+
+## Self-check and feedback
+
+1. Name four essential elements of a task-specific prompt.
+2. Why is 'ask for missing information' safer than 'fill any gaps'?
+
+<details>
+  <summary>Read feedback after answering</summary>
+
+The answer must demonstrate the principles taught above: verification against evidence, safe handling, defined responsibility and a reproducible process. Revisit the scenario if you cannot show how a reviewer would confirm the result independently.
+
+</details>
+
+## Evidence to retain
+
+- [ ] A titled task artefact with fictional or permitted input.
+- [ ] Explicit expected and observed results.
+- [ ] One failure or negative test and corrective action.
+- [ ] A concise reflection explaining the relevance to daily work.
+
+## Extended learning: prompt structure and systematic improvement
+
+### A useful prompt is a testable specification
+
+A prompt is easier to assess when its **role, task, approved context, audience, output format and boundaries** are explicit. The prompt should also say what to do with unknown values. Giving a model extra irrelevant context can increase confusion or disclosure risk; provide the minimum useful information. A few-shot example is helpful when it demonstrates the expected structure without exposing private material.
+
+Compare the following prompts:
+
+| Element | Weak request | Improved request |
+|---|---|---|
+| Task | Write an email | Draft a reply to a fictional course enquiry |
+| Audience | Not specified | A first-time IT learner |
+| Source facts | Make up details | Use only the supplied approved course titles |
+| Format | Anything | Subject plus three short paragraphs |
+| Uncertainty | Hidden | Write “date not confirmed” when no date was supplied |
+| Review | None | List the facts a staff member must check before sending |
+
+### Worked example: controlled revision
+
+1. Create a fictional enquiry asking about two courses, a start date and a discount.
+2. Supply two confirmed course titles but **no** date or approved discount.
+3. Request a draft no longer than 130 words. Instruct the assistant not to invent dates, prices or approvals.
+4. Inspect the result: underline every factual claim and trace each to the supplied brief.
+5. Ask for a second revision that improves tone without changing facts.
+6. Compare the two drafts against **accuracy, usefulness, tone and review time**, each scored from one to five.
+
+### Troubleshooting poor output
+
+If the response wanders off task, reduce scope. If it adds facts, explicitly forbid assumptions and demand a missing-information list. If the formatting is inconsistent, give a brief example with fictional data. If the task involves consequential decisions, divide drafting, verification and approval into separate steps.
+
+**Practice:** Write two prompts that produce the same content in different formats, such as a table and a short email. Explain which is easier to verify and why.
