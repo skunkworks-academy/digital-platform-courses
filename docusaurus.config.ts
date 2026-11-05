@@ -4,7 +4,7 @@ import type {Options as PresetOptions, ThemeConfig} from '@docusaurus/preset-cla
 const config: Config = {
   title: 'Skunkworks Academy | Digital Platforms',
   tagline: 'Practical beginner IT skills through five interactive self-paced courses',
-  favicon: 'img/favicon.svg',
+  favicon: 'https://www.skunkworksacademy.com/images/favicon-search.png?v=2026.11.05.2',
   // The same first-party header/footer scripts used by skunkworks-academy/www.
   // They render outside React's Docusaurus root, avoiding hydration clashes.
   scripts: [
