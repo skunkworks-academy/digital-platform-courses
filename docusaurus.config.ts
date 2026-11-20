@@ -8,8 +8,9 @@ const config: Config = {
   // The same first-party header/footer scripts used by skunkworks-academy/www.
   // They render outside React's Docusaurus root, avoiding hydration clashes.
   scripts: [
-    {src:'https://www.skunkworksacademy.com/assets/skunkworks-ui.js',defer:true},
-    {src:'https://www.skunkworksacademy.com/assets/skunkworks-footer.js',defer:true}
+    {src:'https://www.skunkworksacademy.com/assets/skunkworks-ui.js?rev=2026.11.20.1',defer:true,'data-skunkworks-ui':'canonical'},
+    {src:'https://www.skunkworksacademy.com/assets/skunkworks-footer.js?rev=2026.11.20.1',defer:true,'data-skunkworks-global-footer':'canonical'},
+    {src:'https://www.skunkworksacademy.com/assets/academy-navigation-v11.js?nav=2026.11.20.1',defer:true,'data-skunkworks-react-safe':'true'}
   ],
   url: process.env.SKW_CANONICAL_SITE_URL || 'https://skunkworks-academy.github.io',
   baseUrl: '/digital-platform-courses/',
@@ -44,3 +45,4 @@ const config: Config = {
   } satisfies ThemeConfig,
 };
 export default config;
+
